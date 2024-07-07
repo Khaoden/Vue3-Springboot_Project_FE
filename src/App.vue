@@ -1,17 +1,16 @@
 <template>
-  <Index/>
+    <NavBar/>  
 </template>
 
 <script>
 import { ElMessage } from 'element-plus'
-import Index from './components/index.vue'
+import NavBar from './components/navbar/navbar.vue'
 
 export default {
   components: {
-    Index
+    NavBar
   }
 }
-
 </script>
 
 <style scoped>
