@@ -1,73 +1,97 @@
 <template>
-    <div class="navbar">
-      <img class="logo" src="../../assets/logo.jpg" />
-      <el-tabs v-model="activeTab" class="navbar-tabs" @tab-click="handleTabClick">
-        <el-tab-pane label="公益项目" name="first"></el-tab-pane>
-        <el-tab-pane label="社区" name="second"></el-tab-pane>
-        <el-tab-pane label="资讯" name="third"></el-tab-pane>
-        <el-tab-pane label="关于我们" name="fourth"></el-tab-pane>
-        <el-tab-pane label="个人中心" name="fifth"></el-tab-pane>
-      </el-tabs>
-    </div>
-    <div class="content-section">
-      <div v-show="activeTab === 'first'">
-        <CharitableProject />
-      </div>
-      <div v-show="activeTab === 'second'">
-        <Community />
-      </div>
-      <div v-show="activeTab === 'third'">
-        <Information />
-      </div>
-      <div v-show="activeTab === 'fourth'">
-        <AbouUS />
-      </div>
-      <div v-show="activeTab === 'fifth'">
-        <PersonalCenter />
-      </div>
-    </div>
-  </template>
+  <div class="navbar">
+    <img class="logo" src="../../assets/logo.jpg" alt="Logo" />
+    <nav class="nav-menu">
+      <router-link 
+        v-for="item in menuItems" 
+        :key="item.name" 
+        :to="{ name: item.name }" 
+        class="nav-item"
+        :class="{ active: activeItem === item.name }"
+      >
+        {{ item.label }}
+      </router-link>
+    </nav>
+  </div>
+</template>
 
 <script setup>
-import { ref } from 'vue';
-import AbouUS from '../../views/aboutUs/index.vue';
-import CharitableProject from '../../views/charitableProjects/index.vue';
-import Community from '../../views/community/index.vue';
-import PersonalCenter from '../../views/personalCenter/index.vue';
-import Information from '../../views/Information/index.vue';
+import { ref, computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
-let activeTab = ref('first');
+const route = useRoute();
+const router = useRouter();
 
-const handleTabClick = (tab) => {
-  activeTab.value = tab.name;
-};
+const menuItems = [
+  { label: '公益项目', name: 'charitable-project' },
+  { label: '社区', name: 'community' },
+  { label: '资讯', name: 'information' },
+  { label: '关于我们', name: 'about-us' },
+  { label: '个人中心', name: 'personal-center' },
+];
+
+const activeItem = computed(() => route.name);
 </script>
 
-<style lang="scss">
-.logo {
-  height: 5%;
-  width: 5%;
-}
-
+<style lang="scss" scoped>
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 10px;
   width: 100%;
+  height: 10vh;
+  min-height: 50px;
+  padding: 0 2%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: aqua;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
-.navbar-tabs {
-    margin-right: 10%;
-    width: 60%;
+.logo {
+  height: 80%; 
+  width: auto; 
+  max-height: 150px;
+  object-fit: contain;
 }
 
-.navbar-tabs .el-tabs__item {
-  margin-right: 35%;
-  font-size: 15px;
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+}
+
+.nav-item {
+  font-size: 1vw;
+  padding: 0 1vw;
+  height: 100%;
+  line-height: 10vh;
+  white-space: nowrap;
+  margin-right: 3vw;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    color: #409EFF;
+  }
+
+  &:hover {
+    color: #409EFF;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    font-size: 3vw; 
+    padding: 0 1vw;
+    margin-right: 2vw;
+  }
 }
 </style>

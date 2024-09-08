@@ -14,7 +14,8 @@
     "sass": "^1.77.3",
     "sass-loader": "^14.2.1",
     "unplugin-element-plus": "^0.8.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "^4.4.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

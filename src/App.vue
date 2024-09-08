@@ -1,15 +1,10 @@
 <template>
-    <NavBar/>  
+    <router-view></router-view>
 </template>
 
 <script>
-import { ElMessage } from 'element-plus'
-import NavBar from './components/navbar/navbar.vue'
-
 export default {
-  components: {
-    NavBar
-  }
+    name: 'App'
 }
 </script>
 
