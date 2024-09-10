@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <img class="logo" src="../../assets/logo.jpg" alt="Logo" />
+    <img class="logo" src="../../assets/logo.png" alt="Logo" />
     <nav class="nav-menu">
       <router-link 
         v-for="item in menuItems" 
@@ -45,9 +45,10 @@ const activeItem = computed(() => route.name);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: aqua;
+  background-color: #fff;
   z-index: 1000;
   box-sizing: border-box;
+  box-shadow: 0 2px 2px #ddd;
 }
 
 .logo {
