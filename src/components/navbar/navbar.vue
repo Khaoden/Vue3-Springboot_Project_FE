@@ -1,36 +1,188 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" ref="navbar">
     <img class="logo" src="../../assets/logo.png" alt="Logo" />
     <nav class="nav-menu">
-      <router-link 
-        v-for="item in menuItems" 
-        :key="item.name" 
-        :to="{ name: item.name }" 
+      <router-link
+        v-for="item in menuItems"
+        :key="item.name"
+        :to="{ name: item.name }"
         class="nav-item"
-        :class="{ active: activeItem === item.name }"
+        :class="{ active: isActiveRoute(item) }"
+        @mouseover="showDropdown(item.name)"
+        @mouseleave="handleMenuItemMouseLeave"
       >
         {{ item.label }}
       </router-link>
     </nav>
+    <transition
+      name="dropdown"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+    >
+      <div
+        v-if="activeDropdown"
+        class="dropdown-container"
+        ref="dropdownContainer"
+        @mouseover="clearHideDropdownTimer"
+        @mouseleave="handleDropdownMouseLeave"
+      >
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <h3>{{ activeDropdown.label }}</h3>
+            <ul>
+              <li
+                v-for="subItem in activeDropdown.subItems"
+                :key="subItem.name"
+                @click="handleSubItemClick(subItem)"
+              >
+                <router-link :to="{ name: subItem.name }">
+                  {{ subItem.label }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { ref, computed, nextTick, onMounted, onBeforeUnmount } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
 const router = useRouter();
+const activeDropdown = ref(null);
+const dropdownContainer = ref(null);
+let hideDropdownTimer = null;
+
+const beforeEnter = (el) => {
+  el.style.height = "0";
+};
+
+const enter = (el) => {
+  nextTick(() => {
+    el.style.height = el.scrollHeight + "px";
+  });
+};
+
+const getRouteForItem = (item) => {
+  return { name: item.name };
+};
+
+const isActiveRoute = (item) => {
+  if (item.subItems && item.subItems.length > 0) {
+    return item.subItems.some((subItem) => subItem.name === route.name);
+  }
+  return item.name === route.name;
+};
+
+const handleSubItemClick = (subItem) => {
+  console.log(`Navigating to ${subItem.name}`);
+  router.push({ name: subItem.name });
+  activeDropdown.value = null;
+};
+
+const leave = (el) => {
+  el.style.height = "0";
+};
 
 const menuItems = [
-  { label: '公益项目', name: 'charitable-project' },
-  { label: '社区', name: 'community' },
-  { label: '资讯', name: 'information' },
-  { label: '关于我们', name: 'about-us' },
-  { label: '个人中心', name: 'personal-center' },
+  {
+    label: "公益项目",
+    name: "charitable-projects",
+    subItems: [
+      { label: "平台公益", name: "platform-charity" },
+      { label: "绿水青山", name: "environmental-protection" },
+      { label: "乡村振兴", name: "rural-revitalization" },
+      { label: "应急救灾", name: "disaster-relief" },
+      { label: "助残扶弱", name: "disability-support" },
+      { label: "健康公益", name: "health-charity" },
+      { label: "国际公益", name: "international-charity" },
+    ],
+  },
+  {
+    label: "社区",
+    name: "community",
+    subItems: [],
+  },
+  {
+    label: "资讯",
+    name: "information",
+    subItems: [
+      { label: "活动新闻", name: "activity-news" },
+      { label: "研究报告", name: "research-reports" },
+    ],
+  },
+  {
+    label: "关于我们",
+    name: "about-us",
+    subItems: [
+      { label: "基金会简介", name: "foundation-introduction" },
+      { label: "理事会简介", name: "board-intro" }, // 确保这里的名称与路由一致
+      { label: "荣誉表彰", name: "honors" }, // 确保这里的名称与路由一致
+      { label: "联系我们", name: "contact-us" },
+    ],
+  },
+  {
+    label: "个人中心",
+    name: "personal-center",
+    subItems: [],
+  },
 ];
 
 const activeItem = computed(() => route.name);
+
+const showDropdown = (name) => {
+  activeDropdown.value = menuItems.find((item) => item.name === name);
+};
+
+const handleMenuItemMouseLeave = (event) => {
+  // 延迟隐藏下拉框，以防光标还在下拉框区域内
+  hideDropdownTimer = setTimeout(() => {
+    if (dropdownContainer.value) {
+      const rect = dropdownContainer.value.getBoundingClientRect();
+      const { clientY } = event;
+      // 判断光标是否移到下拉框区域之外
+      if (clientY > rect.bottom) {
+        activeDropdown.value = null;
+      }
+    }
+  }, 200); // 延迟200ms
+};
+
+const handleDropdownMouseLeave = () => {
+  // 当光标离开下拉框时立即隐藏
+  startHideDropdownTimer();
+};
+
+const startHideDropdownTimer = () => {
+  hideDropdownTimer = setTimeout(() => {
+    activeDropdown.value = null;
+  }, 200); // 延迟200ms
+};
+
+const clearHideDropdownTimer = () => {
+  clearTimeout(hideDropdownTimer);
+};
+
+onMounted(() => {
+  document.addEventListener("click", (event) => {
+    if (activeDropdown.value) {
+      const navbar = document.querySelector(".navbar");
+      const dropdown = dropdownContainer.value;
+      if (!navbar.contains(event.target) && !dropdown.contains(event.target)) {
+        activeDropdown.value = null;
+      }
+    }
+  });
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", () => {});
+});
 </script>
 
 <style lang="scss" scoped>
@@ -52,8 +204,8 @@ const activeItem = computed(() => route.name);
 }
 
 .logo {
-  height: 80%; 
-  width: auto; 
+  height: 80%;
+  width: auto;
   max-height: 150px;
   object-fit: contain;
 }
@@ -80,19 +232,96 @@ const activeItem = computed(() => route.name);
   }
 
   &.active {
-    color: #409EFF;
+    color: #409eff;
   }
 
   &:hover {
-    color: #409EFF;
+    color: #409eff;
   }
 }
 
-@media (max-width: 768px) {
-  .nav-item {
-    font-size: 3vw; 
-    padding: 0 1vw;
-    margin-right: 2vw;
+.dropdown-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  z-index: 999;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.dropdown {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #f9f9f9;
+  border: none; /* 去除边框 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dropdown-content {
+  display: flex;
+  align-items: flex-start;
+
+  h3 {
+    width: 20%;
+    margin: 0;
+    padding-right: 20px;
+    border-right: none; /* 去除右边框 */
+    font-size: 1.2em;
+  }
+
+  ul {
+    width: 80%;
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 10%;
+      padding: 5px 0;
+      a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #409eff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-item {
+      font-size: 3vw;
+      padding: 0 1vw;
+      margin-right: 2vw;
+    }
+
+    .dropdown-content {
+      flex-direction: column;
+
+      h3 {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd; /* 保留底部边框 */
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        width: 100%;
+        padding-left: 0;
+
+        li {
+          width: 50%;
+        }
+      }
+    }
   }
 }
 </style>
