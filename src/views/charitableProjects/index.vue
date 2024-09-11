@@ -87,4 +87,40 @@
     width: calc(50% - 20px);
     background-color: #222;
 }
+
+.project-li:nth-child(3) {
+    border-radius: 20px;
+    display: inline-block;
+    float: left;
+    height: 410px;
+    margin-bottom: 20px;
+    margin-right: 20px\\;
+    overflow: hidden;
+    width: calc(100% - 20px);
+    background-color: #222;
+}
+
+.project-li:nth-child(4) {
+    border-radius: 20px;
+    display: inline-block;
+    float: left;
+    height: 840px;
+    margin-bottom: 20px;
+    margin-right: 20px\\;
+    overflow: hidden;
+    width: calc(50% - 20px);
+    background-color: #222;
+}
+
+.project-li:nth-child(7) {
+    border-radius: 20px;
+    display: inline-block;
+    float: left;
+    height: 410px;
+    margin-bottom: 20px;
+    margin-right: 20px\\;
+    overflow: hidden;
+    width: calc(100% - 20px);
+    background-color: #222;
+}
 </style>
