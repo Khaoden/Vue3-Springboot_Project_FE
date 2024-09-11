@@ -14,6 +14,8 @@ import Navbar from '../components/navbar/navbar.vue';
 <style scoped>
 .main-layout {
   min-height: 100vh;
+  /*隐藏滚动条*/
+  overflow: hidden;
 }
 
 .content-wrapper {

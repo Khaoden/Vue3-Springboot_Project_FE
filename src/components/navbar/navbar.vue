@@ -1,6 +1,7 @@
 <template>
   <div class="navbar" ref="navbar">
-    <img class="logo" src="../../assets/logo.png" alt="Logo" />
+    <img class="logo" src="../../assets/logo-icon.png" alt="Logo" />
+    <img class="logo-text" src="../../assets/logo-text.png" alt="Logo" />
     <nav class="nav-menu">
       <router-link
         v-for="item in menuItems"
@@ -208,6 +209,15 @@ onBeforeUnmount(() => {
   width: auto;
   max-height: 150px;
   object-fit: contain;
+  margin-left: 2%;
+}
+
+.logo-text {
+  height: 40%;
+  width: auto;
+  max-height: 150px;
+  object-fit: contain;
+  margin-right: 24%;
 }
 
 .nav-menu {
