@@ -1,21 +1,49 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import MainLayout from '../layouts/MainLayout.vue';
-import CharitableProject from '../views/charitableProjects/index.vue';
-import Community from '../views/community/index.vue';
-import Information from '../views/Information/index.vue';
-import AboutUs from '../views/aboutUs/index.vue';
-import PersonalCenter from '../views/personalCenter/index.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import charitableProjectsRoutes from "./charitableProjects";
+import communityRoutes from "./community";
+import informationRoutes from "./information";
+import aboutUsRoutes from "./aboutUs";
+import personalCenterRoutes from "./personalCenter";
 
 const routes = [
   {
-    path: '/',
-    component: MainLayout,
+    path: "/",
+    component: () => import("../layouts/MainLayout.vue"),
     children: [
-      { path: '', name: 'charitable-project', component: CharitableProject },
-      { path: 'community', name: 'community', component: Community },
-      { path: 'information', name: 'information', component: Information },
-      { path: 'about-us', name: 'about-us', component: AboutUs },
-      { path: 'personal-center', name: 'personal-center', component: PersonalCenter },
+      { path: "", redirect: "/charitable-projects" },
+      {
+        path: "charitable-projects",
+        name: "charitable-projects",
+        component: () => import("../views/charitableProjects/index.vue"),
+        children: charitableProjectsRoutes,
+        redirect: { name: 'platform-charity' }
+      },
+      {
+        path: "community",
+        name: "community",
+        component: () => import("../views/community/index.vue"),
+        children: communityRoutes
+      },
+      {
+        path: "information",
+        name: "information",
+        component: () => import("../views/Information/index.vue"),
+        children: informationRoutes,
+        redirect: { name: 'activity-news' }
+      },
+      {
+        path: "about-us",
+        name: "about-us",
+        component: () => import("../views/aboutUs/index.vue"),
+        children: aboutUsRoutes,
+        redirect: { name: 'foundation-introduction' }
+      },
+      {
+        path: "personal-center",
+        name: "personal-center",
+        component: () => import("../views/personalCenter/index.vue"),
+        children: personalCenterRoutes
+      },
     ],
   },
 ];
