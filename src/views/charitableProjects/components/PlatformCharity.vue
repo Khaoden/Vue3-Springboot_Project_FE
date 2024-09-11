@@ -9,6 +9,7 @@
             </div>
           </div>
           <div class="projects">
+
             <a href="" class="project-li">
               <img src="../../assets/background/test.jpg" alt="Example Image">
             </a>
@@ -30,6 +31,7 @@
             <a href="" class="project-li">
               <img src="../../assets/background/test.jpg" alt="Example Image">
             </a>
+
           </div>
         </div>
       </div>
@@ -138,7 +140,6 @@
       width: calc(100% - 20px);
       background-color: #222;
   }
-  
   .project-li img {
     height: 420px;
     width: 100%;
