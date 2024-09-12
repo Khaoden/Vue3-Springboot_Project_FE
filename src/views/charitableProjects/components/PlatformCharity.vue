@@ -11,24 +11,52 @@
           <div class="projects">
             <a href="" class="project-li">
               <img src="../../../assets/background/test.png" alt="Example Image">
+              <div class="project-info">
+                <div class="info1">平台公益</div>
+                <div class="info2">人人可参与的<br/>互联网公益</div>
+              </div>
             </a>
             <a href="" class="project-li">
               <img src="../../../assets/background/test.png" alt="Example Image">
+              <div class="project-info">
+                <div class="info1">绿水青山</div>
+                <div class="info2">帮助地球减负</div>
+              </div>
             </a>
             <a href="" class="project-li">
               <img src="../../../assets/background/test.png" alt="Example Image">
+              <div class="project-info">
+                <div class="info1">乡村振兴</div>
+                <div class="info2">产业振兴 科技振兴<br/>人才振兴 巩固脱贫攻坚</div>
+              </div>
             </a>
             <a href="" class="project-li">
               <img src="../../../assets/background/test.png" alt="Example Image">
+              <div class="project-info">
+                <div class="info1">应急救灾</div>
+                <div class="info2">才能最大限度地减少人员<br/>伤亡和财产损失</div>
+              </div>
             </a>
             <a href="" class="project-li">
               <img src="../../../assets/background/test.png" alt="Example Image">
+              <div class="project-info">
+                <div class="info1">助残扶弱</div>
+                <div class="info2">用有温度的技术<br/>助残扶弱</div>
+              </div>
             </a>
             <a href="" class="project-li">
               <img src="../../../assets/background/test.png" alt="Example Image">
+              <div class="project-info">
+                <div class="info1">健康公益</div>
+                <div class="info2">提高公众健康水平<br/>而展开的各种公益活动和服务</div>
+              </div>
             </a>
             <a href="" class="project-li">
               <img src="../../../assets/background/test.png" alt="Example Image">
+              <div class="project-info">
+                <div class="info1">国际公益</div>
+                <div class="info2">为世界带来<br/>微小而美好的改变</div>
+              </div>
             </a>
           </div>
         </div>
@@ -57,11 +85,12 @@
   }
   
   .main {
-    padding: 100px 0;
+    padding: 170px 0;
     min-height: 60vh;
     margin: 0 auto;
     width: 92%;
     max-width: 1300px;
+    letter-spacing: 2px;
   }
   
   .title-content {
@@ -75,11 +104,17 @@
   
   .title {
     font-size: 37px;
-    font-weight: 400;
+    font-weight: 500;
   }
   
   .subtitle {
+    font-size: 19px;
+    margin-top: 5px;
     color: #666;
+  }
+
+  .subtitle p {
+    margin: 0;
   }
   
   .projects {
@@ -101,6 +136,7 @@
       width: calc(50% - 20px);
       background-color: #222;
       overflow: hidden;
+      position: relative;
   }
   
   .project-li:nth-child(3) {
@@ -142,11 +178,36 @@
     height: 420px;
     width: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
   
   .project-li:hover img {
-    transform: scale(1.2); 
+    transform: scale(1.05); 
+  }
+
+  .project-info {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: calc(50% - 20px);
+    margin: 0;
+    padding: 30px;
+    text-align: left;
+  }
+  .info1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    color: grey;
+  }
+
+  .info2 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    color: grey
   }
   </style>
   
