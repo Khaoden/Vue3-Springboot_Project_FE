@@ -246,6 +246,22 @@
   padding: 0;
   color: grey;
 }
+.project-info {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: calc(50% - 20px);
+  margin: 0;
+  padding: 30px;
+  text-align: left;
+}
+.info1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: grey;
+}
 
 .info2 {
   font-size: 18px;
