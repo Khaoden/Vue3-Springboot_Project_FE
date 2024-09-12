@@ -29,12 +29,11 @@
 <style scoped>
 .health-public-service {
   text-align: center;
-  background: url('../../../assets/background/test.jpg') no-repeat center center;
+  background: url('../../../assets/background/test1.png') no-repeat center center;
   background-size:cover;
   padding: 150px 0; 
   color: white;
   overflow-x: hidden;
-  
 }
 
 .header {
