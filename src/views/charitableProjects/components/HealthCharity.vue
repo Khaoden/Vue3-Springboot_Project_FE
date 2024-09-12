@@ -7,15 +7,15 @@
   </div>
   <div class="card-container">
     <div class="card">
-      <img src="../../../assets/background/test.jpg" alt="小鹿灯">
+      <img src="../../../assets/background/test.png" alt="小鹿灯">
       <p>“小鹿灯”儿童重症救助平台</p>
     </div>
     <div class="card">
-      <img src="../../../assets/background/test.jpg" alt="军见病就诊地图">
+      <img src="../../../assets/background/test.png" alt="军见病就诊地图">
       <p>军见病就诊地图</p>
     </div>
     <div class="card">
-      <img src="../../../assets/background/test.jpg" alt="基层医生">
+      <img src="../../../assets/background/test.png" alt="基层医生">
       <p>基层医生</p>
     </div>
   </div>
