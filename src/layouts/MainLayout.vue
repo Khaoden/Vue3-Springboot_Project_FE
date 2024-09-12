@@ -13,6 +13,7 @@
 <script setup>
 import Navbar from '../components/navbar/navbar.vue';
 import Footer from '../components/footer/footer.vue';
+
 </script>
 
 <style scoped>
