@@ -9,29 +9,27 @@
             </div>
           </div>
           <div class="projects">
-
             <a href="" class="project-li">
-              <img src="../../assets/background/test.jpg" alt="Example Image">
+              <img src="../../../assets/background/test.png" alt="Example Image">
             </a>
             <a href="" class="project-li">
-              <img src="../../assets/background/test.jpg" alt="Example Image">
+              <img src="../../../assets/background/test.png" alt="Example Image">
             </a>
             <a href="" class="project-li">
-              <img src="../../assets/background/test.jpg" alt="Example Image">
+              <img src="../../../assets/background/test.png" alt="Example Image">
             </a>
             <a href="" class="project-li">
-              <img src="../../assets/background/test.jpg" alt="Example Image">
+              <img src="../../../assets/background/test.png" alt="Example Image">
             </a>
             <a href="" class="project-li">
-              <img src="../../assets/background/test.jpg" alt="Example Image">
+              <img src="../../../assets/background/test.png" alt="Example Image">
             </a>
             <a href="" class="project-li">
-              <img src="../../assets/background/test.jpg" alt="Example Image">
+              <img src="../../../assets/background/test.png" alt="Example Image">
             </a>
             <a href="" class="project-li">
-              <img src="../../assets/background/test.jpg" alt="Example Image">
+              <img src="../../../assets/background/test.png" alt="Example Image">
             </a>
-
           </div>
         </div>
       </div>
