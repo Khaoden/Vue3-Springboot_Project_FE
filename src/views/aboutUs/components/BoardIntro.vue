@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div class="placeholder--w2tkuoAk"></div>
             <div style="background:rgb(245, 245, 245);font-size:18px">
                 <div class="introduce gypad max1300">
@@ -205,7 +205,7 @@
 
 <style scoped>
 .introduce-ab {
-    font-size: 40px;/*设置理事会介绍字体大小*/
+    font-size: 300%;/*设置理事会介绍字体大小*/
 }
 
 .introduce-a {
@@ -219,7 +219,7 @@
 .introduce-a,.introduce-b {
     display: inline-block;
     vertical-align: top;
-    margin-top: 90px;
+    margin-top: 10%;
 }
 
 .introduce-b {
@@ -243,10 +243,10 @@
     /* 设置底部边框为1像素的实线，颜色为#d2d2d2 */
     border-bottom: 1px solid #d2d2d2;
     /* 设置顶部外边距为150像素 */
-    margin-top: 150px;
+    margin-top: 150;
     /* 设置文本对齐方式为左对齐 */
     text-align:left; 
-    margin-left: 105px; /*理事标题离左位置*/
+    margin-left: 8%; /*理事标题离左位置*/
 }
 
 .introduce-c>div {
