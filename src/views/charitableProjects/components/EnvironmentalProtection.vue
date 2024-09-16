@@ -54,7 +54,7 @@
 
 .title-content {
   color: #fff;
-  width: 80%;
+  width: 80%; 
   padding-top: 160px;
   margin: 0 auto;
   position: relative;
