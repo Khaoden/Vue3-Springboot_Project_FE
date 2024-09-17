@@ -2,10 +2,6 @@
   <footer>
     <div class="footer-container max1300">
       <div class="footer-ab">
-        <img
-          class="footer-a"
-          src="https://img.alicdn.com/imgextra/i1/O1CN01wdLw4V1mEKIQofhtC_!!6000000004922-2-tps-262-36.png"
-        />
         <div class="footer-b" style="cursor: pointer">
           <span class="footer-bli">
             <img
@@ -145,10 +141,6 @@
 <script setup>
 import { ref, computed, nextTick, onMounted, onBeforeUnmount } from "vue";
 import { useRoute, useRouter } from "vue-router";
-
-
-
-
 </script>
 
 <style scoped>
@@ -178,23 +170,20 @@ footer {
 
 .footer-container {
   background: #fff;
-  max-width: 100%;
   padding: 0 auto; /* 添加左右内边距 */
+  margin: 0 auto;
+  width: 80%;
 }
 
 .footer {
-    margin-top: 10%;
-    border-bottom: 10px solid #f60;
-    max-width: 100%;
-}
-
-.max1300 {
-  max-width: 1300px;
-  margin: 0 auto;
+  margin-top: 10%;
+  border-bottom: 10px solid #f60;
+  max-width: 100%;
 }
 
 .footer-ab {
   font-size: 0;
+  width: 100%;
 }
 
 .footer-b {
@@ -242,6 +231,7 @@ footer {
   justify-content: space-between;
   margin-top: 30px;
   padding: 70px 0;
+  width: 100%;
 }
 
 .footer-anvil {
@@ -277,6 +267,9 @@ footer {
   .footer-e a,
   .footer-f {
     font-size: 16px; /* 减小字体大小 */
+  }
+  .footer-b {
+    display: none;
   }
 }
 
@@ -399,7 +392,8 @@ footer {
   }
 
   .footer-a {
-    width: 3rem;
+    height: 100px;
+    width: auto;
   }
 
   .footer-bli {

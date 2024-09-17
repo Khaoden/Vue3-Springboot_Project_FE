@@ -16,33 +16,33 @@ const routes = [
         name: "charitable-projects",
         component: () => import("@/views/charitableProjects/index.vue"),
         children: charitableProjectsRoutes,
-        redirect: { name: 'platform-charity' }
+        redirect: { name: "platform-charity" },
       },
       {
         path: "community",
         name: "community",
         component: () => import("@/views/community/index.vue"),
-        children: communityRoutes
+        children: communityRoutes,
       },
       {
         path: "information",
         name: "information",
         component: () => import("@/views/Information/index.vue"),
         children: informationRoutes,
-        redirect: { name: 'activity-news' }
+        redirect: { name: "activity-news" },
       },
       {
         path: "about-us",
         name: "about-us",
         component: () => import("@/views/aboutUs/index.vue"),
         children: aboutUsRoutes,
-        redirect: { name: 'foundation-introduction' }
+        redirect: { name: "foundation-introduction" },
       },
       {
         path: "personal-center",
         name: "personal-center",
         component: () => import("@/views/personalCenter/index.vue"),
-        children: personalCenterRoutes
+        children: personalCenterRoutes,
       },
     ],
   },
@@ -51,6 +51,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // 如果有保存的滚动位置，使用它 (例如浏览器后退操作)
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      // 否则滚动到页面顶部
+      return { top: 0 };
+    }
+  },
 });
 
 export default router;

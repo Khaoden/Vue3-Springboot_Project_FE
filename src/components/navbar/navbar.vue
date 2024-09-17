@@ -227,12 +227,12 @@ onBeforeUnmount(() => {
 }
 
 .nav-item {
-  font-size: 1vw;
+  font-size: 1.3vw;
   padding: 0 1vw;
   height: 100%;
   line-height: 10vh;
   white-space: nowrap;
-  margin-right: 3vw;
+  margin-right: 3.5vw;
   text-decoration: none;
   color: #333;
   transition: color 0.3s;
@@ -266,7 +266,7 @@ onBeforeUnmount(() => {
   width: 100%;
   background-color: #f9f9f9;
   border: none; /* 去除边框 */
-  padding: 20px;
+  padding: 2%;
   box-sizing: border-box;
 }
 
@@ -285,10 +285,11 @@ onBeforeUnmount(() => {
   ul {
     width: 80%;
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 1%;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: right;
 
     li {
       width: 10%;
