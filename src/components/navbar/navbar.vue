@@ -12,7 +12,10 @@
         @mouseover="showDropdown(item.name)"
         @mouseleave="handleMenuItemMouseLeave"
       >
-        {{ item.label }}
+        <span v-if="item.name === 'personal-center'">
+          <el-dropdown @command="handleCommand"></el-dropdown>
+        </span>
+        <span v-else>{{ item.label }}</span>
       </router-link>
     </nav>
     <transition
@@ -137,6 +140,11 @@ const menuItems = [
 const activeItem = computed(() => route.name);
 
 const showDropdown = (name) => {
+  if (name === "personal-center") {
+    activeDropdown.value = null;
+
+    return;
+  }
   activeDropdown.value = menuItems.find((item) => item.name === name);
 };
 
