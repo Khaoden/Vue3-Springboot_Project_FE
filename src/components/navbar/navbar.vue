@@ -13,7 +13,7 @@
         @mouseleave="handleMenuItemMouseLeave"
       >
         <span v-if="item.name === 'personal-center'">
-          <el-dropdown @command="handleCommand"></el-dropdown>
+          <img src="" alt="User" />
         </span>
         <span v-else>{{ item.label }}</span>
       </router-link>
@@ -133,7 +133,10 @@ const menuItems = [
   {
     label: "个人中心",
     name: "personal-center",
-    subItems: [],
+    subItems: [
+      { label: "个人中心", name: "personal-center" },
+      { label: "账户设置", name: "account-settings"}
+    ],
   },
 ];
 

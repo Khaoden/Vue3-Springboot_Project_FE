@@ -10,7 +10,7 @@ const routes = [
     path: "/",
     component: () => import("@/layouts/MainLayout.vue"),
     children: [
-      { path: "", redirect: "/charitable-projects" },
+      { path: "", component: () => import("@/views/charitableProjects/index.vue")},
       {
         path: "charitable-projects",
         name: "charitable-projects",
@@ -23,6 +23,7 @@ const routes = [
         name: "community",
         component: () => import("@/views/community/index.vue"),
         children: communityRoutes,
+        redirect: { name: "invitation" },
       },
       {
         path: "information",
@@ -38,14 +39,21 @@ const routes = [
         children: aboutUsRoutes,
         redirect: { name: "foundation-introduction" },
       },
-      {
-        path: "personal-center",
-        name: "personal-center",
-        component: () => import("@/views/personalCenter/index.vue"),
-        children: personalCenterRoutes,
-      },
     ],
   },
+  {
+    path: "/personal-center",
+    name: "personal-center",
+    component: () => import("@/layouts/UserLayout.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("@/views/personalCenter/index.vue"),
+        redirect: { name: "personal-data" },
+      },
+      ...personalCenterRoutes,
+    ],
+  }  
 ];
 
 const router = createRouter({
