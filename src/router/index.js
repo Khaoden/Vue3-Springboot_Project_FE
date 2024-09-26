@@ -8,9 +8,18 @@ import personalCenterRoutes from "./personalCenter";
 const routes = [
   {
     path: "/",
+    redirect: "/login", 
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import('@/components/login/login.vue')
+  },
+  {
+    path: "/main", // 主页面的路径
     component: () => import("@/layouts/MainLayout.vue"),
     children: [
-      { path: "", component: () => import("@/views/charitableProjects/index.vue")},
+      { path: "", component: () => import("@/views/charitableProjects/index.vue") },
       {
         path: "charitable-projects",
         name: "charitable-projects",
@@ -53,7 +62,7 @@ const routes = [
       },
       ...personalCenterRoutes,
     ],
-  }  
+  },
 ];
 
 const router = createRouter({

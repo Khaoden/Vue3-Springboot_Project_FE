@@ -2,8 +2,8 @@
     <div class="login">
       <div class="container">
         <div class="tit">登录</div>
-        <input type="text" placeholder="账号" id="text" />
-        <input type="password" placeholder="密码" id="password" />
+        <input type="text" placeholder="账号" v-model="username" id="text" />
+        <input type="password" placeholder="密码" v-model="password" id="password" />
         <button @click="verify">登录</button>
         <span>没有账号？<a href="#">去注册</a></span>
       </div>
@@ -30,8 +30,21 @@
   </template>
   
   <script setup>
+  import { ref } from 'vue';
+  import { useRouter } from 'vue-router';
+
+  const username = ref('');
+  const password = ref('');
+  const router = useRouter();
+
   const verify = () => {
-    console.log('登录按钮被点击');
+    // 简单的登录逻辑：检查账号和密码是否为空
+    if (username.value && password.value) {
+      // 登录成功后，跳转到主页面
+      router.push('/main'); // 跳转到主页面
+    } else {
+      alert('请输入有效的账号和密码');
+    }
   };
   </script>
   
@@ -155,4 +168,3 @@
     }
   }
   </style>
-  
