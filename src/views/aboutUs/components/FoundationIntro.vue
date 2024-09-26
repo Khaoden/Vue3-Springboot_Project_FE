@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+
+
+
     <!-- 基金会简介 -->
     <div class="text-left">
       <span class="main-text">基金会简介</span>
@@ -129,8 +132,7 @@
             style="visibility: visible"
           >
             <img
-              src="https://img.alicdn.com/imgextra/i2/O1CN01zTb1p61rXAfmzIkCR_!!6000000005640-0-tps-640-482.jpg"
-            />
+              src="../../../assets/background/boardeIntro.jpg"/>
           </div>
         </div>
       </div>
@@ -552,13 +554,15 @@ img {
 }
 
 .about-hi {
+  /* 设置上边距为40px */
   margin-top: 40px;
+  /* 隐藏溢出内容 */
   overflow: hidden;
 }
 
 .about-h {
   float: left;
-  max-width: 585px; /* 改姚瑶图片旁边字体框架宽度*/
+  max-width: 550px; /* 改姚瑶图片旁边字体框架宽度*/
   position: relative;
   width: 47%;
   text-align: justify;
@@ -756,6 +760,26 @@ img {
   flex-direction: column;
   align-items: flex-start;
 }
+
+
+
+body {
+  background: #333F47;
+}
+
+#context {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 </style>
 
-<script setup></script>
+<script setup>
+
+</script>
