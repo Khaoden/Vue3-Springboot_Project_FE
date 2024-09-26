@@ -1,0 +1,24 @@
+name: Frontend Build and Test
+
+stages:
+  - build
+  - test
+
+jobs:
+  build_job:
+    stage: build
+    before_script:
+      - nvm use 22.1.0  # 使用 Node.js 22.1.0
+      - npm install pnpm@9.1.3 -g  # 安装 pnpm 9.1.3
+      - pnpm install  # 下载依赖
+    script:
+      - pnpm run build  # 构建项目
+
+  test_job:
+    stage: test
+    before_script:
+      - nvm use 22.1.0
+      - npm install pnpm@9.1.3 -g
+      - pnpm install
+    script:
+      - pnpm run test  # 运行测试
