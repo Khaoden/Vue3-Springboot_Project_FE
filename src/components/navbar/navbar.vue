@@ -11,9 +11,10 @@
         :class="{ active: isActiveRoute(item) }"
         @mouseover="showDropdown(item.name)"
         @mouseleave="handleMenuItemMouseLeave"
+        @click="handleMenuItemClick(item)"
       >
-        <span v-if="item.name === 'personal-center'">
-          <img src="" alt="User" />
+        <span v-if="item.name === 'personal-center'" class="personal-center">
+          <img src="@/assets/background/boardeIntro.png" alt="User" />
         </span>
         <span v-else>{{ item.label }}</span>
       </router-link>
@@ -83,6 +84,10 @@ const isActiveRoute = (item) => {
   return item.name === route.name;
 };
 
+const handleMenuItemClick = (item) => {
+  router.push({ name: item.name });
+};
+
 const handleSubItemClick = (subItem) => {
   console.log(`Navigating to ${subItem.name}`);
   router.push({ name: subItem.name });
@@ -95,7 +100,7 @@ const leave = (el) => {
 
 const menuItems = [
   {
-    label: "公益项目",
+    label: "公益",
     name: "charitable-projects",
     subItems: [
       { label: "平台公益", name: "platform-charity" },
@@ -108,9 +113,14 @@ const menuItems = [
     ],
   },
   {
-    label: "社区",
-    name: "community",
-    subItems: [],
+    label: "关于",
+    name: "about-us",
+    subItems: [
+      { label: "基金会简介", name: "foundation-introduction" },
+      { label: "理事会简介", name: "board-intro" }, // 确保这里的名称与路由一致
+      { label: "荣誉表彰", name: "honors" }, // 确保这里的名称与路由一致
+      { label: "联系我们", name: "contact-us" },
+    ],
   },
   {
     label: "资讯",
@@ -121,21 +131,16 @@ const menuItems = [
     ],
   },
   {
-    label: "关于我们",
-    name: "about-us",
-    subItems: [
-      { label: "基金会简介", name: "foundation-introduction" },
-      { label: "理事会简介", name: "board-intro" }, // 确保这里的名称与路由一致
-      { label: "荣誉表彰", name: "honors" }, // 确保这里的名称与路由一致
-      { label: "联系我们", name: "contact-us" },
-    ],
+    label: "社区",
+    name: "community",
+    subItems: [],
   },
   {
     label: "个人中心",
     name: "personal-center",
     subItems: [
-      { label: "个人中心", name: "personal-center" },
-      { label: "账户设置", name: "account-settings"}
+      { label: "个人数据", name: "personal-data" },
+      { label: "账户设置", name: "account-setting" }
     ],
   },
 ];
@@ -143,13 +148,13 @@ const menuItems = [
 const activeItem = computed(() => route.name);
 
 const showDropdown = (name) => {
-  if (name === "personal-center") {
+  if (name === "personal-center" || name === "community") {
     activeDropdown.value = null;
-
     return;
   }
   activeDropdown.value = menuItems.find((item) => item.name === name);
 };
+
 
 const handleMenuItemMouseLeave = (event) => {
   // 延迟隐藏下拉框，以防光标还在下拉框区域内
@@ -180,20 +185,22 @@ const clearHideDropdownTimer = () => {
   clearTimeout(hideDropdownTimer);
 };
 
-onMounted(() => {
-  document.addEventListener("click", (event) => {
-    if (activeDropdown.value) {
-      const navbar = document.querySelector(".navbar");
-      const dropdown = dropdownContainer.value;
-      if (!navbar.contains(event.target) && !dropdown.contains(event.target)) {
-        activeDropdown.value = null;
-      }
+const handleClickOutside = (event) => {
+  if (activeDropdown.value) {
+    const navbar = document.querySelector(".navbar");
+    const dropdown = dropdownContainer.value;
+    if (!navbar || !dropdown || !navbar.contains(event.target) && !dropdown.contains(event.target)) {
+      activeDropdown.value = null;
     }
-  });
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
 });
 
 onBeforeUnmount(() => {
-  document.removeEventListener("click", () => {});
+  document.removeEventListener("click", handleClickOutside);
 });
 </script>
 
@@ -234,12 +241,27 @@ onBeforeUnmount(() => {
 .nav-menu {
   display: flex;
   justify-content: flex-end;
-  width: 70%;
+  width: 100%;
+  height: 10vh; /* 确保导航栏有固定高度 */
+}
+
+.personal-center {
+  width: 100%; /* 使用全宽 */
+  height: 100%; 
+  display: flex;
+  align-items: center;
+}
+
+.personal-center img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .nav-item {
   font-size: 1.3vw;
-  padding: 0 1vw;
+  padding: 0 1vw; 
   height: 100%;
   line-height: 10vh;
   white-space: nowrap;
@@ -247,6 +269,9 @@ onBeforeUnmount(() => {
   text-decoration: none;
   color: #333;
   transition: color 0.3s;
+  width: 4%;
+  display: flex;
+  align-items: center;
 
   &:last-child {
     margin-right: 0;
