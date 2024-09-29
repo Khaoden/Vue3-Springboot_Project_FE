@@ -46,7 +46,7 @@ const verify = () => {
   // 简单的登录逻辑：检查账号和密码是否为空
   if (username.value && password.value) {
     // 登录成功后，跳转到主页面
-    router.push("/main"); // 跳转到主页面
+    router.push("/main");
   } else {
     alert("请输入有效的账号和密码");
   }
