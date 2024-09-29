@@ -41,12 +41,12 @@ const handleClose = (key, keyPath) => {
 
 const menuItems = [
   {
-    name: "account-setting",
-    label: "账户设置",
+    name: "personal-data",
+    label: "个人资料",
   },
   {
-    name: "personal-data",
-    label: "个人数据",
+    name: "account-setting",
+    label: "账户设置",
   },
 ];
 </script>

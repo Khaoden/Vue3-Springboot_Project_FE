@@ -56,12 +56,11 @@ const routes = [
   },
   {
     path: "/personal-center",
-    name: "personal-center",
     component: () => import("@/layouts/UserLayout.vue"),
     children: [
       {
         path: "",
-        name: "personal-center-to",
+        name: "personal-center",
         component: () => import("@/views/personalCenter/index.vue"),
         children: personalCenterRoutes,
         redirect: { name: "personal-data" },

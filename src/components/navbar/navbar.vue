@@ -6,7 +6,7 @@
       <router-link
         v-for="item in menuItems"
         :key="item.name"
-        :to="{ name: item.name }"
+        :to="getRouteForItem(item)"
         class="nav-item"
         :class="{ active: isActiveRoute(item) }"
         @mouseover="showDropdown(item.name)"
@@ -73,10 +73,6 @@ const enter = (el) => {
   });
 };
 
-const getRouteForItem = (item) => {
-  return { name: item.name };
-};
-
 const isActiveRoute = (item) => {
   if (item.subItems && item.subItems.length > 0) {
     return item.subItems.some((subItem) => subItem.name === route.name);
@@ -84,8 +80,20 @@ const isActiveRoute = (item) => {
   return item.name === route.name;
 };
 
+const getRouteForItem = (item) => {
+  if (item.name === 'personal-center') {
+    return { name: 'personal-data' };
+  }
+  return { name: item.name };
+};
+
 const handleMenuItemClick = (item) => {
-  router.push({ name: item.name });
+  if (item.name === 'personal-center') {
+    router.push({ name: 'personal-data' });
+  } else {
+    router.push({ name: item.name });
+  }
+  activeDropdown.value = null; // 关闭下拉菜单
 };
 
 const handleSubItemClick = (subItem) => {
