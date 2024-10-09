@@ -4,4 +4,9 @@ export default [
         name: "invitation",
         component: () => import("@/views/community/components/Invitation.vue"),
     },
+    {
+        path: "forum",
+        name: "forum",
+        component: () => import("@/views/community/components/Forum.vue"),
+    },
 ];
