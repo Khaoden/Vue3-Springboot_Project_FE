@@ -4,8 +4,9 @@
       <el-menu
         default-active="2"
         class="el-menu-vertical-demo"
-        @open="handleOpen"
-        @close="handleClose"
+        @open="menuActive"
+        @close="menuClose"
+        @click="isActive"
       >
         <el-sub-menu index="1">
           <template #title>
@@ -32,10 +33,14 @@ import {
   Location,
   Setting,
 } from "@element-plus/icons-vue";
-const handleOpen = (key, keyPath) => {
-  console.log(key, keyPath);
-};
-const handleClose = (key, keyPath) => {
+import { ref } from "vue";
+
+let menuActive = ref(true)
+let menuClose = ref(false)
+
+const isActive = (key, keyPath) => {
+  menuActive.value = !menuActive.value
+  menuClose.value = !menuClose.value
   console.log(key, keyPath);
 };
 
