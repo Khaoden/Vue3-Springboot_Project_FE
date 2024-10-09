@@ -39,6 +39,10 @@ import ForumList from "@/components/forum/forumList.vue";
       border-radius: 10px;
       box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
+      .forum-list {
+        padding: 20px;
+      }
+
       .title-list {
         height: 50px;
         line-height: 50px;
