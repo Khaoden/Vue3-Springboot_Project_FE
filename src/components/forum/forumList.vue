@@ -1,7 +1,18 @@
 <template>
     <div class="forum-list">
         <template class="forum-item" v-for="item in data" :key="item.id">
-            
+            <div class="main">
+                <div class="avatar">
+
+                </div>
+                <div class="description">
+
+                </div>
+                <div div="create-user">
+
+                </div>
+            </div>
+            <el-divider />
         </template>
     </div>
 </template>
