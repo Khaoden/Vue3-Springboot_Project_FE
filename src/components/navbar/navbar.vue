@@ -141,7 +141,9 @@ const menuItems = [
   {
     label: "社区",
     name: "community",
-    subItems: [],
+    subItems: [
+      { label: "论坛", name: "forum" },
+    ],
   },
   {
     label: "个人中心",
@@ -156,7 +158,7 @@ const menuItems = [
 const activeItem = computed(() => route.name);
 
 const showDropdown = (name) => {
-  if (name === "personal-center" || name === "community") {
+  if (name === "personal-center") { //  || name === "community" 为了写论坛页面方便就先给这一段注释了哈
     activeDropdown.value = null;
     return;
   }

@@ -20,9 +20,12 @@ importers:
       sass-loader:
         specifier: ^14.2.1
         version: 14.2.1(sass@1.78.0)
+      three:
+        specifier: ^0.168.0
+        version: 0.168.0
       unplugin-element-plus:
         specifier: ^0.8.0
-        version: 0.8.0
+        version: 0.8.0(rollup@4.21.2)
       vue:
         specifier: ^3.4.21
         version: 3.5.3
@@ -32,13 +35,13 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.1.3(vite@5.4.3)(vue@3.5.3)
+        version: 5.1.3(vite@5.4.3(sass@1.78.0))(vue@3.5.3)
       unplugin-auto-import:
         specifier: ^0.17.6
-        version: 0.17.8
+        version: 0.17.8(@vueuse/core@9.13.0(vue@3.5.3))(rollup@4.21.2)
       unplugin-vue-components:
         specifier: ^0.27.0
-        version: 0.27.4(vue@3.5.3)
+        version: 0.27.4(@babel/parser@7.25.6)(rollup@4.21.2)(vue@3.5.3)
       vite:
         specifier: ^5.2.0
         version: 5.4.3(sass@1.78.0)
@@ -645,6 +648,9 @@ packages:
   strip-literal@2.1.0:
     resolution: {integrity: sha512-Op+UycaUt/8FbN/Z2TWPBLge3jWrP3xj10f3fnYxf052bKuS3EKs1ZQcVGjnEMdsNVAM+plXRdmjrZ/KgG3Skw==}
 
+  three@0.168.0:
+    resolution: {integrity: sha512-6m6jXtDwMJEK/GGMbAOTSAmxNdzKvvBzgd7q8bE/7Tr6m7PaBh5kKLrN7faWtlglXbzj7sVba48Idwx+NRsZXw==}
+
   to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
@@ -873,11 +879,13 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@rollup/pluginutils@5.1.0':
+  '@rollup/pluginutils@5.1.0(rollup@4.21.2)':
     dependencies:
       '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    optionalDependencies:
+      rollup: 4.21.2
 
   '@rollup/rollup-android-arm-eabi@4.21.2':
     optional: true
@@ -939,7 +947,7 @@ snapshots:
 
   '@types/web-bluetooth@0.0.16': {}
 
-  '@vitejs/plugin-vue@5.1.3(vite@5.4.3)(vue@3.5.3)':
+  '@vitejs/plugin-vue@5.1.3(vite@5.4.3(sass@1.78.0))(vue@3.5.3)':
     dependencies:
       vite: 5.4.3(sass@1.78.0)
       vue: 3.5.3
@@ -1266,6 +1274,7 @@ snapshots:
   sass-loader@14.2.1(sass@1.78.0):
     dependencies:
       neo-async: 2.6.2
+    optionalDependencies:
       sass: 1.78.0
 
   sass@1.78.0:
@@ -1282,6 +1291,8 @@ snapshots:
     dependencies:
       js-tokens: 9.0.0
 
+  three@0.168.0: {}
+
   to-fast-properties@2.0.0: {}
 
   to-regex-range@5.0.1:
@@ -1290,9 +1301,9 @@ snapshots:
 
   ufo@1.5.4: {}
 
-  unimport@3.11.1:
+  unimport@3.11.1(rollup@4.21.2):
     dependencies:
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
       acorn: 8.12.1
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
@@ -1309,23 +1320,25 @@ snapshots:
       - rollup
       - webpack-sources
 
-  unplugin-auto-import@0.17.8:
+  unplugin-auto-import@0.17.8(@vueuse/core@9.13.0(vue@3.5.3))(rollup@4.21.2):
     dependencies:
       '@antfu/utils': 0.7.10
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
       fast-glob: 3.3.2
       local-pkg: 0.5.0
       magic-string: 0.30.11
       minimatch: 9.0.5
-      unimport: 3.11.1
+      unimport: 3.11.1(rollup@4.21.2)
       unplugin: 1.14.0
+    optionalDependencies:
+      '@vueuse/core': 9.13.0(vue@3.5.3)
     transitivePeerDependencies:
       - rollup
       - webpack-sources
 
-  unplugin-element-plus@0.8.0:
+  unplugin-element-plus@0.8.0(rollup@4.21.2):
     dependencies:
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
       es-module-lexer: 1.5.4
       magic-string: 0.30.11
       unplugin: 1.14.0
@@ -1333,10 +1346,10 @@ snapshots:
       - rollup
       - webpack-sources
 
-  unplugin-vue-components@0.27.4(vue@3.5.3):
+  unplugin-vue-components@0.27.4(@babel/parser@7.25.6)(rollup@4.21.2)(vue@3.5.3):
     dependencies:
       '@antfu/utils': 0.7.10
-      '@rollup/pluginutils': 5.1.0
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
       chokidar: 3.6.0
       debug: 4.3.7
       fast-glob: 3.3.2
@@ -1346,6 +1359,8 @@ snapshots:
       mlly: 1.7.1
       unplugin: 1.14.0
       vue: 3.5.3
+    optionalDependencies:
+      '@babel/parser': 7.25.6
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -1361,9 +1376,9 @@ snapshots:
       esbuild: 0.21.5
       postcss: 8.4.45
       rollup: 4.21.2
-      sass: 1.78.0
     optionalDependencies:
       fsevents: 2.3.3
+      sass: 1.78.0
 
   vue-demi@0.14.10(vue@3.5.3):
     dependencies:
