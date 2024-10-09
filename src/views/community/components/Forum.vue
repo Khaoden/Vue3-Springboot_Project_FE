@@ -7,6 +7,7 @@
           <el-divider class="divider" />
         </div>
         <ForumList />
+        <Pagination />
       </el-main>
       <el-aside width="500px" class="aside">
         <div class="title-list">
@@ -19,6 +20,7 @@
 </template>
 <script setup>
 import ForumList from "@/components/forum/forumList.vue";
+import Pagination from "@/components/pagination/pagination.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -26,11 +28,11 @@ import ForumList from "@/components/forum/forumList.vue";
   display: flex;
   justify-content: center;
   background-color: rgb(245, 245, 245);
-
+    
   .el-container {
+    display: flex;
     margin-top: 50px;
-    height: 1000px;
-
+    margin-bottom: 100px;
     .main {
       padding: 0;
       margin-left: 200px;
@@ -41,28 +43,22 @@ import ForumList from "@/components/forum/forumList.vue";
 
       .forum-list {
         padding: 20px;
+        padding-top: 0;
       }
 
       .title-list {
         height: 50px;
         line-height: 50px;
         .title {
-            margin-left: 20px;
+          margin-left: 20px;
+          font-weight: 800;
         }
         .divider {
-            margin: 0;
+          margin: 0;
         }
       }
     }
   }
-
-  //   .main {
-  //     max-width: 1000px;
-  //     padding: 20px;
-  //     background-color: #fff;
-  //     border-radius: 10px;
-  //     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  //   }
 
   .aside {
     margin-right: 200px;
@@ -71,15 +67,16 @@ import ForumList from "@/components/forum/forumList.vue";
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
     .title-list {
-        height: 50px;
-        line-height: 50px;
-        .title {
-            margin-left: 20px;
-        }
-        .divider {
-            margin: 0;
-        }
+      height: 50px;
+      line-height: 50px;
+      .title {
+        margin-left: 20px;
+        font-weight: 800;
       }
+      .divider {
+        margin: 0;
+      }
+    }
   }
 }
 </style>
