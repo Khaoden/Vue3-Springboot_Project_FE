@@ -3,7 +3,7 @@
     <el-container>
       <el-main class="main">
         <div class="title-list">
-          <span class="title">社区动态</span>
+          <span class="title">益论坛</span>
           <el-divider class="divider" />
         </div>
         <ForumList />
@@ -11,8 +11,9 @@
       </el-main>
       <el-aside width="500px" class="aside">
         <div class="title-list">
-          <span class="title">社区小贴</span>
+          <span class="title">益动态</span>
           <el-divider class="divider" />
+          <ForumAside />
         </div>
       </el-aside>
     </el-container>
@@ -21,6 +22,7 @@
 <script setup>
 import ForumList from "@/components/forum/forumList.vue";
 import Pagination from "@/components/pagination/pagination.vue";
+import ForumAside from '@/components/forum/forumAside.vue';
 </script>
 
 <style lang="scss" scoped>
