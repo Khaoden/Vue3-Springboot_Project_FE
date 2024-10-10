@@ -335,6 +335,10 @@ const data = [
         .router-link-active {
           color: #31755d;
           font-weight: 800;
+          transition: color 0.2s ease;
+        }
+        .router-link-active:hover {
+          color: #14ae78;
         }
       }
 
@@ -342,6 +346,11 @@ const data = [
         .router-link-active {
           color: #b58c1d;
           font-weight: 500;
+          transition: color 0.2s ease;
+        }
+
+        .router-link-active:hover {
+          color: #e3c571;
         }
       }
     }
