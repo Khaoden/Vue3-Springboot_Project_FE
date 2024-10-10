@@ -81,9 +81,6 @@ const isActiveRoute = (item) => {
 };
 
 const getRouteForItem = (item) => {
-  if (item.name === 'personal-center') {
-    return { name: 'personal-data' };
-  }
   return { name: item.name };
 };
 

@@ -14,6 +14,7 @@
     "sass": "^1.77.3",
     "sass-loader": "^14.2.1",
     "three": "^0.168.0",
+    "three-stdlib": "^2.33.0",
     "unplugin-element-plus": "^0.8.0",
     "vue": "^3.4.21",
     "vue-router": "^4.4.3"

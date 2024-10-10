@@ -10,7 +10,7 @@
         id="password"
       />
       <button @click="verify">登录</button>
-      <span>没有账号？<a href="#">去注册</a></span>
+      <span>没有账号？<router-link to="/signIn">去注册</router-link></span>
     </div>
 
     <div class="square">
