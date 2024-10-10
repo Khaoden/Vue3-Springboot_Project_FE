@@ -288,11 +288,11 @@ onBeforeUnmount(() => {
   }
 
   &.active {
-    color: #409eff;
+    color: #31755d;
   }
 
   &:hover {
-    color: #409eff;
+    color: #31755d;
   }
 }
 
@@ -346,7 +346,7 @@ onBeforeUnmount(() => {
         transition: color 0.3s;
 
         &:hover {
-          color: #409eff;
+          color: #31755d;
         }
       }
     }
