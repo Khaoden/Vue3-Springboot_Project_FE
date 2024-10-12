@@ -33,7 +33,7 @@ const projects = [
     description: "这是一个公益项目2的描述",
     image: "../../assets/background/test3.png",
     status: 3,
-  },
+  }
 ];
 
 // TODO:
