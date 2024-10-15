@@ -9,15 +9,15 @@
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="" />
+          <img src="../../../assets/background/DisasterRelief01.jpg" alt="" />
           <div class="description">河南水灾</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="" />
+          <img src="../../../assets/background/DisasterRelief02.jpg" alt="" />
           <div class="description">泸定地震</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="" />
+          <img src="../../../assets/background/DisasterRelief03.jpg" alt="" />
           <div class="description">山西水灾</div>
         </router-link>
       </div>
@@ -34,15 +34,30 @@
   padding: 0;
 }
 
-.background {
+/* .background {
   background: rgb(245, 245, 245);
   font-size: 18px;
+} */
+
+.background {
+  background-color: rgb(245, 245, 245);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/background/DisasterReliefBackground.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 .banner {
   position: relative;
-  height: 560px;
-  background-image: url("../../../assets/background/test3.png");
+  height: 600px;
+  /* background-image: url("../../../assets/background/DisasterReliefBackground.jpg"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,7 +101,7 @@
 .project-list {
   font-size: 0;
   margin-bottom: 50px;
-  width: calc(100% + 20px);
+  width: calc(100% + 120px);
 }
 
 .project-item {
@@ -98,7 +113,7 @@
   margin-right: 20px;
   float: left;
   width: calc(33.333% - 20px);
-  height: 350px;
+  height: 400px;
 }
 
 .project-item img {

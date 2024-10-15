@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="background ">
     <div class="banner">
       <div class="title-content">
         <div class="title">绿水青山</div>
@@ -9,19 +9,19 @@
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="">
+          <img src="../../../assets/background/EnvironmentalProtection01.jpg" alt="">
           <div class="description">广州绿网</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="">
+          <img src="../../../assets/background/EnvironmentalProtection02.jpg" alt="">
           <div class="description">水保护</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="">
+          <img src="../../../assets/background/EnvironmentalProtection03.jpg" alt="">
           <div class="description">清源行动</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="">
+          <img src="../../../assets/background/EnvironmentalProtection04.jpg" alt="">
           <div class="description">千岛湖水基金</div>
         </router-link>
       </div>
@@ -38,15 +38,35 @@
   padding: 0;
 }
 
+/* .background {
+  background: rgb(245, 245, 245);
+  font-size: 18px;
+} */
+
 .background {
   background: rgb(245, 245, 245);
   font-size: 18px;
+  background-color: rgb(245, 245, 245);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/background/EnvironmentalProtectionBackground.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
 }
+
+
+
 
 .banner {
   position: relative;
   height: 560px;
-  background-image: url("../../../assets/background/test1.png");
+  /* background-image: url("../../../assets/background/EnvironmentalProtectionBackground.jpg"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -102,7 +122,7 @@
   margin-right: 20px;
   float: left;
   width: calc(33.333% - 20px);
-  height: 350px;
+  height: 400px;
 }
 
 .project-item img {

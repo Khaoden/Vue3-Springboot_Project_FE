@@ -1,210 +1,177 @@
 <template>
-  <div class="container">
-
-
-
-    <!-- 基金会简介 -->
-    <div class="text-left">
-      <span class="main-text">基金会简介</span>
-      <span class="sub-text"
-        >阿里巴巴公益基金会（英文名“Alibaba
-        Foundation”），成立于2011年，是民政部主管的全国性非公募基金会。基金会以“天更蓝、心更暖”为愿景，用平台和科技的力量，共建美好社会。基金会以专业公益理念和方法聚合动员阿里巴巴集团及生态伙伴力量投身公益事业，是阿里巴巴履行社会责任、实现公益愿景的设计者、服务者和守护者。基金会积极回应践行国家战略，主要关注乡村振兴、绿水青山、助残扶弱和应急救灾四大方向，通过运营阿里巴巴公益平台（公募服务）和人人3小时平台（公益行为倡导）倡导人人公益，让更多人帮助更多人</span
-      >
-    </div>
-    <!-- 基金会信息 -->
-    <div
-      class="about-b2 wow fadeInUp animated"
-      data-wow-delay=".4s"
-      style="visibility: visible; animation-delay: 0.4s"
-    >
-      <div class="about-b3">
-        <div class="number">2011</div>
-        <p>成立时间</p>
-      </div>
-      <div class="about-b3">
-        <div class="number">4</div>
-        <p>发起公司（家）</p>
-      </div>
-      <div class="about-b3">
-        <div class="number">5000</div>
-        <p>原始基金（万元）</p>
-      </div>
-    </div>
-    <!-- 使命愿景和背景图 -->
-    <div style="background: #f8f8f8">
-      <img
-        class="about-c max"
-        src="https://img.alicdn.com/imgextra/i3/O1CN01KvuoAZ1pOLocNslDn_!!6000000005350-0-tps-1920-570.jpg"
-      />
-      <div class="about-d max1300">
-        <div
-          class="about-dul wow fadeInUp animated"
-          style="visibility: visible"
+  <div class="background">
+    <div class="container">
+      <!-- 基金会简介 -->
+      <div class="text-left">
+        <span class="main-text">基金会简介</span>
+        <span class="sub-text"
+          >在广袤的中国大地上，山区作为自然与人文的交汇点，蕴藏着丰富的自然资源和深厚的文化底蕴，但同时也面临着发展不平衡、教育资源匮乏、基础设施落后等挑战。为了积极响应国家乡村振兴战略，促进山区经济社会的全面发展，提升山区人民的生活品质与幸福感</span
         >
-          <div class="about-dli on">
-            <div class="about-d2">
-              <img
-                src="https://img.alicdn.com/imgextra/i2/O1CN01EVUOQw1Q4K6Madpj7_!!6000000001922-2-tps-62-60.png"
-              />
-            </div>
-            <div class="about-d3">使命</div>
-            <div class="about-d4">用平台和科技的力量，共建美好社会</div>
-          </div>
-          <div class="about-dli">
-            <div class="about-d2">
-              <img
-                src="https://img.alicdn.com/imgextra/i3/O1CN01KyHQM51K0IvkZlCYc_!!6000000001101-2-tps-62-60.png"
-              />
-            </div>
-            <div class="about-d3">愿景</div>
-            <div class="about-d4">天更蓝，心更暖</div>
-          </div>
-        </div>
       </div>
-    </div>
-
-    <!-- 组织架构 -->
-    <div class="about-e">
+      <!-- 基金会信息 -->
       <div
-        class="about-ebj imgBj pos"
-        style="
-          background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01w3lEPn1b6Zp4TiA1H_!!6000000003416-0-tps-1920-700.jpg);
-        "
-      ></div>
-      <div class="about-f max1300">
-        <div
-          class="about-fct wow fadeInUp animated"
-          style="visibility: visible"
-        >
-          <div
-            class="about-ftit gytit40"
-            style="float: initial; text-align: center"
-          >
-            组织架构
-          </div>
-          <div class="about-ftxt"></div>
+        class="about-b2 wow fadeInUp animated"
+        data-wow-delay=".4s"
+        style="visibility: visible; animation-delay: 0.4s"
+      >
+        <div class="about-b3">
+          <div class="number">2011</div>
+          <p>成立时间</p>
         </div>
-        <div
-          class="about-img wow fadeInUp animated"
-          style="visibility: visible"
-        >
-          <img
-            src="https://img.alicdn.com/imgextra/i1/O1CN01YSfwD01oMgqTNg55i_!!6000000005211-0-tps-705-579.jpg"
-          />
+        <div class="about-b3">
+          <div class="number">4</div>
+          <p>发起公司（家）</p>
+        </div>
+        <div class="about-b3">
+          <div class="number">5000</div>
+          <p>原始基金（万元）</p>
         </div>
       </div>
-
-      <!-- 新闻发言人 -->
-      <div class="about-gi max1300">
-        <div class="about-g gytit40">新闻发言人</div>
-        <div class="about-hi">
+      <!-- 使命愿景和背景图 -->
+      <div>
+        <img class="about-c max" src="../../../assets/background/foundationIntro01.png"/>
+        <!-- src="../../../assets/background/foundationIntro.jpg" /> -->
+        <div class="about-d max1300">
           <div
-            class="about-h wow fadeInUp animated"
+            class="about-dul wow fadeInUp animated"
             style="visibility: visible"
           >
-            <div class="about-h1 gytit40">姚瑶</div>
-            <div class="about-h2">阿里巴巴公益基金会秘书长 新闻发言人</div>
-            <div class="about-h3">
-              <p>
-                2016年加入阿里巴巴以来，致力于通过数字经济和技术领域的国际合作来促进贸易便利化，创造更加普惠的贸易环境在eWTP（世界电子贸易平台）项目中任国际项目负责人。同时是世界贸易组织（WTO）、世界经济论坛（WEF）和eWTP共同发起的“赋能电商”三方合作的主要执行人。<br />
-              </p>
-              <p>
-                2020年，负责了东南亚等地区的抗疫捐赠项目。在加入阿里巴巴之前，曾长期从事多双边贸易政策、国际发展合作等领域的工作。自2023年3月7日起正式专职担任阿里巴巴公益基金会秘书长。
-              </p>
+            <div class="about-dli on">
+              <div class="about-d2">
+                <img
+                  src="https://img.alicdn.com/imgextra/i2/O1CN01EVUOQw1Q4K6Madpj7_!!6000000001922-2-tps-62-60.png"
+                />
+              </div>
+              <div class="about-d3">使命</div>
+              <div class="about-d4">用平台和科技的力量，共建美好社会</div>
             </div>
-            <a
-              href="https://csr-foundation-public.oss-cn-hangzhou.aliyuncs.com/foundation/official/08bb3535-acd5-4b4f-8898-e82cb698f889.pdf"
-              target="_blank"
-              class="about-h4"
+            <div class="about-dli">
+              <div class="about-d2">
+                <img
+                  src="https://img.alicdn.com/imgextra/i3/O1CN01KyHQM51K0IvkZlCYc_!!6000000001101-2-tps-62-60.png"
+                />
+              </div>
+              <div class="about-d3">愿景</div>
+              <div class="about-d4">天更蓝，心更暖</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 组织架构 -->
+      <div class="about-e">
+        <!-- 组织架构背景图 -->
+        <div class="about-ebj imgBj pos">
+          
+        </div>
+        <!--  -->
+        <div class="about-f max1300">
+          <div
+            class="about-fct wow fadeInUp animated"
+            style="visibility: visible"
+          >
+            <div
+              class="about-ftit gytit40"
+              style="float: initial; text-align: center"
             >
-              阿里巴巴公益基金会新闻发言人制度
-              <img
-                src="https://img.alicdn.com/imgextra/i4/O1CN01XbgACy1D6X0TubFAr_!!6000000000167-2-tps-14-16.png"
-              />
-            </a>
+              组织架构
+            </div>
+            <div class="about-ftxt"></div>
+          </div>
+          <div
+            class="about-img wow fadeInUp animated"
+            style="visibility: visible"
+          >
             <img
-              class="about-h5"
-              src="https://img.alicdn.com/imgextra/i2/O1CN01OGfnAS1s0U1PXD3Cc_!!6000000005704-2-tps-42-38.png"
+              src="https://img.alicdn.com/imgextra/i1/O1CN01YSfwD01oMgqTNg55i_!!6000000005211-0-tps-705-579.jpg"
             />
           </div>
-          <div
-            class="about-i wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <img
-              src="../../../assets/background/boardeIntro.jpg"/>
-          </div>
         </div>
-      </div>
 
-      <!--登记信息 -->
-      <div class="about-j">
-        <div
-          class="imgBj pos"
-          style="
-            background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01Bw8YMO1JKAUe759kp_!!6000000001009-0-tps-1920-750.jpg);
-          "
-        ></div>
-        <div class="about-k max1300_1">
-          <div
-            class="about-ktit gytit40 wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            登记信息
-          </div>
-          <div class="about-kdiv">
-            <div
-              class="about-kli wow fadeInUp animated"
-              style="visibility: visible"
-            >
-              <div class="about-k2">发起单位</div>
-              <div class="about-k3"></div>
-              <div class="about-k4">
+        <!-- 新闻发言人 -->
+        <div class="about-gi max1300">
+          <div class="about-g gytit40">新闻发言人</div>
+          <div class="about-hi">
+            <div  class="about-h wow fadeInUp animated" style="visibility: visible" >
+              <div class="about-h1 gytit40">陈总</div>
+              <div class="about-h2">益行山区公益基金会秘书长 新闻发言人</div>
+              <div class="about-h3">
                 <p>
-                  阿里巴巴（中国）有限公司<br />
-                  阿里巴巴（中国）网络技术有限公司<br />
-                  淘宝（中国）软件有限公司<br />
-                  支付宝（中国）网络技术有限公司
+                  致力于通过数字经济和技术领域的国际合作来促进贸易便利化世界经济论坛（WEF）和eWTP共同发起的“赋能电商”三方合作的主要执行人。<br />
                 </p>
+                <p></p>
               </div>
+              <a
+                href="https://csr-foundation-public.oss-cn-hangzhou.aliyuncs.com/foundation/official/08bb3535-acd5-4b4f-8898-e82cb698f889.pdf"
+                target="_blank"
+                class="about-h4"
+              >
+                公益基金会新闻发言人制度
+                <img
+                  src="https://img.alicdn.com/imgextra/i4/O1CN01XbgACy1D6X0TubFAr_!!6000000000167-2-tps-14-16.png"
+                />
+              </a>
               <img
-                class="about-k5"
-                src="https://img.alicdn.com/imgextra/i4/O1CN01N72JCL211hcNxMp4j_!!6000000006925-2-tps-85-104.png"
+                class="about-h5"
+                src="https://img.alicdn.com/imgextra/i2/O1CN01OGfnAS1s0U1PXD3Cc_!!6000000005704-2-tps-42-38.png"
               />
             </div>
             <div
-              class="about-kli wow fadeInUp animated"
+              class="about-i wow fadeInUp animated"
               style="visibility: visible"
             >
-              <div class="about-k2">资质文件</div>
-              <div class="about-k3"></div>
-              <div class="about-k4">
-                <li
-                  data-img="https://img.alicdn.com/imgextra/i4/O1CN01yAReR926P7xSlhhf0_!!6000000007653-0-tps-1755-1242.jpg"
-                >
-                  基金会法人登记证书
-                </li>
-                <li
-                  data-img="https://img.alicdn.com/imgextra/i1/O1CN01XUiIWL1CWLls6GQTp_!!6000000000088-0-tps-1334-894.jpg"
-                >
-                  中国社会组织等级评估证书
-                </li>
-                <li data-img="">
-                  <a
-                    href="https://www.mca.gov.cn/n152/n165/c39529/content.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    公益性捐赠税前扣除资格：<span style="color: #ff6600"
-                      >有</span
-                    >
-                  </a>
-                </li>
+              <img src="../../../assets/background/boardeIntro.png" />
+            </div>
+          </div>
+        </div>
+
+        <!--登记信息 -->
+        <div class="about-j">
+          <div class="imgBj pos">
+
+          </div>
+          <div class="about-k max1300_1">
+            <div class="about-ktit gytit40 " >
+              登记信息
+            </div>
+            <div class="about-kdiv">
+              <div
+                class="about-kli wow fadeInUp animated"
+                style="visibility: visible"
+              >
+                <div class="about-k2">发起单位</div>
+                <div class="about-k3"></div>
+                <div class="about-k4">
+                  <p>
+                    某某（中国）有限公司<br />
+                    某某（中国）网络技术有限公司<br />
+                    某某（中国）软件有限公司<br />
+                    某某（中国）网络技术有限公司
+                  </p>
+                </div>
+                <img class="about-k5" src="https://img.alicdn.com/imgextra/i4/O1CN01N72JCL211hcNxMp4j_!!6000000006925-2-tps-85-104.png"/>
               </div>
-              <img
-                class="about-k5 about-k55"
-                src="https://img.alicdn.com/imgextra/i1/O1CN01w2zEai1Q3PJBp5vt5_!!6000000001920-2-tps-130-102.png"
-              />
+              <div class="about-kli wow fadeInUp animated"  style="visibility: visible">
+                <div class="about-k2">资质文件</div>
+                <div class="about-k3"></div>
+                <div class="about-k4">
+                  <li data-img="">
+                    基金会法人登记证书
+                  </li>
+                  <li>
+                    中国社会组织等级评估证书
+                  </li>
+                  <li data-img="">
+                    <a href="" target="_blank" rel="noopener noreferrer">
+                      公益性捐赠税前扣除资格：<span style="color: #ff6600"></span>
+                    </a>
+                  </li>
+                </div>
+                <img
+                  class="about-k5 about-k55"
+                  src="https://img.alicdn.com/imgextra/i1/O1CN01w2zEai1Q3PJBp5vt5_!!6000000001920-2-tps-130-102.png"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -214,10 +181,26 @@
 </template>
 
 <style scoped>
+.background {
+  background-color: rgb(245, 245, 245);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/background/FoundationIntroBackground.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
 .text-left {
   text-align: left;
   display: flex;
   align-items: center;
+  color: #000000;
 }
 
 .main-text {
@@ -234,17 +217,16 @@
   font-size: 100%; /* 小字体内容字体大小 */
   margin-left: 150px; /* 主文本和小字体内容之间的间距 */
   margin-top: 13%;
-  margin-left: 5%; 
+  margin-left: 5%;
   width: 55%;
 
   overflow-wrap: break-word; /* 允许在单词内部换行 */
-
 }
 
 .number {
   font-size: 40px; /* 数字字体大小 */
   width: 45%;
-  color: #f60; /* 数字颜色 */
+  color: rgb(198, 26, 26); /* 数字颜色 */
   font-weight: bold; /* 加粗 */
   margin-left: 5px; /* 数字和小字体内容之间的间距 */
   flex-shrink: 0; /* 不缩小 */
@@ -259,7 +241,7 @@
 
 .about-b3 {
   display: inline-block; /* 使用inline-block布局 */
-  margin-right:8%;
+  margin-right: 8%;
   vertical-align: top;
   font-weight: 100;
   line-height: 1;
@@ -291,7 +273,24 @@ img {
   text-align: center;
   height: auto;
   position: relative;
-  width: 100%;
+  margin-left: 230px;
+  width: 70%;
+  /* 设置背景颜色为白色 */
+  background: #fff;
+  /* 设置边框圆角为20px */
+  border-radius: 100px;
+  /* 设置鼠标悬停时的光标为指针 */
+  cursor: pointer;
+  /* 设置为行内块元素 */
+  display: inline-block;
+  /* 设置高度为385px */
+  height: 485px;
+  /* 设置右边距为1% */
+  margin-right: 0.5%;
+  /* 设置溢出内容隐藏 */
+  overflow: hidden;
+  /* 设置内边距为85px 30px 30px */
+
 }
 
 .max1300 {
@@ -349,7 +348,7 @@ img {
   /* 设置图片的边框半径为20px */
   border-radius: 20px;
   /* 设置图片的阴影效果，水平偏移量为0，垂直偏移量为3px，模糊半径为3px，颜色为#762121 */
-  box-shadow: 0 3px 3px #762121;
+  box-shadow: 5 3px 3px #762121;
   /* 设置图片的上边距为75px */
   margin-top: 75px;
   /* 设置图片的内边距为65px */
@@ -357,6 +356,7 @@ img {
   /* 设置图片的文本居中对齐 */
   text-align: center;
   background: no-repeat 50%;
+  
 }
 
 @media (max-width: 6000px) {
@@ -490,7 +490,7 @@ img {
 }
 
 .about-ftit {
-  color: #fff;
+  color: #000000;
   float: left;
 }
 
@@ -507,7 +507,7 @@ img {
 
 .about-img {
   border-radius: 20px;
-  box-shadow: 0 3px 3px #ddd;
+  box-shadow: 5px 3px 3px #ddd;
   margin-top: 75px;
   padding: 65px;
   text-align: center;
@@ -551,6 +551,7 @@ img {
 .about-g {
   text-align: center;
   font-weight: bold;
+  color: #0e0e0e;
 }
 
 .about-hi {
@@ -572,8 +573,8 @@ img {
   font-size: 40px;
   margin-bottom: 10px;
   font-weight: bold;
-  background-color: #f8f8f8;
   display: inline-block;
+  color: #1b1818;
 }
 
 .gytit40 {
@@ -583,22 +584,23 @@ img {
 .about-h2 {
   font-size: 30px;
   text-align: justify;
+  color: #1b1818;
 }
 
 .about-h3 {
-  color: #999;
+  color: #1b1818;
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 .about-h4 {
-  color: #666;
+  color: #000000;
   display: inline-block;
   font-size: 16px;
   margin-top: 50px;
   display: inline-block;
-  color: #333;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -628,6 +630,9 @@ img {
 /*登记信息*/
 .about-j,
 .about-k {
+  /* height: auto;
+  position: relative;
+  width: 100%; */
   position: relative;
 }
 
@@ -654,7 +659,8 @@ img {
 }
 
 .about-ktit {
-  color: #fff; /* 设置文字颜色为白色 */
+  color: #000000; /* 设置文字颜色为白色 */
+  margin-left: 50px;
 }
 
 .about-kdiv {
@@ -761,25 +767,94 @@ img {
   align-items: flex-start;
 }
 
-
-
-body {
-  background: #333F47;
-}
-
-#context {
-  width: 400px;
-  height: 300px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
+/* canvas{
+  position:fixed;
+  top:0;
+  left:0;
+} */
 </style>
 
 <script setup>
+// import * as THREE from 'three'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
+// const scene = new THREE.Scene();
+
+// const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// const renderer = new THREE.WebGLRenderer({
+//   canvas: document.querySelector('#bg'),
+// })
+// renderer.setPixelRatio(window.devicePixelRatio);
+// renderer.setSize(window.innerWidth, window.innerHeight);
+// camera.position.setZ(30);
+
+// renderer.render(scene, camera);
+
+// const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
+// const material = new THREE.MeshStandardMaterial({ color: 0xFF6347 });
+// const torus = new THREE.Mesh(geometry, material);
+
+// scene.add(torus)
+
+// // Lights
+// const pointLight = new THREE.PointLight(0xffffff)
+// pointLight.position.set(5, 5, 5)
+
+// const ambientLight = new THREE.AmbientLight(0xffffff)
+// scene.add(pointLight, ambientLight)
+
+// const lightHelper = new THREE.PointLightHelper(pointLight)
+// const gridHelper = new THREE.GridHelper(200, 50)
+// scene.add(lightHelper, gridHelper)
+
+// const controls = new OrbitControls(camera, renderer.domElement);
+// function addStar() {
+//   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+//   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+//   const star = new THREE.Mesh(geometry, material);
+
+//   const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+//   star.position.set(x, y, z);
+//   scene.add(star);
+
+// }
+
+// Array(200).fill().forEach(addStar);
+
+// const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+// scene.background = spaceTexture;
+
+// const jeffTexture = new THREE.TextureLoader().load('jeff.jpg');
+
+// const jeff = new THREE.Mesh(
+//   new THREE.BoxGeometry(3, 3, 3),
+//   new THREE.MeshBasicMaterial({ map: jeffTexture })
+
+// )
+// scene.add(jeff)
+
+// const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+// const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+
+// const moon = new THREE.Mesh(
+//   new THREE.SphereGeometry(3, 24, 24),
+//   new THREE.MeshStandardMaterial({
+//     map:moonTexture,
+//     normalMap: normalTexture
+//   })
+// )
+// scene.add(moon)
+
+// function animate(){
+//   requestAnimationFrame(animate);
+
+//   torus.rotation.x += 0.01;
+//   torus.rotation.y += 0.005;
+//   torus.rotation.z += 0.01;
+
+//   controls.update();
+
+//   renderer.render(scene, camera);
+// }
+// animate();
 </script>

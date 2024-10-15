@@ -1,18 +1,18 @@
 <template>
   <div class="background">
     <div class="main">
-      <div class="title-content">
-        <div class="title">公益项目</div>
-        <div class="subtitle">
-          <p>为改善人们的生活和创造一个更美好的社会</p>
-        </div>
-      </div>
+      <section class="sec">
+          <div class="title">
+            公益项目<br />
+            为改善人们的生活和创造一个更美好的社会
+          </div>
+      </section>
       <div class="projects">
         <router-link
           to="/charitable-projects/platform-charity"
           class="project-li"
         >
-          <img src="../../../assets/background/test.png" alt="Example Image" />
+          <img src="../../../assets/background/PlatformCharity01.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">平台公益</div>
             <div class="info2">人人可参与的<br />互联网公益</div>
@@ -22,7 +22,7 @@
           to="/charitable-projects/environmental-protection"
           class="project-li"
         >
-          <img src="../../../assets/background/test.png" alt="Example Image" />
+          <img src="../../../assets/background/PlatformCharity02.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">绿水青山</div>
             <div class="info2">帮助地球减负</div>
@@ -32,7 +32,7 @@
           to="/charitable-projects/rural-revitalization"
           class="project-li"
         >
-          <img src="../../../assets/background/test.png" alt="Example Image" />
+          <img src="../../../assets/background/PlatformCharity03.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">乡村振兴</div>
             <div class="info2">
@@ -44,7 +44,7 @@
           to="/charitable-projects/disaster-relief"
           class="project-li"
         >
-          <img src="../../../assets/background/test.png" alt="Example Image" />
+          <img src="../../../assets/background/PlatformCharity02.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">应急救灾</div>
             <div class="info2">才能最大限度地减少人员<br />伤亡和财产损失</div>
@@ -54,7 +54,7 @@
           to="/charitable-projects/disability-support"
           class="project-li"
         >
-          <img src="../../../assets/background/test.png" alt="Example Image" />
+          <img src="../../../assets/background/PlatformCharity05.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">助残扶弱</div>
             <div class="info2">用有温度的技术<br />助残扶弱</div>
@@ -64,7 +64,7 @@
           to="/charitable-projects/health-charity"
           class="project-li"
         >
-          <img src="../../../assets/background/test.png" alt="Example Image" />
+          <img src="../../../assets/background/PlatformCharity06.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">健康公益</div>
             <div class="info2">
@@ -76,7 +76,7 @@
           to="/charitable-projects/international-charity"
           class="project-li"
         >
-          <img src="../../../assets/background/test.png" alt="Example Image" />
+          <img src="../../../assets/background/PlatformCharity07.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">国际公益</div>
             <div class="info2">为世界带来<br />微小而美好的改变</div>
@@ -95,6 +95,14 @@
   font-size: 18px;
   margin: 0;
   padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/background/PlatformCharityBackground.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 .main {
@@ -107,7 +115,7 @@
 }
 
 .title-content {
-  color: #333;
+  color: #9d1c1c;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -117,6 +125,7 @@
 .title {
   font-size: 37px;
   font-weight: 500;
+  color: #f3ebeb;
 }
 
 .subtitle {
@@ -210,7 +219,7 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
-  color: grey;
+  color: rgb(234, 225, 225);
 }
 .project-info {
   bottom: 0;
@@ -226,7 +235,7 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
-  color: grey;
+  color: rgb(234, 225, 225);
 }
 
 .info2 {
@@ -234,6 +243,6 @@
   margin: 0;
   padding: 0;
   margin-top: 5px;
-  color: grey;
+  color: rgb(234, 225, 225);
 }
 </style>
