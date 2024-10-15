@@ -6,27 +6,57 @@
         <h2>欢迎您的到来</h2>
         <form @submit.prevent="handleSubmit" autocomplete="off">
           <div class="input-group">
-            <label for="email">电子邮箱</label>
-            <input
-              id="email"
-              v-model="email"
-              type="email"
-              placeholder="Enter your email"
-              required
-            />
+            <label for="username">用户名</label>
+            <div class="input-wrapper">
+              <input
+                id="username"
+                v-model="username"
+                type="text"
+                placeholder="输入用户名"
+                required
+              />
+            </div>
           </div>
+
+          <div class="input-group">
+            <label for="email">电子邮箱</label>
+            <div class="input-wrapper">
+              <input
+                id="email"
+                v-model="email"
+                type="email"
+                placeholder="输入您的邮箱"
+                required
+                @input="validateEmail"
+              />
+              <span class="icon" v-show="emailValid !== null">
+                <i v-show="emailValid" class="green-check">✔️</i>
+                <i v-show="!emailValid" class="red-cross">✖️</i>
+              </span>
+            </div>
+          </div>
+
           <div class="input-group">
             <label for="password">密码</label>
-            <input
-              id="password"
-              v-model="password"
-              type="password"
-              placeholder="Enter your password"
-              required
-            />
+            <div class="input-wrapper">
+              <input
+                id="password"
+                v-model="password"
+                type="password"
+                placeholder="输入您的密码"
+                required
+                @input="validatePassword"
+              />
+              <span class="icon" v-show="passwordValid !== null">
+                <i v-show="passwordValid" class="green-check">✔️</i>
+                <i v-show="!passwordValid" class="red-cross">✖️</i>
+              </span>
+            </div>
           </div>
+
           <button type="submit">注册</button>
         </form>
+
         <div class="form-footer">
           <p>已有账号，去登录！<router-link to="/login">登录</router-link></p>
         </div>
@@ -43,15 +73,49 @@ import { Sky } from "three/examples/jsm/objects/Sky";
 import { Water } from "three/examples/jsm/objects/Water";
 import { ImprovedNoise } from "three/examples/jsm/math/ImprovedNoise";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { useRouter } from "vue-router";
+import { register } from '@/api/auth.js'; 
 
 const threeCanvas = ref(null);
-const email = ref("");
-const password = ref("");
+const username = ref('');
+const email = ref('');
+const password = ref('');
+const emailValid = ref(null);
+const passwordValid = ref(null);
+const router = useRouter();
 
-const handleSubmit = () => {
-  console.log("Submitting:", { email: email.value, password: password.value });
-  // 这里添加您的提交逻辑
+const validateEmail = () => {
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  emailValid.value = emailPattern.test(email.value);
 };
+
+const validatePassword = () => {
+  // 例如：密码至少 6 位，且包含字母和数字
+  const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+  passwordValid.value = passwordPattern.test(password.value);
+};
+
+const handleSubmit = async () => {
+  if (emailValid.value && passwordValid.value) {
+    try {
+      const response = await register(username.value, email.value, password.value);
+      console.log('注册成功', response.data);
+      alert('注册成功！请检查您的邮箱以验证账户。');
+      router.push('/login');
+    } catch (error) {
+      console.error('注册失败', error.response?.data);
+      alert(error.response?.data || "注册失败，请重试");
+    }
+  } else {
+    alert('请确保所有字段均有效！');
+  }
+};
+
+// 这里是您的 Three.js 初始化代码
+onMounted(() => {
+  // 初始化 Three.js 场景
+  // ...（您的 Three.js 代码）
+});
 
 function generateTerrain(width, height, depth, scale) {
   const data = new Float32Array(width * height);
@@ -249,6 +313,7 @@ canvas {
 
 .form-content {
   padding: 40px;
+  width: 85%;
 }
 
 h2 {
@@ -271,7 +336,30 @@ form {
 
 .input-group {
   margin-bottom: 20px;
-  width: 95%;
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 18px;
+  flex-shrink: 0; 
+  margin-left: 10px; 
+  font-size: 18px; 
+}
+
+.green-check {
+  color: green;
+}
+
+.red-cross {
+  color: red;
 }
 
 label {
@@ -297,18 +385,27 @@ input:focus {
   background: white;;
 }
 
-input:-webkit-autofill {
-    background-color: #f0f8ff; 
-    color: #000; 
+input:not(:placeholder-shown) {
+    background-color: #f8f9fa; /* 可选：改变背景颜色 */
 }
 
-input:-webkit-autofill:focus {
-    color: white 
+/* input:valid {
+
+} */
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #fff !important;
+    color: #333 !important;
+    box-shadow: 0 0 0px 1000px white inset !important; /* 消除默认的黄色阴影 */
+    -webkit-text-fill-color: #333 !important; /* 文字颜色 */
+    transition: background-color 5000s ease-in-out 0s; /* 防止闪烁 */
 }
 
 
 button {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   background-color: rgba(255, 255, 255, 0.5);
   color: black;

@@ -120,12 +120,6 @@ const changePage = (page) => {
   padding: 0;
 }
 
-/* .background {
-  background: #f6f6f6;
-  font-size: 18px;
-  min-height: 100vh;
-  overflow: hidden;
-} */
 .background {
   background-color: rgb(245, 245, 245);
   font-size: 18px;
@@ -151,7 +145,7 @@ const changePage = (page) => {
   top: 0;
   z-index: 10;
   text-align: center;
-
+  background: rgba(255, 255, 255, 0); /* 完全透明的白色背景 */
 }
 
 .title {
@@ -176,6 +170,7 @@ const changePage = (page) => {
   width: 80%;
   margin: 0 auto;
   margin-top: 10px;
+  background: rgba(255, 255, 255, 0.5);;
 }
 
 .project-list {
