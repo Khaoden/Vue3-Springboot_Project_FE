@@ -12,7 +12,6 @@
       <button @click="verify">登录</button>
       <span>没有账号？<router-link to="/signIn">去注册</router-link></span>
     </div>
-
     <div class="square">
       <ul>
         <li></li>
@@ -37,22 +36,35 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { login } from '@/api/auth.js';
 
 const username = ref("");
 const password = ref("");
 const router = useRouter();
 
-const verify = () => {
-  // 简单的登录逻辑：检查账号和密码是否为空
-  if (username.value && password.value) {
-    // 登录成功后，跳转到主页面
+const verify = async () => {
+  if (!username.value || !password.value) {
+    return alert("请输入有效的账号和密码");
+  }
+  try {
+    const response = await login(username.value, password.value);
+    localStorage.setItem('token', response.data.token);
+    console.log('登录成功', response.data);
+    // Assuming the backend returns a user object with a token
+    localStorage.setItem('user', JSON.stringify(response.data));
     router.push("/main");
-  } else {
-    alert("请输入有效的账号和密码");
+  } catch (error) {
+    console.error('登录失败', error.response?.data);
+    alert(error.response?.data || "登录失败，请重试");
   }
 };
-</script>
 
+const logout = () => {
+  localStorage.removeItem('token');
+  // 重定向到登录页面或首页
+  router.push('/login');
+};
+</script>
 <style scoped>
 *{
     /* 初始化 */
@@ -111,7 +123,7 @@ const verify = () => {
     letter-spacing: 8px;
     border-radius: 10px;
     cursor: pointer;
-    /* 动画过渡 */
+    /* 画过渡 */
     transition: 0.5s;
 }
 .container button:hover{

@@ -85,8 +85,8 @@ const getRouteForItem = (item) => {
 };
 
 const handleMenuItemClick = (item) => {
-  if (item.name === 'personal-center') {
-    router.push({ name: 'personal-data' });
+  if (item.name === "personal-center") {
+    router.push({ name: "personal-data" });
   } else {
     router.push({ name: item.name });
   }
@@ -138,16 +138,14 @@ const menuItems = [
   {
     label: "社区",
     name: "community",
-    subItems: [
-      { label: "论坛", name: "forum" },
-    ],
+    subItems: [{ label: "论坛", name: "forum" }],
   },
   {
     label: "个人中心",
     name: "personal-center",
     subItems: [
       { label: "个人数据", name: "personal-data" },
-      { label: "账户设置", name: "account-setting" }
+      { label: "账户设置", name: "account-setting" },
     ],
   },
 ];
@@ -155,13 +153,13 @@ const menuItems = [
 const activeItem = computed(() => route.name);
 
 const showDropdown = (name) => {
-  if (name === "personal-center") { //  || name === "community" 为了写论坛页面方便就先给这一段注释了哈
+  if (name === "personal-center") {
+    //  || name === "community" 为了写论坛页面方便就先给这一段注释了哈
     activeDropdown.value = null;
     return;
   }
   activeDropdown.value = menuItems.find((item) => item.name === name);
 };
-
 
 const handleMenuItemMouseLeave = (event) => {
   // 延迟隐藏下拉框，以防光标还在下拉框区域内
@@ -196,7 +194,11 @@ const handleClickOutside = (event) => {
   if (activeDropdown.value) {
     const navbar = document.querySelector(".navbar");
     const dropdown = dropdownContainer.value;
-    if (!navbar || !dropdown || !navbar.contains(event.target) && !dropdown.contains(event.target)) {
+    if (
+      !navbar ||
+      !dropdown ||
+      (!navbar.contains(event.target) && !dropdown.contains(event.target))
+    ) {
       activeDropdown.value = null;
     }
   }
@@ -254,7 +256,7 @@ onBeforeUnmount(() => {
 
 .personal-center {
   width: 100%; /* 使用全宽 */
-  height: 100%; 
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -268,7 +270,7 @@ onBeforeUnmount(() => {
 
 .nav-item {
   font-size: 1.3vw;
-  padding: 0 1vw; 
+  padding: 0 1vw;
   height: 100%;
   line-height: 10vh;
   white-space: nowrap;
@@ -279,6 +281,7 @@ onBeforeUnmount(() => {
   width: 4%;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   &:last-child {
     margin-right: 0;
