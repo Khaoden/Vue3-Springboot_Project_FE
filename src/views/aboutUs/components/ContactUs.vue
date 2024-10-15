@@ -18,7 +18,7 @@
             </div>
             <div class="contact-d">
               <div class="contact-d1">联系电话</div>
-              <div class="contact-d2">0571-86561717</div>
+              <div class="contact-d2">  12345678912</div>
             </div>
           </div>
           <div class="contact-li wow fadeInUp animated">
@@ -29,7 +29,7 @@
             </div>
             <div class="contact-d">
               <div class="contact-d1">联系邮箱</div>
-              <div class="contact-d2">alifoundation@alibaba-inc.com</div>
+              <div class="contact-d2">123456789qq.com</div>
             </div>
           </div>
         </div>
@@ -42,14 +42,9 @@
           ></div>
           <div class="contact-f">
             <div class="contact-f1">
-              浙江省杭州市余杭区文一西路969号西溪园区
+              江苏省镇江市丹阳市南京师范大学中北学院
             </div>
-            <a
-              href="https://j.map.baidu.com/d1/NT"
-              target="_blank"
-              class="contact-f2"
-              >立即前往</a
-            >
+            <a href="https://gaode.com/" target="_blank" class="contact-f2">立即前往</a>
           </div>
         </div>
       </div>
@@ -145,9 +140,9 @@
 
 .contact-f {
   position: absolute;
-  right: 90px;
+  right: 4%;
   top: 80px;
-  width: 245px;
+  width: 240px;
 }
 
 .contact-f1 {

@@ -9,18 +9,17 @@
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="" />
+          <img src="../../../assets/background/HealthCharity01.jpg" alt="" />
           <div class="description">爱豆银铃关怀</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/test.png" alt="" />
+          <img src="../../../assets/background/HealthCharity02.jpg" alt="" />
           <div class="description">直播助残</div>
         </router-link>
       </div>
     </div>
   </div>
 </template>
-<<<<<<< Updated upstream
     
     <script setup>
 </script>
@@ -31,15 +30,30 @@
   padding: 0;
 }
 
-.background {
+/* .background {
   background: rgb(245, 245, 245);
   font-size: 18px;
+} */
+
+.background {
+  background-color: rgb(245, 245, 245);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/background/HealthCharityBackground.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 .banner {
   position: relative;
   height: 560px;
-  background-image: url("../../../assets/background/test2.png");
+  /* background-image: url("../../../assets/background/HealthCharityBackground.jpg"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,7 +97,7 @@
 .project-list {
   font-size: 0;
   margin-bottom: 50px;
-  width: calc(100% + 20px);
+  width: calc(100% + 130px);
 }
 
 .project-item {
@@ -95,7 +109,7 @@
   margin-right: 20px;
   float: left;
   width: calc(33.333% - 20px);
-  height: 350px;
+  height: 450px;
 }
 
 .project-item img {
@@ -134,7 +148,6 @@
 }
 </style>
     
-=======
 
 
 <script setup>
@@ -198,4 +211,3 @@
     font-size: 1.1rem;
   }
 </style>
->>>>>>> Stashed changes

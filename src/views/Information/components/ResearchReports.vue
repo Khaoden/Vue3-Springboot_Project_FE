@@ -1,8 +1,12 @@
 <template>
   <div class="background">
     <div class="title-content">
-      <div class="title">研究报告</div>
-      <div class="subtitle">公益的本质是“唤醒”人的善意，为此我们一直不懈努力</div>
+      <div class="title-content">
+        <div class="title">研究报告</div>
+        <div class="subtitle">
+          公益的本质是“唤醒”人的善意，为此我们一直不懈努力
+        </div>
+      </div>
     </div>
     <div class="projects">
       <div class="project-list">
@@ -51,37 +55,169 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import image from '@/assets/background/test.png';
-import image1 from '@/assets/background/test1.png';
-
+import { ref, computed } from "vue";
+import image1 from "@/assets/background/ActivityNews01.jpeg";
+import image2 from "@/assets/background/ActivityNews06.jpeg";
+import image3 from "@/assets/background/ActivityNews03.jpeg";
+import image4 from "@/assets/background/ActivityNews04.jpeg";
+import image5 from "@/assets/background/ActivityNews05.jpeg";
+import image6 from "@/assets/background/ActivityNews06.jpeg";
+import image7 from "@/assets/background/ActivityNews07.jpeg";
+import image8 from "@/assets/background/ActivityNews08.jpeg";
+import image9 from "@/assets/background/ActivityNews09.jpeg";
+import image10 from "@/assets/background/ActivityNews10.jpeg";
+import image11 from "@/assets/background/ActivityNews11.jpeg";
+import image12 from "@/assets/background/ActivityNews12.jpeg";
+import image13 from "@/assets/background/ActivityNews13.jpeg";
+import image14 from "@/assets/background/ActivityNews05.jpeg";
+import image15 from "@/assets/background/ActivityNews08.jpeg";
+import image16 from "@/assets/background/ActivityNews09.jpeg";
+import image17 from "@/assets/background/ActivityNews03.jpeg";
+import image18 from "@/assets/background/ActivityNews07.jpeg";
+import image19 from "@/assets/background/ActivityNews01.jpeg";
 
 const projects = ref([
-  { id: 1, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image1, link: '' },
-  { id: 2, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 3, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 4, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 5, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 6, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 7, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 8, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 9, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 10, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 11, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 12, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 13, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 14, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 15, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 16, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 17, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 18, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' },
-  { id: 19, title: '第八届阿里95公益周启动', date: '2022-12-12', image: image, link: '' }
+  {
+    id: 1,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image1,
+    link: "",
+  },
+  {
+    id: 2,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image2,
+    link: "",
+  },
+  {
+    id: 3,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image3,
+    link: "",
+  },
+  {
+    id: 4,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image4,
+    link: "",
+  },
+  {
+    id: 5,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image5,
+    link: "",
+  },
+  {
+    id: 6,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image6,
+    link: "",
+  },
+  {
+    id: 7,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image7,
+    link: "",
+  },
+  {
+    id: 8,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image8,
+    link: "",
+  },
+  {
+    id: 9,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image9,
+    link: "",
+  },
+  {
+    id: 10,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image10,
+    link: "",
+  },
+  {
+    id: 11,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image11,
+    link: "",
+  },
+  {
+    id: 12,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image12,
+    link: "",
+  },
+  {
+    id: 13,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image13,
+    link: "",
+  },
+  {
+    id: 14,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image14,
+    link: "",
+  },
+  {
+    id: 15,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image15,
+    link: "",
+  },
+  {
+    id: 16,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image16,
+    link: "",
+  },
+  {
+    id: 17,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image17,
+    link: "",
+  },
+  {
+    id: 18,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image18,
+    link: "",
+  },
+  {
+    id: 19,
+    title: "第一届益行山区公益周启动",
+    date: "2022-12-12",
+    image: image19,
+    link: "",
+  },
 ]);
 
 const itemsPerPage = 9;
 const currentPage = ref(1);
 
-const totalPages = computed(() => Math.ceil(projects.value.length / itemsPerPage));
+const totalPages = computed(() =>
+  Math.ceil(projects.value.length / itemsPerPage)
+);
 
 const paginatedProjects = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage;
@@ -102,11 +238,25 @@ const changePage = (page) => {
   padding: 0;
 }
 
-.background {
+/* .background {
   background: #f6f6f6;
   font-size: 18px;
   min-height: 100vh;
   overflow: hidden;
+} */
+.background {
+  background-color: rgb(245, 245, 245);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/background/ResearchReportsBackground.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 .title-content {
@@ -119,7 +269,6 @@ const changePage = (page) => {
   top: 0;
   z-index: 10;
   text-align: center;
-  background: #f6f6f6;
 }
 
 .title {
@@ -134,7 +283,7 @@ const changePage = (page) => {
   line-height: 1.6;
   margin-top: 10px;
   letter-spacing: 1px;
-  color: #888;
+  color: #000000;
 }
 
 .projects {
@@ -144,7 +293,6 @@ const changePage = (page) => {
   width: 80%;
   margin: 0 auto;
   margin-top: 10px;
-  background: #efefef;
 }
 
 .project-list {
@@ -160,7 +308,7 @@ const changePage = (page) => {
   border-radius: 20px;
   margin-top: 30px;
   margin-right: 20px;
-  float:left;
+  float: left;
   width: calc(33.333% - 20px);
   height: 350px;
 }
@@ -220,7 +368,6 @@ const changePage = (page) => {
   border-radius: 5px;
   margin: 0 5px;
   cursor: pointer;
-
 }
 
 .page a.arrow {

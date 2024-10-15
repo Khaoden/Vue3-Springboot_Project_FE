@@ -1,360 +1,336 @@
 <template>
-  <div class="container">
-    <div class="placeholder--w2tkuoAk"></div>
-    <div style="background: rgb(245, 245, 245); font-size: 18px">
-      <div class="introduce gypad max1300">
-        <div class="introduce-ab">
-          <div
-            class="introduce-a gytit40 wow fadeInLeft animated"
-            style="visibility: visible; animation-name: fadeInLeft"
-          >
-            理事会简介
-          </div>
-          <div
-            class="introduce-b wow fadeInRight animated"
-            style="visibility: visible; animation-name: fadeInRight"
-          >
-            <p>
-              <span
-                style="
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-                >理事长 ：孙利军</span
-              >
-              <br
-                style="
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-              />
-              <span
-                style="
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-                >副理事长 ：胡晓明、王帅</span
-              >
-              <br
-                style="
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-              />
-              <span
-                style="
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-                >秘书长 ：姚瑶</span
-              >
-              <br
-                style="
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-              />
-              <span
-                style="
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-                >理事
-                ：邵晓锋、刘振飞、张爽、于秀红、刘文奎、宋迎春、欧阳晨曦、徐晓新</span
-              >
-              <br
-                style="
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-              />
-              <span
-                style="
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-                >监事 ：韩敏</span
-              >
-              <br
-                style="
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
-                  color: rgb(102, 102, 102);
-                  font-size: 20px;
-                  background-color: rgb(245, 245, 245);
-                "
-              />
-            </p>
+  <div class="background">
+    <div class="container">
+      <div class="placeholder--w2tkuoAk"></div>
+      <div >
+        <div class="introduce gypad max1300">
+          <div class="introduce-ab">
+            <div  class="introduce-a gytit40 wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft">
+              理事会简介
+            </div>
             <div
-              class="introduce-b2"
-              style="
-                margin: 45px 0px 0px;
-                padding: 0;
-                box-sizing: border-box;
-                color: rgb(153, 153, 153);
-                font-size: 20px;
-                background-color: rgb(245, 245, 245);
-              "
+              class="introduce-b wow fadeInRight animated"
+              style="visibility: visible; animation-name: fadeInRight"
             >
-              *理事会成员与监事均不在基金会受薪
+              <p>
+                <span
+                  style="
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                  >理事长 ：某某某</span
+                >
+                <br
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                />
+                <span
+                  style="
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                  >副理事长 ：某某某、某某</span
+                >
+                <br
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                />
+                <span
+                  style="
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                  >秘书长 ：某某</span
+                >
+                <br
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                />
+                <span
+                  style="
+                   color:black;
+                    font-size: 20px;
+
+                  "
+                  >理事 ：某某某、某某</span
+                >
+                <br
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                />
+                <span
+                  style="
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                  >监事 ：某某</span
+                >
+                <br
+                  style="
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    color:black;
+                    font-size: 20px;
+
+                  "
+                />
+              </p>
+              <div class="introduce-b2" style="  margin: 30px 0px 0px;  padding: 0; box-sizing: border-box; color:black;  font-size: 20px; "  >
+                *理事会成员与监事均不在基金会受薪
+              </div>
+              <p>
+                <br />
+              </p>
             </div>
-            <p>
-              <br />
-            </p>
+          </div>
+          <div class="introduce-c wow fadeInUp animated" style="visibility: visible">
+            <div>理事</div>
+          </div>
+          <div class="introduce-d wow fadeInUp animated" style="visibility: visible">
+            <div class="introduce-dli hoverImg wow fadeInUp animated" style="visibility: visible">
+              <div class="introduce-d2">
+                <div class="card front fronta1"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公司合伙人、益行山区基金会理事长</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta2"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>某某</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta3"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区基金会副理事长</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta4"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">默默</div>
+              <div class="introduce-d3">
+                <p>益行山区益基金会理事</p>
+                <p>益行山区集团秘书长</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front front fronta5"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>益行山区董事长</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta6"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>益行山区生态保护基金会创始人 &amp;CEO</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta7"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>益行山区公益基金会理事长</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta8"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>益行山区乡村发展基金会副理事长</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta9"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>梦想集团创始人 &amp;CEO</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta10"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>有灵且美创始人</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta11"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>、、、、、</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta12"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会理事</p>
+                <p>秘书长</p>
+              </div>
+            </div>
+            <div
+              class="introduce-dli hoverImg wow fadeInUp animated"
+              style="visibility: visible"
+            >
+              <div class="introduce-d2">
+                <div class="card front fronta13"></div>
+                <img src="../../../assets/background/boardeIntro02.jpg" />
+                <div class="card back"></div>
+              </div>
+              <div class="introduce-d2">某某某</div>
+              <div class="introduce-d3">
+                <p>益行山区公益基金会监事</p>
+                <p>自由职业</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          class="introduce-c wow fadeInUp animated"
-          style="visibility: visible"
-        >
-          <div>理事</div>
-        </div>
-        <div
-          class="introduce-d wow fadeInUp animated"
-          style="visibility: visible"
-        >
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
+        <div>
+          <div class="introduce-ef max1300">
+            <div  class="introduce-e gytit40 wow fadeInUp animated"    style="visibility: visible"  >
+              理事会议信息
             </div>
-            <div class="introduce-d2">孙利军</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴合伙人、阿里巴巴公益基金会理事长</p>
+            <div class="introduce-f">
+              <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
+                <div class="introduce-f1"></div>
+                <div class="introduce-f2">2020</div>
+              </a>
+              <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
+                <div class="introduce-f1"></div>
+                <div class="introduce-f2">2021</div>
+              </a>
+              <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
+                <div class="introduce-f1"></div>
+                <div class="introduce-f2">2022</div>
+              </a>
+              <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
+                <div class="introduce-f1"></div>
+                <div class="introduce-f2">2023</div>
+              </a>
             </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">胡晓明</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会副理事长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">王帅</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会副理事长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">邵晓锋</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>阿里巴巴集团秘书长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-            </div>
-            <div class="introduce-d2">刘振飞</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>高德地图董事长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">张爽</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>桃花源生态保护基金会创始人 &amp;CEO</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-            </div>
-            <div class="introduce-d2">于秀红</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>马云公益基金会理事长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">刘文奎</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>中国乡村发展基金会副理事长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">宋迎春</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>Today今天梦想集团创始人 &amp;CEO</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">欧阳晨曦</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>有灵且美创始人</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">徐晓新</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>北京师范大学政府管理学院副教授、中国公益研究院执行院长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">姚瑶</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会理事</p>
-              <p>秘书长</p>
-            </div>
-          </div>
-          <div
-            class="introduce-dli hoverImg wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="introduce-d2">
-              <img src="../../../assets/background/boardeIntro02.jpg"/>
-              
-            </div>
-            <div class="introduce-d2">韩敏</div>
-            <div class="introduce-d3">
-              <p>阿里巴巴公益基金会监事</p>
-              <p>自由职业</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="background: #eeeeee">
-        <div class="introduce-ef max1300">
-          <div
-            class="introduce-e gytit40 wow fadeInUp animated"
-            style="visibility: visible"
-          >
-            理事会议信息
-          </div>
-          <div class="introduce-f">
-            <a
-              class="introduce-fli wow fadeInUp animated"
-              style="visibility: visible"
-              href="/about-us/council/meetings/46"
-            >
-              <div class="introduce-f1"></div>
-              <div class="introduce-f2">2020</div>
-            </a>
-            <a
-              class="introduce-fli wow fadeInUp animated"
-              style="visibility: visible"
-              href="/about-us/council/meetings/47"
-            >
-              <div class="introduce-f1"></div>
-              <div class="introduce-f2">2021</div>
-            </a>
-            <a
-              class="introduce-fli wow fadeInUp animated"
-              style="visibility: visible"
-              href="/about-us/council/meetings/48"
-            >
-              <div class="introduce-f1"></div>
-              <div class="introduce-f2">2022</div>
-            </a>
-            <a
-              class="introduce-fli wow fadeInUp animated"
-              style="visibility: visible"
-              href="/about-us/council/meetings/49"
-            >
-              <div class="introduce-f1"></div>
-              <div class="introduce-f2">2023</div>
-            </a>
           </div>
         </div>
       </div>
@@ -365,8 +341,23 @@
 <script setup></script>
 
 <style scoped>
+.background {
+  background-color: rgb(245, 245, 245);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/background/FoundationIntroBackground.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
 .introduce-ab {
   font-size: 300%; /*设置理事会介绍字体大小*/
+  margin-left: 100px;
 }
 
 .introduce-a {
@@ -374,6 +365,7 @@
   width: 30.5%;
   /* 设置字体加粗 */
   font-weight: bold;
+  color:black;
 }
 
 /* 设置.introduce-a和.introduce-b的display属性为inline-block，vertical-align属性为top，margin-top属性为90px */
@@ -402,12 +394,13 @@
 
 .introduce-c {
   /* 设置底部边框为1像素的实线，颜色为#d2d2d2 */
-  border-bottom: 1px solid #d2d2d2;
+  border-bottom: 2px solid #0f0e0e;
   /* 设置顶部外边距为150像素 */
   margin-top: 150;
   /* 设置文本对齐方式为左对齐 */
   text-align: left;
   margin-left: 8%; /*理事标题离左位置*/
+  color: #0f0e0e;
 }
 
 .introduce-c > div {
@@ -425,15 +418,16 @@
   /* 设置元素底部外边距为55px */
   margin-bottom: 55px;
   /* 设置元素右侧外边距为30px */
-  margin-right: 30px;
+  margin-right: 2px;
   /* 设置元素垂直对齐方式为顶部 */
   vertical-align: top;
   /* 设置元素宽度为33.33%减去30px */
-  width: calc(40% - 30px);
+  width: calc(400px);
 }
 
 .introduce-d2 {
   /* 设置边框圆角为20px */
+  color: #0f0e0e;
   border-radius: 20%;
   /* 设置字体大小为0 */
   font-size: 0;
@@ -448,17 +442,20 @@
 }
 
 .introduce-d2 {
-  font-size: 24px;
   margin-top: 30px;
+  margin-left: 20%;
+  text-align: center;
 }
 
 .introduce-d3 {
-  color: #666;
+  color: #000000;
   font-size: 18px;
+  margin-left: 30%;
   margin-top: 10px;
 }
 
 .introduce-ef {
+  color: #000000;
   padding: 75px 0;
   text-align: justify;
   margin-left: 100px;
@@ -630,6 +627,103 @@ nav,
 section,
 summary {
   display: block;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: #a861d7;
+  transform-style: preserve-3d; /* 开启3d空间属性，div会有正面背面之分  3d效果 */
+  backface-visibility: hidden; /* 隐藏div背面背面不可见 */
+  /* 使前后两个盒子位置重叠 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out; /* 0.5秒过渡效果 */
+  /* 设置盒子内容具中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fronta1 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro01.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta2 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro10.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta3 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro03.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta4 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro04.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta5 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro05.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta6 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro06.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta7 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro07.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta8 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro08.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta9 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro09.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta10 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro10.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta11 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro11.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta12 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro12.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+.fronta13 {
+  transform: rotateY(0deg);
+  background: url(../../../assets/background/boardeIntro13.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.back {
+  transform: rotateY(180deg);
+  /* 绕y轴180度 */
+
+  /* 给后门照片加背景图片 */
+  background: url() no-repeat center;
+  background-size: 100% 100%;
+}
+.introduce-d2:hover .front {
+  transform: rotateY(-180deg);
+}
+.introduce-d2:hover .back {
+  transform: rotateY(0deg);
 }
 </style>
 
