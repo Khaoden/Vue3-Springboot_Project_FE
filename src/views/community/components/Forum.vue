@@ -12,8 +12,7 @@
       <el-aside width="500px" class="aside">
         <div class="title-list">
           <span class="title">益动态</span>
-          <el-divider class="divider" />
-          <ForumAside />
+           <ForumAside />
         </div>
       </el-aside>
     </el-container>

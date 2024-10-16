@@ -9,4 +9,9 @@ export default [
         name: "forum",
         component: () => import("@/views/community/components/Forum.vue"),
     },
+    {
+        path: "create",
+        name: "create",
+        component: () => import("@/views/community/components/CreateBlog.vue")
+    }
 ];
