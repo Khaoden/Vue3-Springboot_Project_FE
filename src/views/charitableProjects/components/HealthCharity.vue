@@ -10,12 +10,26 @@
       <div class="project-list">
         <router-link to="" class="project-item">
           <img src="../../../assets/background/HealthCharity01.jpg" alt="" />
-          <div class="description">爱豆银铃关怀</div>
+          <div class="description">爱健康教育与宣传</div>
         </router-link>
         <router-link to="" class="project-item">
           <img src="../../../assets/background/HealthCharity02.jpg" alt="" />
-          <div class="description">直播助残</div>
+          <div class="description">健康服务体系构建</div>
         </router-link>
+        <router-link to="" class="project-item">
+          <img src="../../../assets/background/HealthCharity03.jpg" alt="" />
+          <div class="description">健康环境改善</div>
+        </router-link>
+        <router-link to="" class="project-item">
+          <img src="../../../assets/background/HealthCharity04.jpg" alt="" />
+          <div class="description">健康素养提升</div>
+        </router-link>
+        <router-link to="" class="project-item">
+          <img src="../../../assets/background/HealthCharity05.jpg" alt="" />
+          <div class="description">政策支持与保障模块</div>
+        </router-link>
+
+
       </div>
     </div>
   </div>

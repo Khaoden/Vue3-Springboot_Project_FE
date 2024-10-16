@@ -3,18 +3,22 @@
     <div class="banner">
       <div class="title-content">
         <div class="title">助残扶弱</div>
-        <div class="subtitle">用有温度的技术<br />助残扶弱</div>
+        <div class="subtitle">提供物质、精神、教育、就业、康复等多方面的支持和服务<br />我们可以帮助残疾人和弱势群体更好地融入社会，实现自我价值和社会价值。</div>
       </div>
     </div>
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
           <img src="../../../assets/background/DisabilitySupport01.jpg" alt="" />
-          <div class="description">爱豆银铃关怀</div>
+          <div class="description">关怀</div>
         </router-link>
         <router-link to="" class="project-item">
           <img src="../../../assets/background/DisabilitySupport02.jpg" alt="" />
           <div class="description">直播助残</div>
+        </router-link>
+        <router-link to="" class="project-item">
+          <img src="../../../assets/background/DisabilitySupport03.jpg" alt="" />
+          <div class="description">扶弱</div>
         </router-link>
       </div>
     </div>
@@ -42,7 +46,7 @@
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/DisasterReliefBackground.jpg");
+  background-image: url("../../../assets/background/DisabilitySupportBackground.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,16 +75,25 @@
 }
 
 .title {
+  color: #000000;
+  width: 80%;
+  padding-top: px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  z-index: 10;
+  text-align: center;
   font-size: 70px;
   line-height: 1.3;
   letter-spacing: 2px;
 }
-
 .subtitle {
   font-size: 20px;
   line-height: 1.6;
   margin-top: 10px;
   letter-spacing: 1px;
+  color: #000000;
 }
 
 .projects {

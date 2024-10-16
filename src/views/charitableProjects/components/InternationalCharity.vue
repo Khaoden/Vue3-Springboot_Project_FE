@@ -14,11 +14,23 @@
           </router-link>
           <router-link to="" class="project-item">
             <img src="../../../assets/background/InternationalCharity02.png" alt="" />
-            <div class="description">国际爱心包裹</div>
+            <div class="description">爱心包裹</div>
           </router-link>
           <router-link to="" class="project-item">
             <img src="../../../assets/background/InternationalCharity03.png" alt="" />
-            <div class="description">非洲创业者大赛</div>
+            <div class="description">国际组织与国际公益项目</div>
+          </router-link>
+          <router-link to="" class="project-item">
+            <img src="../../../assets/background/InternationalCharity04.png" alt="" />
+            <div class="description">国际公益组织的类型与宗旨</div>
+          </router-link>
+          <router-link to="" class="project-item">
+            <img src="../../../assets/background/InternationalCharity05.png" alt="" />
+            <div class="description">国际公益活动的形式与内容</div>
+          </router-link>
+          <router-link to="" class="project-item">
+            <img src="../../../assets/background/InternationalCharity06.png" alt="" />
+            <div class="description">国际公益的影响与挑战</div>
           </router-link>
         </div>
       </div>

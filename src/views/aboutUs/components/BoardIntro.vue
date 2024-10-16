@@ -316,19 +316,19 @@
             <div class="introduce-f">
               <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
                 <div class="introduce-f1"></div>
-                <div class="introduce-f2">2020</div>
+                <div class="introduce-f2">2024</div>
               </a>
               <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
                 <div class="introduce-f1"></div>
-                <div class="introduce-f2">2021</div>
+                <div class="introduce-f2">2025</div>
               </a>
               <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
                 <div class="introduce-f1"></div>
-                <div class="introduce-f2">2022</div>
+                <div class="introduce-f2">2026</div>
               </a>
               <a class="introduce-fli wow fadeInUp animated"  href="../../aboutUs/components/BoardIntro.vue">
                 <div class="introduce-f1"></div>
-                <div class="introduce-f2">2023</div>
+                <div class="introduce-f2">2027</div>
               </a>
             </div>
           </div>

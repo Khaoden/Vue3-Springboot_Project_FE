@@ -9,27 +9,28 @@
       </section>
       <div class="projects">
         <router-link
-          to="/charitable-projects/platform-charity"
+          to="/main/charitable-projects/platform-charity"
           class="project-li"
         >
           <img src="../../../assets/background/PlatformCharity01.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">平台公益</div>
-            <div class="info2">人人可参与的<br />互联网公益</div>
+            <div class="info2">互联网公益<br />通过非营利的方式，改善社会问题、提升社会福利、保护环境或促进文化传承</div>
+            
           </div>
         </router-link>
         <router-link
-          to="/charitable-projects/environmental-protection"
+          to="/main/charitable-projects/environmental-protection"
           class="project-li"
         >
           <img src="../../../assets/background/PlatformCharity02.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">绿水青山</div>
-            <div class="info2">帮助地球减负</div>
+            <div class="info2">环境保护、绿色发展</div>
           </div>
         </router-link>
         <router-link
-          to="/charitable-projects/rural-revitalization"
+          to="/main/charitable-projects/rural-revitalization"
           class="project-li"
         >
           <img src="../../../assets/background/PlatformCharity03.jpg" alt="Example Image" />
@@ -41,7 +42,7 @@
           </div>
         </router-link>
         <router-link
-          to="/charitable-projects/disaster-relief"
+          to="/main/charitable-projects/disaster-relief"
           class="project-li"
         >
           <img src="../../../assets/background/PlatformCharity02.jpg" alt="Example Image" />
@@ -51,7 +52,7 @@
           </div>
         </router-link>
         <router-link
-          to="/charitable-projects/disability-support"
+          to="/main/charitable-projects/disability-support"
           class="project-li"
         >
           <img src="../../../assets/background/PlatformCharity05.jpg" alt="Example Image" />
@@ -61,7 +62,7 @@
           </div>
         </router-link>
         <router-link
-          to="/charitable-projects/health-charity"
+          to="/main/charitable-projects/health-charity"
           class="project-li"
         >
           <img src="../../../assets/background/PlatformCharity06.jpg" alt="Example Image" />
@@ -73,7 +74,7 @@
           </div>
         </router-link>
         <router-link
-          to="/charitable-projects/international-charity"
+          to="/main/charitable-projects/international-charity"
           class="project-li"
         >
           <img src="../../../assets/background/PlatformCharity07.jpg" alt="Example Image" />
