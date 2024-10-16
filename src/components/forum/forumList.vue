@@ -5,7 +5,12 @@
         <!-- <div class="avatar">
           <el-icon :size="30"><User /></el-icon>
         </div> -->
-        <el-avatar shape="square" :size="50" :src="squareUrl" />
+        <el-avatar
+          shape="square"
+          :size="50"
+          :fit="fit"
+          :src="'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'"
+        />
         <div class="info">
           <div class="description">
             <router-link>
@@ -25,10 +30,12 @@
 </template>
 
 <script setup>
-const data = [
+import { ref, reactive } from "vue";
+
+const data = reactive([
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews01.jpeg",
       nickname: "sam1",
       id: 1,
       name: "sam wang",
@@ -46,7 +53,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews02.jpeg",
       nickname: "lily1",
       id: 2,
       name: "lily",
@@ -64,7 +71,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews03.jpeg",
       nickname: "sam2",
       id: 3,
       name: "sam wang",
@@ -82,7 +89,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews04.jpeg",
       nickname: "lily2",
       id: 4,
       name: "lily",
@@ -100,7 +107,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews05.jpeg",
       nickname: "sam3",
       id: 5,
       name: "sam wang",
@@ -118,7 +125,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews06.jpeg",
       nickname: "sam1",
       id: 6,
       name: "sam wang",
@@ -136,7 +143,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews07.jpeg",
       nickname: "lily1",
       id: 7,
       name: "lily",
@@ -154,7 +161,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews08.jpeg",
       nickname: "sam2",
       id: 8,
       name: "sam wang",
@@ -172,7 +179,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews09.jpeg",
       nickname: "lily2",
       id: 9,
       name: "lily",
@@ -190,7 +197,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews10.jpeg",
       nickname: "sam3",
       id: 10,
       name: "sam wang",
@@ -208,7 +215,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews11.jpeg",
       nickname: "sam1",
       id: 11,
       name: "sam wang",
@@ -226,7 +233,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews12.jpeg",
       nickname: "lily1",
       id: 12,
       name: "lily",
@@ -244,7 +251,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews13.jpeg",
       nickname: "sam2",
       id: 13,
       name: "sam wang",
@@ -262,7 +269,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews01.jpeg",
       nickname: "lily2",
       id: 14,
       name: "lily",
@@ -280,7 +287,7 @@ const data = [
   },
   {
     user: {
-      avatar: "null",
+      avatar: "../../../assets/background/ActivityNews02.jpeg",
       nickname: "sam3",
       id: 15,
       name: "sam wang",
@@ -296,7 +303,7 @@ const data = [
     create_time: "2024-10-09T00:40:30.000000Z",
     update_time: "2024-10-09T00:40:30.000000Z",
   },
-];
+]);
 </script>
 
 <style lang="scss" scoped>
@@ -323,7 +330,7 @@ const data = [
       justify-content: center;
       width: 40px;
       height: 40px;
-      background-color: rgb(245, 245, 245);
+      // background-color: rgb(245, 245, 245);
       border-radius: 5px;
     }
     .info {

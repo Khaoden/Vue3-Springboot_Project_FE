@@ -1,24 +1,34 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import router from './router'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
+import router from "./router";
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
+import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 
+import VueMarkdownEditor from "@kangc/v-md-editor";
+import "@kangc/v-md-editor/lib/style/base-editor.css";
+import vuepressTheme from "@kangc/v-md-editor/lib/theme/vuepress.js";
+import "@kangc/v-md-editor/lib/theme/style/vuepress.css";
 
-const app = createApp(App)
-app.use(router)
-app.use(ElementPlus)
+import Prism from 'prismjs';
+
+VueMarkdownEditor.use(vuepressTheme, {
+  Prism,
+});
+
+const app = createApp(App);
+app.use(router);
+app.use(ElementPlus);
+app.use(VueMarkdownEditor);
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-    app.component(key, component)
-  }
-app.mount('#app')
+  app.component(key, component);
+}
+app.mount("#app");
 
 // import './style.css'
 // import * as THREE from 'three'
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
 
 // const scene = new THREE.Scene();
 
@@ -59,9 +69,7 @@ app.mount('#app')
 //   star.position.set(x, y, z);
 //   scene.add(star);
 
-
 // }
-
 
 // Array(200).fill().forEach(addStar);
 
@@ -73,7 +81,7 @@ app.mount('#app')
 // const jeff = new THREE.Mesh(
 //   new THREE.BoxGeometry(3, 3, 3),
 //   new THREE.MeshBasicMaterial({ map: jeffTexture })
-  
+
 // )
 // scene.add(jeff)
 
@@ -82,15 +90,12 @@ app.mount('#app')
 
 // const moon = new THREE.Mesh(
 //   new THREE.SphereGeometry(3, 24, 24),
-//   new THREE.MeshStandardMaterial({ 
+//   new THREE.MeshStandardMaterial({
 //     map:moonTexture,
 //     normalMap: normalTexture
 //   })
 // )
 // scene.add(moon)
-
-
-
 
 // function animate(){
 //   requestAnimationFrame(animate);
@@ -104,8 +109,3 @@ app.mount('#app')
 //   renderer.render(scene, camera);
 // }
 // animate();
-
-
-
-
-
