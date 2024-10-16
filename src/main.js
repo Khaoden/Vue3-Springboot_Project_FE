@@ -11,10 +11,10 @@ import "@kangc/v-md-editor/lib/style/base-editor.css";
 import vuepressTheme from "@kangc/v-md-editor/lib/theme/vuepress.js";
 import "@kangc/v-md-editor/lib/theme/style/vuepress.css";
 
-import Prism from 'prismjs';
+import Prism from 'prismjs'; // Ensure this import is correct
 
 VueMarkdownEditor.use(vuepressTheme, {
-  Prism,
+  Prism: Prism, // Ensure Prism is correctly referenced
 });
 
 const app = createApp(App);

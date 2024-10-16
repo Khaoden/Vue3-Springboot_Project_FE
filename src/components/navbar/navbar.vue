@@ -138,7 +138,10 @@ const menuItems = [
   {
     label: "社区",
     name: "community",
-    subItems: [{ label: "论坛", name: "forum" }],
+    subItems: [
+      { label: "论坛", name: "forum" },
+      { label: "旧物回收", name: "recycling" },
+    ],
   },
   {
     label: "个人中心",

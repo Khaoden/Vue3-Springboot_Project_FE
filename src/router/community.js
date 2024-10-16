@@ -13,5 +13,10 @@ export default [
         path: "create",
         name: "create",
         component: () => import("@/views/community/components/CreateBlog.vue")
+    },
+    {
+        path: "recycling",
+        name: "recycling",
+        component: () => import("@/views/community/components/recycling.vue")
     }
 ];

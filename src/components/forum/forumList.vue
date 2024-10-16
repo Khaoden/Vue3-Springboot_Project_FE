@@ -1,6 +1,6 @@
 <template>
   <div class="forum-list">
-    <template class="forum-item" v-for="item in data" :key="item.id">
+    <class class="forum-item" v-for="item in data" :key="item.id">
       <div class="main">
         <!-- <div class="avatar">
           <el-icon :size="30"><User /></el-icon>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <el-divider class="divider" />
-    </template>
+    </class>
   </div>
 </template>
 
