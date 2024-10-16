@@ -15,16 +15,16 @@
         style="visibility: visible; animation-delay: 0.4s"
       >
         <div class="about-b3">
-          <div class="number">2011</div>
+          <div class="number">2024</div>
           <p>成立时间</p>
         </div>
         <div class="about-b3">
           <div class="number">4</div>
-          <p>发起公司（家）</p>
+          <p>成员人数</p>
         </div>
         <div class="about-b3">
-          <div class="number">5000</div>
-          <p>原始基金（万元）</p>
+          <div class="number">50000</div>
+          <p>目标人数</p>
         </div>
       </div>
       <!-- 使命愿景和背景图 -->
@@ -245,6 +245,7 @@
   vertical-align: top;
   font-weight: 100;
   line-height: 1;
+  color:rgb(198, 26, 26); /* 数字颜色 */
 }
 
 /*使命愿景和背景图的css*/
@@ -273,12 +274,12 @@ img {
   text-align: center;
   height: auto;
   position: relative;
-  margin-left: 230px;
+  margin-left: 185px;
   width: 70%;
   /* 设置背景颜色为白色 */
   background: #fff;
   /* 设置边框圆角为20px */
-  border-radius: 100px;
+  border-radius: 150px;
   /* 设置鼠标悬停时的光标为指针 */
   cursor: pointer;
   /* 设置为行内块元素 */

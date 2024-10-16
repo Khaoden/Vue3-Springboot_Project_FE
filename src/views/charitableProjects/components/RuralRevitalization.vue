@@ -9,36 +9,28 @@
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
-          <img
-            src="../../../assets/background/RuralRevitalization01.png"
-            alt=""
-          />
-          <div class="description">益行山区乡村振兴特派员</div>
+          <img src="../../../assets/background/RuralRevitalization01.png" alt=""/>
+          <div class="description">山区风景展示</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img
-            src="../../../assets/background/RuralRevitalization02.png"
-            alt=""
-          />
+          <img src="../../../assets/background/RuralRevitalization02.png" alt=""/>
+          <div class="description">山区农作物</div>
+        </router-link>
+        <router-link to="" class="project-item">
+          <img src="../../../assets/background/RuralRevitalization03.png" alt=""/>
           <div class="description">智慧育种</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img
-            src="../../../assets/background/RuralRevitalization03.png"
-            alt=""
-          />
-          <div class="description">技术培训</div>
+          <img src="../../../assets/background/RuralRevitalization04.png" alt=""/>
+          <div class="description">农作物种植技术培训</div>
+        </router-link>
+        <router-link to="" class="project-item">
+          <img src="../../../assets/background/RuralRevitalization05.png" alt="" />
+          <div class="description">益行山区—乡村振兴技术人员介绍</div>
         </router-link>
         <router-link to="" class="project-item">
           <img
-            src="../../../assets/background/RuralRevitalization04.png"
-            alt=""
-          />
-          <div class="description">益行山区乡村振兴技术官</div>
-        </router-link>
-        <router-link to="" class="project-item">
-          <img
-            src="../../../assets/background/RuralRevitalization05.png"
+            src="../../../assets/background/RuralRevitalization06.png"
             alt=""
           />
           <div class="description">寻找远方的美好</div>

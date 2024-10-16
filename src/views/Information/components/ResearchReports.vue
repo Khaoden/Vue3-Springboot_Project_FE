@@ -4,7 +4,7 @@
       <div class="title-content">
         <div class="title">研究报告</div>
         <div class="subtitle">
-          公益的本质是“唤醒”人的善意，为此我们一直不懈努力
+          为了深入理解社会问题、评估公益活动成效、提供政策建议、促进公众参与与意识提升以及推动学术研究与理论创新。这些目的共同构成了公益研究报告的核心价值和意义。
         </div>
       </div>
     </div>
@@ -79,63 +79,63 @@ import image19 from "@/assets/background/ActivityNews01.jpeg";
 const projects = ref([
   {
     id: 1,
-    title: "第一届益行山区公益周启动",
+    title: "理解社会问题与需求",
     date: "2022-12-12",
     image: image1,
     link: "",
   },
   {
     id: 2,
-    title: "第一届益行山区公益周启动",
+    title: "评估公益活动的成效",
     date: "2022-12-12",
     image: image2,
     link: "",
   },
   {
     id: 3,
-    title: "第一届益行山区公益周启动",
+    title: "提供政策建议与改进方向",
     date: "2022-12-12",
     image: image3,
     link: "",
   },
   {
     id: 4,
-    title: "第一届益行山区公益周启动",
+    title: "促进公众参与与意识提升",
     date: "2022-12-12",
     image: image4,
     link: "",
   },
   {
     id: 5,
-    title: "第一届益行山区公益周启动",
+    title: "推动学术研究与理论创新",
     date: "2022-12-12",
     image: image5,
     link: "",
   },
   {
     id: 6,
-    title: "第一届益行山区公益周启动",
+    title: "提供政策建议与改进方向",
     date: "2022-12-12",
     image: image6,
     link: "",
   },
   {
     id: 7,
-    title: "第一届益行山区公益周启动",
+    title: "评估公益活动的成效与影响",
     date: "2022-12-12",
     image: image7,
     link: "",
   },
   {
     id: 8,
-    title: "第一届益行山区公益周启动",
+    title: "促进公众意识提升与参与",
     date: "2022-12-12",
     image: image8,
     link: "",
   },
   {
     id: 9,
-    title: "第一届益行山区公益周启动",
+    title: "揭示社会问题与挑战",
     date: "2022-12-12",
     image: image9,
     link: "",

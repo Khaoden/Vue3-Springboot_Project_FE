@@ -3,26 +3,30 @@
     <div class="banner">
       <div class="title-content">
         <div class="title">绿水青山</div>
-        <div class="subtitle">帮助地球减负</div>
+        <div class="subtitle">绿水青山就是金山银山</div>
       </div>
     </div>
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
           <img src="../../../assets/background/EnvironmentalProtection01.jpg" alt="">
-          <div class="description">广州绿网</div>
+          <div class="description">生态保护知识</div>
         </router-link>
         <router-link to="" class="project-item">
           <img src="../../../assets/background/EnvironmentalProtection02.jpg" alt="">
-          <div class="description">水保护</div>
+          <div class="description">绿水青山美景</div>
         </router-link>
         <router-link to="" class="project-item">
           <img src="../../../assets/background/EnvironmentalProtection03.jpg" alt="">
-          <div class="description">清源行动</div>
+          <div class="description">环保措施</div>
         </router-link>
         <router-link to="" class="project-item">
           <img src="../../../assets/background/EnvironmentalProtection04.jpg" alt="">
-          <div class="description">千岛湖水基金</div>
+          <div class="description">绿色生活</div>
+        </router-link>
+        <router-link to="" class="project-item">
+          <img src="../../../assets/background/EnvironmentalProtection05.jpg" alt="">
+          <div class="description">环保新闻</div>
         </router-link>
       </div>
     </div>
