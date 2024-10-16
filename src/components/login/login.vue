@@ -42,7 +42,11 @@ const username = ref("");
 const password = ref("");
 const router = useRouter();
 
-const verify = async () => {
+const verify = () => {
+  router.push("/main");
+}
+
+/*const verify = async () => {
   if (!username.value || !password.value) {
     return alert("请输入有效的账号和密码");
   }
@@ -58,6 +62,7 @@ const verify = async () => {
     alert(error.response?.data || "登录失败，请重试");
   }
 };
+*/
 
 const logout = () => {
   localStorage.removeItem('token');
