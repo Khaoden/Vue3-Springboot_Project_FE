@@ -94,7 +94,7 @@ onUnmounted(() => {
 .footer {
   overflow-x: hidden;
   background: linear-gradient(to right, #e6f7ff, #e6ffed);
-  padding: 4rem;
+  padding: 3rem 0rem;
   position: relative;
   overflow: hidden;
 }
