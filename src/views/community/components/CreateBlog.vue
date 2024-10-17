@@ -8,10 +8,11 @@
       <el-input
         class="title-input"
         v-model="input"
-        style="width: 1px'; height: 40px; margin-bottom: 20px; "
+        style="width: 100px'; height: 40px; margin-bottom: 20px; "
         placeholder="请输入标题"
       />
       <InputArea class="create-blog" />
+      
     </div>
   </div>
 </template>
