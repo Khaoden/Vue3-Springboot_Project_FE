@@ -59,7 +59,7 @@
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/RuralRevitalizationBackground.png");
+  background-image: url("../../../assets/background/bg11.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

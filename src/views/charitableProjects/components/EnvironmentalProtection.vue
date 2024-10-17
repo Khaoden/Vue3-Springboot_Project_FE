@@ -9,23 +9,23 @@
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/EnvironmentalProtection01.jpg" alt="">
+          <img src="../../../assets/background/bg7.png" alt="">
           <div class="description">生态保护知识</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/EnvironmentalProtection02.jpg" alt="">
+          <img src="../../../assets/background/bg2.png" alt="">
           <div class="description">绿水青山美景</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/EnvironmentalProtection03.jpg" alt="">
+          <img src="../../../assets/background/bg4.png" alt="">
           <div class="description">环保措施</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/EnvironmentalProtection04.jpg" alt="">
+          <img src="../../../assets/background/bg6.png" alt="">
           <div class="description">绿色生活</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/EnvironmentalProtection05.jpg" alt="">
+          <img src="../../../assets/background/bg5.png" alt="">
           <div class="description">环保新闻</div>
         </router-link>
       </div>
@@ -56,7 +56,7 @@
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/EnvironmentalProtectionBackground.jpg");
+  background-image: url("../../../assets/background/bg1.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

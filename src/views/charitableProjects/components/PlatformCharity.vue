@@ -23,7 +23,7 @@
           to="/main/charitable-projects/environmental-protection"
           class="project-li"
         >
-          <img src="../../../assets/background/PlatformCharity02.jpg" alt="Example Image" />
+          <img src="../../../assets/background/bg1.png" alt="Example Image" />
           <div class="project-info">
             <div class="info1">绿水青山</div>
             <div class="info2">环境保护、绿色发展</div>
@@ -33,7 +33,7 @@
           to="/main/charitable-projects/rural-revitalization"
           class="project-li"
         >
-          <img src="../../../assets/background/PlatformCharity03.jpg" alt="Example Image" />
+          <img src="../../../assets/background/bg11.png" alt="Example Image" />
           <div class="project-info">
             <div class="info1">乡村振兴</div>
             <div class="info2">
@@ -62,7 +62,7 @@
           to="/main/charitable-projects/health-charity"
           class="project-li"
         >
-          <img src="../../../assets/background/PlatformCharity06.jpg" alt="Example Image" />
+          <img src="../../../assets/background/bg12.png" alt="Example Image" />
           <div class="project-info">
             <div class="info1">健康公益</div>
             <div class="info2">
@@ -95,7 +95,7 @@
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/PlatformCharityBackground.jpg");
+  background-image: url("../../../assets/background/bg10.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

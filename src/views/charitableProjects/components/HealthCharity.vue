@@ -9,23 +9,23 @@
     <div class="projects">
       <div class="project-list">
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/HealthCharity01.jpg" alt="" />
+          <img src="../../../assets/background/bg3.png" alt="" />
           <div class="description">爱健康教育与宣传</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/HealthCharity02.jpg" alt="" />
+          <img src="../../../assets/background/bg13.png" alt="" />
           <div class="description">健康服务体系构建</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/HealthCharity03.jpg" alt="" />
+          <img src="../../../assets/background/bg14.png" alt="" />
           <div class="description">健康环境改善</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/HealthCharity04.jpg" alt="" />
+          <img src="../../../assets/background/bg15.png" alt="" />
           <div class="description">健康素养提升</div>
         </router-link>
         <router-link to="" class="project-item">
-          <img src="../../../assets/background/HealthCharity05.jpg" alt="" />
+          <img src="../../../assets/background/bg16.png" alt="" />
           <div class="description">政策支持与保障</div>
         </router-link>
 
@@ -56,7 +56,7 @@
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/HealthCharityBackground.jpg");
+  background-image: url("../../../assets/background/bg12.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
