@@ -5,7 +5,7 @@
         <el-carousel-item v-for="project in projects" :key="project.id">
           <div class="project-card">
             <img
-              :src="'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'"
+              :src="project.image"
               alt="project image"
             />
             <div class="project-info">
@@ -29,6 +29,10 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import image1 from "@/assets/background/EnvironmentalProtection01.jpg";
+import image2 from "@/assets/background/EnvironmentalProtection02.jpg";
+import image3 from "@/assets/background/EnvironmentalProtection03.jpg";
+
 const route = useRoute();
 const router = useRouter();
 const projects = reactive([
@@ -36,21 +40,21 @@ const projects = reactive([
     id: 1,
     name: "益行公益项目1",
     description: "这是一个公益项目1的描述",
-    image: "../../assets/background/EnvironmentalProtection01.jpg",
+    image: image1,
     status: 1,
   },
   {
     id: 2,
     name: "益行公益项目2",
     description: "这是一个公益项目2的描述",
-    image: "../../../assets/background/EnvironmentalProtection01.jpg",
+    image: image2,
     status: 2,
   },
   {
     id: 3,
     name: "益行公益项目3",
     description: "这是一个公益项目2的描述",
-    image: "../../../assets/background/EnvironmentalProtection01.jpg",
+    image: image3,
     status: 3,
   },
 ]);
