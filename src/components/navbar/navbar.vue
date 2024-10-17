@@ -85,9 +85,10 @@ const getRouteForItem = (item) => {
 };
 
 const handleMenuItemClick = (item) => {
-  if (item.name === "personal-center") {
+  if (item.name === "personal-center" ) {
     router.push({ name: "personal-data" });
-  } else {
+  } 
+  else {
     router.push({ name: item.name });
   }
   activeDropdown.value = null; // 关闭下拉菜单
@@ -141,6 +142,7 @@ const menuItems = [
     subItems: [
       { label: "论坛", name: "forum" },
       { label: "旧物回收", name: "recycling" },
+      { label: "照片墙", name: "photoWall"}
     ],
   },
   {
@@ -157,7 +159,6 @@ const activeItem = computed(() => route.name);
 
 const showDropdown = (name) => {
   if (name === "personal-center") {
-    //  || name === "community" 为了写论坛页面方便就先给这一段注释了哈
     activeDropdown.value = null;
     return;
   }
@@ -281,7 +282,7 @@ onBeforeUnmount(() => {
   text-decoration: none;
   color: #333;
   transition: color 0.3s;
-  width: 4%;
+  width: 7%;
   display: flex;
   align-items: center;
   justify-content: center;
