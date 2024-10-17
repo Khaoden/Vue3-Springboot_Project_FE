@@ -3,17 +3,28 @@
     <Navbar class="navbar" />
     <div class="content-wrapper">
       <div class="route-content">
-        <router-view></router-view>
+        <router-view v-slot="{ Component }">
+          <component v-bind:is="Component" />
+        </router-view>
       </div>
-      <Footer class="footer"/>
+      <!-- 根据路由条件决定是否显示 Footer -->
+      <Footer v-if="!isPhotoWall" class="footer" />
     </div>
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import Navbar from '../components/navbar/navbar.vue';
 import Footer from '../components/footer/footer.vue';
 
+const route = useRoute();
+
+// 计算属性，判断当前路由是否为 photoWall
+const isPhotoWall = computed(() => {
+  return route.name === 'photoWall'; 
+});
 </script>
 
 <style scoped>

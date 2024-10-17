@@ -18,5 +18,10 @@ export default [
         path: "recycling",
         name: "recycling",
         component: () => import("@/views/community/components/recycling.vue")
+    },
+    {
+        path: "photoWall",
+        name: "photoWall",
+        component: () => import("@/views/community/components/photoWall.vue")
     }
 ];

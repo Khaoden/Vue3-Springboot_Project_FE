@@ -41,7 +41,7 @@ const routes = [
         name: "community",
         component: () => import("@/views/community/index.vue"),
         children: communityRoutes,
-        redirect: { name: "invitation" },
+        redirect: { name: "forum" },
       },
       {
         path: "information",
