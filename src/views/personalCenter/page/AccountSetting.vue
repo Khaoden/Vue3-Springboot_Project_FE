@@ -118,6 +118,7 @@ const submitChange = () => {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: backgroundZoom 20s ease-in-out infinite; /* 修改动画 */
 }
 
 .page-wrapper::after {
@@ -181,5 +182,14 @@ const submitChange = () => {
 
 .dialog-footer {
   text-align: right;
+}
+
+@keyframes backgroundZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 </style>

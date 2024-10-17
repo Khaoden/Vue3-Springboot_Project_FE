@@ -125,7 +125,7 @@ const rules = reactive({
     {
       type: "array",
       required: true,
-      message: "请至少选择一个兴趣标签",
+      message: "���至少选择一个兴趣标签",
       trigger: "change",
     },
   ],
@@ -196,6 +196,16 @@ const handleChange = (value, checked) => {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: zoomInOut 14s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .page-wrapper::after {
