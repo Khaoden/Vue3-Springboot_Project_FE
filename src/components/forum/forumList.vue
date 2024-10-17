@@ -9,7 +9,7 @@
           shape="square"
           :size="50"
           :fit="fit"
-          :src="'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'"
+          :src="item.user.avatar"
         />
         <div class="info">
           <div class="description">
@@ -31,11 +31,16 @@
 
 <script setup>
 import { ref, reactive } from "vue";
+import avatar1 from "@/assets/background/ActivityNews01.jpeg";
+import avatar2 from "@/assets/background/ActivityNews02.jpeg";
+import avatar3 from "@/assets/background/ActivityNews03.jpeg";
+import avatar4 from "@/assets/background/ActivityNews04.jpeg";
+import avatar5 from "@/assets/background/ActivityNews05.jpeg";
 
 const data = reactive([
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews01.jpeg",
+      avatar: avatar1,
       nickname: "sam1",
       id: 1,
       name: "sam wang",
@@ -53,7 +58,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews02.jpeg",
+      avatar: avatar2,
       nickname: "lily1",
       id: 2,
       name: "lily",
@@ -71,7 +76,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews03.jpeg",
+      avatar: avatar3,
       nickname: "sam2",
       id: 3,
       name: "sam wang",
@@ -89,7 +94,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews04.jpeg",
+      avatar: avatar4,
       nickname: "lily2",
       id: 4,
       name: "lily",
@@ -107,7 +112,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews05.jpeg",
+      avatar: avatar5,
       nickname: "sam3",
       id: 5,
       name: "sam wang",
@@ -125,7 +130,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews06.jpeg",
+      avatar: avatar1,
       nickname: "sam1",
       id: 6,
       name: "sam wang",
@@ -143,7 +148,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews07.jpeg",
+      avatar: avatar2,
       nickname: "lily1",
       id: 7,
       name: "lily",
@@ -161,7 +166,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews08.jpeg",
+      avatar: avatar3,
       nickname: "sam2",
       id: 8,
       name: "sam wang",
@@ -179,7 +184,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews09.jpeg",
+      avatar: avatar4,
       nickname: "lily2",
       id: 9,
       name: "lily",
@@ -197,7 +202,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews10.jpeg",
+      avatar: avatar5,
       nickname: "sam3",
       id: 10,
       name: "sam wang",
@@ -215,7 +220,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews11.jpeg",
+      avatar: avatar1,
       nickname: "sam1",
       id: 11,
       name: "sam wang",
@@ -233,7 +238,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews12.jpeg",
+      avatar: avatar2,
       nickname: "lily1",
       id: 12,
       name: "lily",
@@ -251,7 +256,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews13.jpeg",
+      avatar: avatar3,
       nickname: "sam2",
       id: 13,
       name: "sam wang",
@@ -269,7 +274,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews01.jpeg",
+      avatar: avatar4,
       nickname: "lily2",
       id: 14,
       name: "lily",
@@ -287,7 +292,7 @@ const data = reactive([
   },
   {
     user: {
-      avatar: "../../../assets/background/ActivityNews02.jpeg",
+      avatar: avatar5,
       nickname: "sam3",
       id: 15,
       name: "sam wang",
