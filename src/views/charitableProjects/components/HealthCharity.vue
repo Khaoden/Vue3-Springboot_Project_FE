@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="title-content">
         <div class="title">提高公众健康水平</div>
-        <div class="subtitle">而开展的各种公益活动和服务</div>
+        <div class="subtitle">增强民众身体素质，减少疾病发生，提升生活质量和预期寿命。</div>
       </div>
     </div>
     <div class="projects">
@@ -26,7 +26,7 @@
         </router-link>
         <router-link to="" class="project-item">
           <img src="../../../assets/background/HealthCharity05.jpg" alt="" />
-          <div class="description">政策支持与保障模块</div>
+          <div class="description">政策支持与保障</div>
         </router-link>
 
 
