@@ -90,12 +90,12 @@
 <style scoped>
 .background {
   background-color: rgb(245, 245, 245);
-  font-size: 18px;
+  font-size: 8px;
   margin: 0;
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/bg10.png");
+  background-image: url("../../../assets/background/bg13.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,7 +121,7 @@
 }
 
 .title {
-  font-size: 37px;
+  font-size: 47px;
   font-weight: 500;
   color: #f3ebeb;
 }
@@ -237,7 +237,7 @@
   text-align: left;
 }
 .info1 {
-  font-size: 40px;
+  font-size: 0px;
   font-weight: 500;
   margin: 0;
   padding: 0;

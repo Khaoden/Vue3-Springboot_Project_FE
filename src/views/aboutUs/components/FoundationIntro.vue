@@ -188,7 +188,7 @@
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/FoundationIntroBackground.jpg");
+  background-image: url("../../../assets/background/jjh.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
