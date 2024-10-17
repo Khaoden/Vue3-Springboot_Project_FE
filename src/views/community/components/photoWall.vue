@@ -133,7 +133,7 @@ onMounted(() => {
 
 <style scoped>
 .perspective {
-  perspective: 600px;
+  perspective: 600px; 
 }
 
 .wrap {

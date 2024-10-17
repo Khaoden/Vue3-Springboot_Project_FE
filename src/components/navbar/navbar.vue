@@ -266,7 +266,7 @@ onBeforeUnmount(() => {
 }
 
 .personal-center img {
-  width: 100%;
+  width: 70%;
   height: auto;
   object-fit: cover;
   border-radius: 50%;
