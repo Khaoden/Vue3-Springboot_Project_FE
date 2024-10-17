@@ -41,11 +41,8 @@
             </div>
           </div>
         </router-link>
-        <router-link
-          to="/main/charitable-projects/disaster-relief"
-          class="project-li"
-        >
-          <img src="../../../assets/background/PlatformCharity02.jpg" alt="Example Image" />
+        <router-link to="/main/charitable-projects/disaster-relief" class="project-lia4">
+          <img src="../../../assets/background/PlatformCharity04.jpg" alt="Example Image" />
           <div class="project-info">
             <div class="info1">应急救灾</div>
             <div class="info2">才能最大限度地减少人员<br />伤亡和财产损失</div>
@@ -160,6 +157,19 @@
   position: relative;
 }
 
+.project-lia4 {
+  border-radius: 20px;
+  float: left;
+  height: 410px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  width: calc(50% - 20px);
+  background-color: #222;
+  overflow: hidden;
+  position: relative;
+}
+
 .project-li:nth-child(3) {
   border-radius: 20px;
   display: inline-block;
@@ -172,7 +182,7 @@
   background-color: #222;
 }
 
-.project-li:nth-child(4) {
+.project-lia4:nth-child(4) {
   border-radius: 20px;
   display: inline-block;
   float: left;
@@ -190,7 +200,7 @@
   float: left;
   height: 410px;
   margin-bottom: 20px;
-  margin-right: 20px\\;
+  margin-right: 20px;
   overflow: hidden;
   width: calc(100% - 20px);
   background-color: #222;
@@ -202,7 +212,18 @@
   transition: transform 0.5s ease;
 }
 
+.project-lia4 img {
+  height: 920px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+
 .project-li:hover img {
+  transform: scale(1.05);
+}
+.project-lia4:hover img {
   transform: scale(1.05);
 }
 
@@ -220,7 +241,7 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
-  color: rgb(234, 225, 225);
+  color: rgb(114, 30, 30);
 }
 .project-info {
   bottom: 0;
@@ -244,6 +265,6 @@
   margin: 0;
   padding: 0;
   margin-top: 5px;
-  color: rgb(234, 225, 225);
+  color: rgb(245, 241, 241);
 }
 </style>
