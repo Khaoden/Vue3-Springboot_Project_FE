@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <v-md-editor v-model="text" height="400px"></v-md-editor>
+    <v-md-editor v-model="text" height="400px" class="editor"></v-md-editor>
   </div>
 </template>
 

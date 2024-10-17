@@ -1,13 +1,10 @@
 <template>
   <div class="function-container">
     <div class="text-area">
-      <el-carousel :interval="4000" height="200px">
+      <el-carousel :interval="4000" height="200px" autoplay>
         <el-carousel-item v-for="project in projects" :key="project.id">
           <div class="project-card">
-            <img
-              :src="project.image"
-              alt="project image"
-            />
+            <img :src="project.image" alt="project image" />
             <div class="project-info">
               <h3>{{ project.name }}</h3>
               <p>{{ project.description }}</p>
@@ -18,17 +15,23 @@
     </div>
     <el-divider class="divider" />
     <div class="button-container">
-      <el-button type="primary" plain @click="handleCreateButtonClick">发帖交流</el-button>
+      <el-button type="primary" plain @click="handleCreateButtonClick"
+        >发帖交流</el-button
+      >
       <el-button type="success" plain>加入益行</el-button>
       <el-button type="warning" plain>助力益行</el-button>
     </div>
     <el-divider class="divider" />
+    <div class="canvas-container">
+      
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, reactive } from "vue";
 import { useRoute, useRouter } from "vue-router";
+
 import image1 from "@/assets/background/EnvironmentalProtection01.jpg";
 import image2 from "@/assets/background/EnvironmentalProtection02.jpg";
 import image3 from "@/assets/background/EnvironmentalProtection03.jpg";

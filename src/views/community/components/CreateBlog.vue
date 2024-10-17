@@ -49,6 +49,7 @@ import InputArea from "@/components/forum/inputArea.vue";
     .create-blog {
       margin: 0;
       padding: 0;
+      background-color: rgb(245, 245, 245);
     }
   }
 }
