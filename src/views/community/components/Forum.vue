@@ -1,23 +1,25 @@
 <template>
   <div class="background">
+    <div class="background">
     <div class="common-layout">
-      <el-container>
-        <el-main class="main">
-          <div class="title-list">
-            <span class="title">益论坛</span>
-            <el-divider class="divider" />
-          </div>
-          <ForumList />
-          <Pagination />
-        </el-main>
-        <el-aside width="500px" class="aside">
-          <div class="title-list">
-            <span class="title">益动态</span>
-            <el-divider class="divider" />
-            <ForumAside />
-          </div>
-        </el-aside>
-      </el-container>
+        <el-container>
+          <el-main class="main">
+            <div class="title-list">
+              <span class="title">益论坛</span>
+              <el-divider class="divider" />
+            </div>
+            <ForumList />
+            <Pagination />
+          </el-main>
+          <el-aside width="500px" class="aside">
+            <div class="title-list">
+              <span class="title">益动态</span>
+              <el-divider class="divider" />
+              <ForumAside />
+            </div>
+          </el-aside>
+        </el-container>
+    </div>
     </div>
   </div>
 </template>
@@ -25,9 +27,11 @@
 import ForumList from "@/components/forum/forumList.vue";
 import Pagination from "@/components/pagination/pagination.vue";
 import ForumAside from "@/components/forum/forumAside.vue";
+import ForumAside from "@/components/forum/forumAside.vue";
 </script>
 
 <style lang="scss" scoped>
+
 
 .common-layout {
   display: flex;
@@ -98,3 +102,5 @@ import ForumAside from "@/components/forum/forumAside.vue";
   }
 }
 </style>
+
+
