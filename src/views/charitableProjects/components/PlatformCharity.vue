@@ -2,28 +2,46 @@
   <div class="background">
     <div class="main">
       <section class="sec">
-          <div class="title">
-            公益项目<br />
-            为改善人们的生活和创造一个更美好的社会
-          </div>
+        <div class="title">
+          公益项目<br />
+          为改善人们的生活和创造一个更美好的社会
+        </div>
       </section>
       <div class="projects">
         <router-link
           to="/main/charitable-projects/platform-charity"
-          class="project-li"
+          class="project-li platform-charity"
         >
-          <img src="../../../assets/background/PlatformCharity01.jpg" alt="Example Image" />
+          <div class="image-container">
+            <img
+              src="../../../assets/background/PlatformCharity01.jpg"
+              alt="平台公益"
+            />
+            <div class="overlay">
+              <p class="overlay-text">
+                加入益行山区，用互联网的力量点亮公益之光。在这里，每一次点击都能改善社会，每一次分享都在传承文化。让我们共同行动，用爱连接世界，用善行改变未来。
+              </p>
+            </div>
+          </div>
           <div class="project-info">
             <div class="info1">平台公益</div>
-            <div class="info2">互联网公益<br />通过非营利的方式，改善社会问题、提升社会福利、保护环境或促进文化传承</div>
-            
+            <div class="info2">
+              互联网公益<br />通过非���利的方式，改善社会问题、提升社会福利、保护环境或促进文化传承
+            </div>
           </div>
         </router-link>
         <router-link
           to="/main/charitable-projects/environmental-protection"
-          class="project-li"
+          class="project-li green-mountains"
         >
-          <img src="../../../assets/background/bg1.png" alt="Example Image" />
+          <div class="image-container">
+            <img src="../../../assets/background/bg1.png" alt="绿水青山" />
+            <div class="overlay">
+              <p class="overlay-text">
+                守护绿水青山，共创绿色未来。加入我们，让每一步行走都成为对地球的爱护，让每一次行动都为可持续发展注入活力。益行山区，与自然同行，为生命添彩！
+              </p>
+            </div>
+          </div>
           <div class="project-info">
             <div class="info1">绿水青山</div>
             <div class="info2">环境保护、绿色发展</div>
@@ -31,9 +49,16 @@
         </router-link>
         <router-link
           to="/main/charitable-projects/rural-revitalization"
-          class="project-li"
+          class="project-li rural-revitalization"
         >
-          <img src="../../../assets/background/bg11.png" alt="Example Image" />
+          <div class="image-container">
+            <img src="../../../assets/background/bg11.png" alt="乡村振兴" />
+            <div class="overlay">
+              <p class="overlay-text">
+                携手益行山区，共筑乡村未来。让我们一起用科技和智慧，点燃产业的火花，培育人才的沃土，巩固脱贫的成果。每一次参与，都是对乡村明天的投资，每一次支持，都是对农民希望的助力。
+              </p>
+            </div>
+          </div>
           <div class="project-info">
             <div class="info1">乡村振兴</div>
             <div class="info2">
@@ -41,8 +66,21 @@
             </div>
           </div>
         </router-link>
-        <router-link to="/main/charitable-projects/disaster-relief" class="project-lia4">
-          <img src="../../../assets/background/PlatformCharity04.jpg" alt="Example Image" />
+        <router-link
+          to="/main/charitable-projects/disaster-relief"
+          class="project-lia4 disaster-relief"
+        >
+          <div class="image-container">
+            <img
+              src="../../../assets/background/PlatformCharity04.jpg"
+              alt="应急救灾"
+            />
+            <div class="overlay">
+              <p class="overlay-text">
+                在益行山区，我们迅速响应，为生命护航。加入我们的"应急救灾"行动，每一次援助都是希望的火种，每一次参与都是力量的汇聚。让我们共同守护每一个需要帮助的生命。
+              </p>
+            </div>
+          </div>
           <div class="project-info">
             <div class="info1">应急救灾</div>
             <div class="info2">才能最大限度地减少人员<br />伤亡和财产损失</div>
@@ -50,9 +88,19 @@
         </router-link>
         <router-link
           to="/main/charitable-projects/disability-support"
-          class="project-li"
+          class="project-li disability-support"
         >
-          <img src="../../../assets/background/PlatformCharity05.jpg" alt="Example Image" />
+          <div class="image-container">
+            <img
+              src="../../../assets/background/PlatformCharity05.jpg"
+              alt="助残扶弱"
+            />
+            <div class="overlay">
+              <p class="overlay-text">
+                在益行山区，我们用技术传递温暖，用行动支持力量。加入我们的"助残扶弱"行动，让每一次创新都为平等铺路，每一次援助都为尊严护航。让我们共同为残疾人士和弱势群体撑起希望的天空。
+              </p>
+            </div>
+          </div>
           <div class="project-info">
             <div class="info1">助残扶弱</div>
             <div class="info2">用有温度的技术<br />助残扶弱</div>
@@ -60,9 +108,16 @@
         </router-link>
         <router-link
           to="/main/charitable-projects/health-charity"
-          class="project-li"
+          class="project-li health-charity"
         >
-          <img src="../../../assets/background/bg12.png" alt="Example Image" />
+          <div class="image-container">
+            <img src="../../../assets/background/bg12.png" alt="健康公益" />
+            <div class="overlay">
+              <p class="overlay-text">
+                在益行山区，我们致力于用公益行动点亮健康之光。加入我们的"健康公益"行动，每一次参与都是对生命的投资，每一次科普都是对未来的关怀。让我们共同为提升公众健康水平而努力。
+              </p>
+            </div>
+          </div>
           <div class="project-info">
             <div class="info1">健康公益</div>
             <div class="info2">
@@ -72,9 +127,19 @@
         </router-link>
         <router-link
           to="/main/charitable-projects/international-charity"
-          class="project-li"
+          class="project-li international-charity"
         >
-          <img src="../../../assets/background/PlatformCharity07.jpg" alt="Example Image" />
+          <div class="image-container">
+            <img
+              src="../../../assets/background/PlatformCharity07.jpg"
+              alt="国际公益"
+            />
+            <div class="overlay">
+              <p class="overlay-text">
+                在益行山区，我们相信每个微小的行动都能在全球引发美好的涟漪。加入我们的"国际公益"，让爱跨越国界，用行动改变世界。一起为创造一个更加和谐的地球贡献力量。
+              </p>
+            </div>
+          </div>
           <div class="project-info">
             <div class="info1">国际公益</div>
             <div class="info2">为世界带来<br />微小而美好的改变</div>
@@ -219,7 +284,6 @@
   transition: transform 0.5s ease;
 }
 
-
 .project-li:hover img {
   transform: scale(1.05);
 }
@@ -266,5 +330,299 @@
   padding: 0;
   margin-top: 5px;
   color: rgb(245, 241, 241);
+}
+
+.green-mountains .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.green-mountains img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.green-mountains:hover img {
+  transform: scale(1.05);
+  filter: blur(5px);
+}
+
+.green-mountains .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(195, 188, 188, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.green-mountains:hover .overlay {
+  opacity: 1;
+}
+
+.green-mountains .overlay-text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.platform-charity .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.platform-charity img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.platform-charity:hover img {
+  transform: scale(1.05);
+  filter: blur(5px);
+}
+
+.platform-charity .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.platform-charity:hover .overlay {
+  opacity: 1;
+}
+
+.platform-charity .overlay-text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px 20px 100px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.rural-revitalization .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.rural-revitalization img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.rural-revitalization:hover img {
+  transform: scale(1.05);
+  filter: blur(5px);
+}
+
+.rural-revitalization .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.rural-revitalization:hover .overlay {
+  opacity: 1;
+}
+
+.rural-revitalization .overlay-text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.disaster-relief .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.disaster-relief img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.disaster-relief:hover img {
+  transform: scale(1.05);
+  filter: blur(5px);
+}
+
+.disaster-relief .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.disaster-relief:hover .overlay {
+  opacity: 1;
+}
+
+.disaster-relief .overlay-text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.disability-support .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.disability-support img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.disability-support:hover img {
+  transform: scale(1.05);
+  filter: blur(5px);
+}
+
+.disability-support .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.disability-support:hover .overlay {
+  opacity: 1;
+}
+
+.disability-support .overlay-text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.health-charity .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.health-charity img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.health-charity:hover img {
+  transform: scale(1.05);
+  filter: blur(5px);
+}
+
+.health-charity .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.health-charity:hover .overlay {
+  opacity: 1;
+}
+
+.health-charity .overlay-text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.international-charity .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.international-charity img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.international-charity:hover img {
+  transform: scale(1.05);
+  filter: blur(5px);
+}
+
+.international-charity .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.international-charity:hover .overlay {
+  opacity: 1;
+}
+
+.international-charity .overlay-text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  max-width: 80%;
+  line-height: 1.6;
 }
 </style>
