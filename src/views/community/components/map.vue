@@ -390,5 +390,3 @@ export default {
   scroll-snap-align: start;
 }
 </style>
-
-<style scoped></style>
