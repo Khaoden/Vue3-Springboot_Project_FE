@@ -37,7 +37,7 @@ const isPhotoWall = computed(() => {
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -45,12 +45,12 @@ const isPhotoWall = computed(() => {
 }
 
 .content-wrapper {
+  margin-top: 10vh;
   flex: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
   overflow-y: auto;
-  margin-top: 0%;
 }
 
 .route-content {
