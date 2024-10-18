@@ -4,7 +4,11 @@
       <el-carousel :interval="4000" height="200px" autoplay>
         <el-carousel-item v-for="project in projects" :key="project.id">
           <div class="project-card">
-            <img :src="project.image" alt="project image" />
+            <img
+              :src="project.image"
+              alt="project image"
+              style="object-fit: cover; width: 100%; height: 100%"
+            />
             <div class="project-info">
               <h3>{{ project.name }}</h3>
               <p>{{ project.description }}</p>
@@ -115,7 +119,7 @@
       <div class="calendar-container">
         <el-image :src="imageUrl" :fit="fit" />
         <div class="calendar-text">
-          <h1>17</h1>
+          <h1>18</h1>
           <h2>2024.10</h2>
           <h3>桂花留晚色，帘影淡秋光</h3>
         </div>
@@ -129,9 +133,9 @@
 import { ref, reactive } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-import image1 from "@/assets/background/bg4.png";
+import image1 from "@/assets/background/bg7.png";
 import image2 from "@/assets/background/bg5.png";
-import image3 from "@/assets/background/bg6.png";
+import image3 from "@/assets/background/bg12.png";
 import image4 from "@/assets/background/love1.png";
 
 const route = useRoute();
@@ -166,10 +170,6 @@ const projects = reactive([
 const handleCreateButtonClick = () => {
   router.push({ name: "create" });
 };
-
-// TODO:
-// 1.按钮上方做一个3D效果
-// 2.按钮下方塞一点项目item
 </script>
 
 <style lang="scss" scoped>
@@ -181,6 +181,9 @@ const handleCreateButtonClick = () => {
   }
 
   .el-carousel {
+    image {
+      object-fit: cover;
+    }
   }
 
   .button-container {
@@ -242,10 +245,15 @@ const handleCreateButtonClick = () => {
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
+        h1 {
+          margin-top: 50px;
+          margin-bottom: 30px;
+        }
+
         h3 {
           white-space: nowrap;
         }
-      } 
+      }
     }
   }
 }

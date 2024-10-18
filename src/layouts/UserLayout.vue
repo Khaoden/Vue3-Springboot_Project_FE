@@ -23,7 +23,7 @@ import Navbar from "@/components/navbar/navbar.vue";
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -37,6 +37,7 @@ import Navbar from "@/components/navbar/navbar.vue";
   width: 100%;
   overflow-y: auto;
   margin-top: 0%;
+  margin-top: 10vh;
 }
 
 .route-content {
