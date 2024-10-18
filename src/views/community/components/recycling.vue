@@ -93,6 +93,10 @@
           >
             提交
           </button>
+          <br>
+          <div class="flex justify-center">
+            <router-link to="/main/community/map" class="text-green-900 hover:text-green-500 transition-all ml-2 hover:text-blue-600" >查看旧物回收分布</router-link>
+          </div>
         </div>
       </form>
     </div>
@@ -148,6 +152,11 @@ const handleSubmit = (e) => {
 </script>
 
 <style scoped>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 @keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

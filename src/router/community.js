@@ -23,5 +23,10 @@ export default [
         path: "photoWall",
         name: "photoWall",
         component: () => import("@/views/community/components/photoWall.vue")
+    },
+    {
+        path: "map",
+        name: "map",
+        component: () => import("@/views/community/components/map.vue")
     }
 ];

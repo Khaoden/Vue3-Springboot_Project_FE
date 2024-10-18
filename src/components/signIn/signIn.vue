@@ -29,10 +29,6 @@
                 required
                 @input="validateEmail"
               />
-              <span class="icon" v-show="emailValid !== null">
-                <i v-show="emailValid" class="green-check">✔️</i>
-                <i v-show="!emailValid" class="red-cross">✖️</i>
-              </span>
             </div>
           </div>
 
@@ -47,10 +43,6 @@
                 required
                 @input="validatePassword"
               />
-              <span class="icon" v-show="passwordValid !== null">
-                <i v-show="passwordValid" class="green-check">✔️</i>
-                <i v-show="!passwordValid" class="red-cross">✖️</i>
-              </span>
             </div>
           </div>
 
@@ -294,6 +286,7 @@ onMounted(() => {
 canvas {
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -336,7 +329,7 @@ form {
 
 .input-group {
   margin-bottom: 20px;
-  width: 100%;
+  width: 95%;
 }
 
 .input-wrapper {
@@ -405,7 +398,7 @@ select:-webkit-autofill {
 
 
 button {
-  width: 90%;
+  width: 95%;
   padding: 12px;
   background-color: rgba(255, 255, 255, 0.5);
   color: black;

@@ -1,461 +1,238 @@
 <template>
-  <footer>
-    <div class="footer-container max1300">
-      <div class="footer-ab">
-        <div class="footer-b" style="cursor: pointer">
-          <span class="footer-bli">
-            <img
-              class="footer-b1"
-              src="https://img.alicdn.com/imgextra/i4/O1CN01iUHIi720lfkhXZFYf_!!6000000006890-2-tps-45-45.png"
-            />
-            <div class="footer-b2">
-              <img
-                class="max"
-                src="https://img.alicdn.com/imgextra/i3/O1CN01tOHtxT1CsKj11emLN_!!6000000000136-2-tps-135-155.png"
-              />
-            </div>
-          </span>
-          <a
-            href="https://weibo.com/u/1866863440"
-            target="_blank"
-            class="footer-bli"
-          >
-            <img
-              class="footer-b1"
-              src="https://img.alicdn.com/imgextra/i3/O1CN01SvQOup29TCJnz7Vqz_!!6000000008068-2-tps-45-45.png"
-            />
-          </a>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h2 class="footer-title">益行山区</h2>
+          <p class="footer-subtitle">携手共创美好未来</p>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">
+            <Home class="footer-icon" :size="20" />
+            公益项目
+          </h3>
+          <ul class="footer-list">
+            <li><router-link to="/main/charitable-projects/platform-charity" class="footer-link">平台公益</router-link></li>
+            <li><router-link to="/main/charitable-projects/environmental-protection" class="footer-link">绿水青山</router-link></li>
+            <li><router-link to="/main/charitable-projects/rural-revitalization" class="footer-link">乡村振兴</router-link></li>
+            <li><router-link to="/main/charitable-projects/disaster-relief" class="footer-link">应急救灾</router-link></li>
+            <li><router-link to="/main/charitable-projects/disability-support" class="footer-link">助残扶弱</router-link></li>
+            <li><router-link to="/main/charitable-projects/health-charity" class="footer-link">健康公益</router-link></li>
+            <li><router-link to="/main/charitable-projects/international-charity" class="footer-link">国际公益</router-link></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">
+            <Heart class="footer-icon" :size="20" />
+            关于我们
+          </h3>
+          <ul class="footer-list">
+            <li><router-link to="/main/about-us/foundation-intro" class="footer-link">基金会简介</router-link></li>
+            <li><router-link to="/main/about-us/board-intro" class="footer-link">理事会简介</router-link></li>
+            <li><router-link to="/main/about-us/honors" class="footer-link">荣誉表彰</router-link></li>
+            <li><router-link to="/main/about-us/contact-us" class="footer-link">联系我们</router-link></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">
+            <Users class="footer-icon" :size="20" />
+            社区
+          </h3>
+          <ul class="footer-list">
+            <li><router-link to="/main/community/forum" class="footer-link">论坛</router-link></li>
+            <li><router-link to="/main/community/recycling" class="footer-link">旧物回收</router-link></li>
+            <li><router-link to="/main/community/photoWall" class="footer-link">照片墙</router-link></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-nav">
-        <div class="footer-anvil">
-          <div class="footer-c" data-name="新闻动态">新闻动态</div>
-          <div class="footer-d"></div>
-          <div class="footer-e">
-            <div class="footer-eli">
-              <a href="/news/list/1">活动新闻</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/news/reports/all">研究报告</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-anvil">
-          <div class="footer-c" data-name="公益项目">公益项目</div>
-          <div class="footer-d"></div>
-          <div class="footer-e">
-            <div class="footer-eli">
-              <a href="/projects/platform">平台公益</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/projects/environmental-protection">绿水青山</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/projects/rural-revitalization">乡村振兴</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/projects/emergency-relief">应急救灾</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/projects/community-development">助残扶弱</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/projects/health">健康公益</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/projects/internationality">国际公益</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-anvil">
-          <div class="footer-c" data-name="党建工作">党建工作</div>
-          <div class="footer-d"></div>
-          <div class="footer-e">
-            <div class="footer-eli">
-              <a href="/party-building">党支部简介</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/party-building/activities/list/1">党建活动动态</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/party-building/regulations">党建制度</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-anvil">
-          <div class="footer-c" data-name="公开信息">公开信息</div>
-          <div class="footer-d"></div>
-          <div class="footer-e">
-            <div class="footer-eli">
-              <a href="/disclosure/info/regulations">规章制度</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/disclosure/info/annual-report">年度报告</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/disclosure/info/finance">财务信息</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/disclosure/info/donation-income">捐赠收入</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/disclosure/info/expenditure">重大资金支出情况</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-anvil">
-          <div class="footer-c" data-name="关于我们">关于我们</div>
-          <div class="footer-d"></div>
-          <div class="footer-e">
-            <div class="footer-eli">
-              <a href="/about-us">基金会简介</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/about-us/council">理事会简介</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/about-us/honors">荣誉表彰</a>
-            </div>
-            <div class="footer-eli">
-              <a href="/about-us/contact">联系我们</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-fg">
-        <div class="footer-f">
-          阿里巴巴版权所有1999-2024<a
-            href="https://beian.miit.gov.cn/#/Integrated/index"
-            target="_blank"
-            >浙ICP备12037069号-1</a
-          >
-          <a href="https://www.beian.gov.cn/" target="_blank"
-            >浙公网安备33010002000089</a
-          >
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 益行山区 版权所有</p>
+        <p>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" class="footer-link">浙ICP备号xxxxxx</a>
+          |
+          <a href="https://www.beian.gov.cn/" target="_blank" class="footer-link">浙公网安备xxxxx</a>
+        </p>
       </div>
     </div>
+    <div class="footer-decoration footer-decoration-bottom"></div>
+    <div class="footer-decoration footer-decoration-top-right"></div>
+    <div class="footer-decoration footer-decoration-bottom-left"></div>
+    <button
+      v-if="showScrollTop"
+      @click="scrollToTop"
+      class="scroll-top-button"
+    >
+      <ChevronUp :size="24" />
+    </button>
   </footer>
 </template>
 
 <script setup>
-import { ref, computed, nextTick, onMounted, onBeforeUnmount } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { ref, onMounted, onUnmounted } from 'vue';
+import { Home, Heart, Users, ChevronUp } from 'lucide-vue-next';
+
+const showScrollTop = ref(false);
+
+const checkScroll = () => {
+  showScrollTop.value = window.scrollY > 300;
+};
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', checkScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', checkScroll);
+});
 </script>
 
 <style scoped>
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-footer {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.footer-container {
-  background: #fff;
-  padding: 0 auto; /* 添加左右内边距 */
-  margin: 0 auto;
-  width: 80%;
-}
-
 .footer {
-  margin-top: 10%;
-  border-bottom: 10px solid #f60;
-  max-width: 100%;
-}
-
-.footer-ab {
-  font-size: 0;
-  width: 100%;
-}
-
-.footer-b {
-  float: right;
-}
-
-.footer-bli {
-  display: inline-block;
-  margin-left: 15px;
-  padding-bottom: 5px;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #e6f7ff, #e6ffed);
+  padding: 3rem 0rem;
   position: relative;
-}
-
-.footer-b1 {
-  opacity: 0.2;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-
-.footer-b2 {
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 2px #ddd;
-  display: none;
-  padding: 5px;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  width: 120px;
-}
-
-.footer-bli:hover .footer-b1 {
-  opacity: 1;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-
-.footer-bli:hover .footer-b2 {
-  display: block;
-}
-
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap; /* 允许在小屏幕上换行 */
-  justify-content: space-between;
-  margin-top: 30px;
-  padding: 70px 0;
-  width: 100%;
-}
-
-.footer-anvil {
-  width: auto; /* 改为自动宽度 */
-  max-width: 250px; /* 设置最大宽度 */
-  margin-bottom: 20px; /* 添加底部外边距，以防在换行时重叠 */
-  text-align: left; /* 确保文本内容左对齐 */
-}
-
-/* 响应式调整 */
-@media (max-width: 1200px) {
-  .footer-nav {
-    justify-content: flex-start;
-  }
-
-  footer-anvil {
-    width: calc(33.33% - 20px); /* 在中等屏幕上每行显示3个 */
-    margin-right: 20px;
-  }
-}
-
-@media (max-width: 750px) {
-  .footer-nav {
-    display: block;
-  }
-
-  footer-anvil {
-    width: 100%;
-    max-width: none;
-  }
-
-  .footer-c,
-  .footer-e a,
-  .footer-f {
-    font-size: 16px; /* 减小字体大小 */
-  }
-  .footer-b {
-    display: none;
-  }
-}
-
-.footer-c {
-  color: #222;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.footer-d {
-  background: #f60;
-  border-radius: 3px;
-  height: 5px;
-  margin: 15px 0;
-  width: 25px;
-}
-
-.footer-e a {
-  color: #999;
-  display: inline-block;
-  font-size: 20px;
-  margin-top: 5px;
-}
-
-.footer-e a:hover {
-  color: #f60;
-}
-
-.footer-fg {
-  margin-top: 30px;
   overflow: hidden;
 }
 
-.footer-f {
-  color: #999;
-  float: left;
-  font-size: 20px;
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
-.footer-f a {
-  color: #999;
-  display: inline-block;
-  margin-left: 10px;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
-.footer-f a:hover {
-  color: #f60;
+.footer-column {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-g {
-  border: 2px solid #ddd;
-  border-radius: 20px;
-  color: #999;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 35px;
-  margin-left: 20px;
+.footer-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.footer-subtitle {
+  color: #4a5568;
+}
+
+.footer-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2f855a;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon {
+  margin-right: 0.5rem;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link {
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #74b5f1;
+}
+
+.footer-bottom {
   text-align: center;
-  width: 60px;
+  color: #4a5568;
+  font-size: 0.875rem;
 }
 
-.footer-g:hover {
-  border-color: #f60;
-  color: #f60;
+.footer-decoration {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
 }
 
-.footer-gif {
-  bottom: 10%;
-  max-width: 1.5rem;
+.footer-decoration-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  background: linear-gradient(to top, #a7f3d0, transparent);
+  opacity: 0.3;
+}
+
+.footer-decoration-top-right {
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  background-color: #bfdbfe;
+  opacity: 0.2;
+  transform: translate(50%, -50%);
+}
+
+.footer-decoration-bottom-left {
+  bottom: 0;
+  left: 0;
+  width: 12rem;
+  height: 12rem;
+  background-color: #a7f3d0;
+  opacity: 0.2;
+  transform: translate(-50%, 50%);
+}
+
+.scroll-top-button {
   position: fixed;
-  right: 5%;
-  width: 150px;
-  z-index: 999;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #2c5282;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
-@media (max-width: 1200px) {
-  .footer {
-    padding: 60px 0;
+.scroll-top-button:hover {
+  background-color: #2b6cb0;
+}
+
+.scroll-top-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 
-  .footer-nav {
-    margin-top: 40px;
-    padding: 40px 0;
-  }
-
-  .footer-c,
-  .footer-e a,
-  .footer-fg {
-    font-size: 18px;
-  }
-
-  .footer-fg {
-    margin-top: 20px;
+  .footer-column {
     text-align: center;
-    width: 100%;
   }
 
-  .footer-f a {
-    margin: 0 5px;
-  }
-
-  .footer-f {
-    font-size: 18px;
+  .footer-heading {
+    justify-content: center;
   }
 }
-
-@media (max-width: 1000px) {
-  .footer-g {
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 750px) {
-  footer {
-    border-width: 3px;
-  }
-
-  .footer {
-    padding: 0.6rem 0;
-  }
-
-  .footer-a {
-    height: 100px;
-    width: auto;
-  }
-
-  .footer-bli {
-    width: 0.6rem;
-  }
-
-  .footer-nav {
-    display: block;
-    margin-top: 0.6rem;
-    padding: 0.3rem 0;
-  }
-
-  .footer-c,
-  .footer-navli {
-    width: 100%;
-  }
-
-  .footer-c {
-    background: url(https://img.alicdn.com/imgextra/i4/O1CN01NRS0oe1lSEi3MeM7p_!!6000000004817-2-tps-14-8.png)
-      no-repeat 100%;
-    border-bottom: 1px solid #eee;
-    font-size: 0.28rem;
-    line-height: 0.9rem;
-  }
-
-  .footer-d,
-  .footer-e {
-    display: none;
-  }
-
-  .footer-e {
-    padding: 0.15rem 0;
-    width: 100%;
-  }
-
-  .footer-e a {
-    display: block;
-    font-size: 0.26rem;
-    line-height: 0.6rem;
-    padding: 0 0.3rem;
-    width: 100%;
-  }
-
-  .footer-fg {
-    margin-top: 0.4rem;
-  }
-
-  .footer-f,
-  .footer-fg {
-    font-size: 0.28rem;
-  }
-
-  .footer-g {
-    border: 1px solid #eee;
-    font-size: 0.26rem;
-    line-height: 0.6rem;
-    width: 1.2rem;
-  }
-
-  .footer-gif {
-    width: 1.5rem;
-  }
-}
-
 </style>

@@ -42,7 +42,7 @@ import ForumAside from "@/components/forum/forumAside.vue";
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/ForumBackground.jpg");
+  background-image: url("../../../assets/background/bg10.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

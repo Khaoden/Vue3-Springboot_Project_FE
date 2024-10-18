@@ -23,7 +23,7 @@ const route = useRoute();
 
 // 计算属性，判断当前路由是否为 photoWall
 const isPhotoWall = computed(() => {
-  return route.name === 'photoWall'; 
+  return (route.name === 'photoWall' || route.name === 'recycling' || route.name === 'forum' || route.name === 'map'); 
 });
 </script>
 
@@ -59,7 +59,9 @@ const isPhotoWall = computed(() => {
 }
 
 .footer {
+  margin-top: 0%;
   width: 100%;
+  height: 10%;
 }
 
 :global(body) {
