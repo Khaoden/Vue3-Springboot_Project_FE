@@ -27,7 +27,6 @@
 import ForumList from "@/components/forum/forumList.vue";
 import Pagination from "@/components/pagination/pagination.vue";
 import ForumAside from "@/components/forum/forumAside.vue";
-import ForumAside from "@/components/forum/forumAside.vue";
 </script>
 
 <style lang="scss" scoped>
