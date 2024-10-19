@@ -284,6 +284,7 @@ onBeforeUnmount(() => {
   flex-direction: column; // 垂直排列
   justify-content: center; // 垂直对齐到中间
   margin-left: 10px; // 可选，调整 logo 和文本之间的间距
+  width: 120px;
 }
 
 .logo {
