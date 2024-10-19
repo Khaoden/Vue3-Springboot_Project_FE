@@ -19,7 +19,7 @@
         @click="handleMenuItemClick(item)"
       >
         <span v-if="item.name === 'personal-center'" class="personal-center">
-          <img src="@/assets/background/boardeIntro.png" alt="User" />
+          <img src="@/assets/background/ActivityNews07.jpeg" alt="User" />
         </span>
         <span v-else>{{ item.emoji }} {{ item.label }}</span>
       </router-link>
