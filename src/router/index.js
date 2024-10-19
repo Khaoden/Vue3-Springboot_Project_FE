@@ -72,6 +72,9 @@ const routes = [
       },
     ],
   },
+  {
+    path: ""
+  }
 ];
 
 const router = createRouter({

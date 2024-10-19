@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div v-if="!isDetailView" class="background">
     <div class="title-content">
       <div class="title">活动新闻</div>
       <div class="subtitle">
@@ -13,6 +13,7 @@
           :key="item.id"
           :to="item.link"
           class="project-item"
+          @click="isDetailView = true"
         >
           <!-- 确保每个 project-item 只显示一个图片 -->
           <img :src="item.image" alt="" />
@@ -50,10 +51,11 @@
       </div>
     </div>
   </div>
+  <router-view @router-view-leave="isDetailView = false"></router-view>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, provide } from "vue";
 import image from "@/assets/background/test.png";
 import image1 from "@/assets/information/ActivityNews/1.png";
 import image2 from "@/assets/information/ActivityNews/2.png";
@@ -65,69 +67,73 @@ import image7 from "@/assets/information/ActivityNews/7.png";
 import image8 from "@/assets/information/ActivityNews/8.png";
 import image9 from "@/assets/information/ActivityNews/9.png";
 
+let isDetailView = ref(false);
+provide('isDetailView', isDetailView);
+console.log(isDetailView.value);
+
 const projects = ref([
   {
     id: 1,
     title: "让教育之光照亮贫困山区",
     date: "2021-02-22",
     image: image1,
-    link: "",
+    link: "/main/information/activity-news/detail01",
   },
   {
     id: 2,
     title: "蓝山县易地搬迁助力幸福生活",
     date: "2024-10-11",
     image: image2,
-    link: "",
+    link: "/main/information/activity-news/detail02",
   },
   {
     id: 3,
     title: "举国同心 合力攻坚",
     date: "2022-09-10",
     image: image3,
-    link: "",
+    link: "/main/information/activity-news/detail03",
   },
   {
     id: 4,
     title: "乌蒙山区的幸福迁徙",
     date: "2020-04-12",
     image: image4,
-    link: "",
+    link: "/main/information/activity-news/detail04",
   },
   {
     id: 5,
     title: "义务教育有保障，山区的孩...",
     date: "2022-06-18",
     image: image5,
-    link: "",
+    link: "/main/information/activity-news/detail05",
   },
   {
     id: 6,
     title: "大别山区扶贫路",
     date: "2019-04-19",
     image: image6,
-    link: "",
+    link: "/main/information/activity-news/detail06",
   },
   {
     id: 7,
     title: "新华社长篇通讯：中国脱贫...",
     date: "2021-02-24",
     image: image7,
-    link: "",
+    link: "/main/information/activity-news/detail07",
   },
   {
     id: 8,
     title: "决战千山万弄间",
     date: "2020-10-14",
     image: image8,
-    link: "",
+    link: "/main/information/activity-news/detail08",
   },
   {
     id: 9,
     title: "情系山区教育 助力乡村振...",
     date: "2021-03-30",
     image: image9,
-    link: "",
+    link: "/main/information/activity-news/detail09",
   },
   {
     id: 10,
