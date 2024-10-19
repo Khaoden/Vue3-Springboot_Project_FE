@@ -20,7 +20,7 @@
     </div>
 
     <div
-      class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg max-w-md w-full relative z-10 backdrop-blur-sm"
+      class=" bg-white bg-opacity-80 p-8 rounded-lg shadow-lg max-w-lg w-full relative z-10 backdrop-blur-sm"
     >
       <h1 class="text-3xl font-bold text-center mb-6 text-green-700">
         💞益回收
@@ -80,7 +80,16 @@
           <el-input type="textarea" />
         </el-form-item>
       </el-form>
-      <el-button type="success" round size="large">提交</el-button>
+      <el-button
+            type="submit"
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all"
+          >
+            提交
+          </el-button>
+          <br>
+          <div class="flex justify-center">
+            <router-link to="/main/community/map" class="text-green-900 hover:text-green-500 transition-all ml-2 hover:text-blue-600" >查看旧物回收分布</router-link>
+          </div>
     </div>
   </div>
 </template>
@@ -173,6 +182,16 @@ const onSubmit = () => {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.upload-demo {
+  width: 100%;
+  height: auto;
+}
+
+.el-icon--upload {
+
+  width: 10%;
 }
 
 .emoji-enter-active,
