@@ -50,8 +50,8 @@
               社区
             </h3>
             <ul class="footer-list">
-              <li><router-link to="/main/community/forum" class="footer-link">论坛</router-link></li>
-              <li><router-link to="/main/community/recycling" class="footer-link">旧物回收</router-link></li>
+              <li><router-link to="/main/community/forum" class="footer-link">益论坛</router-link></li>
+              <li><router-link to="/main/community/recycling" class="footer-link">益回收</router-link></li>
               <li><router-link to="/main/community/photoWall" class="footer-link">照片墙</router-link></li>
             </ul>
           </div>
