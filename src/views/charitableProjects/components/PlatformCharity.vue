@@ -26,7 +26,7 @@
           <div class="project-info">
             <div class="info1">平台公益</div>
             <div class="info2">
-              互联网公益<br />通过非���利的方式，改善社会问题、提升社会福利、保护环境或促进文化传承
+              互联网公益<br />通过非营利的方式，改善社会问题、提升社会福利、保护环境或促进文化传承
             </div>
           </div>
         </router-link>
