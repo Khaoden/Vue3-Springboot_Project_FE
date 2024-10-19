@@ -57,27 +57,27 @@ const username = ref("");
 const password = ref("");
 const router = useRouter();
 
-const verify = () => {
-  router.push("/main");
-};
-
-
-// const verify = async () => {
-//   if (!username.value || !password.value) {
-//     return alert("请输入有效的账号和密码");
-//   }
-//   try {
-//     const response = await login(username.value, password.value);
-//     localStorage.setItem('token', response.data.token);
-//     console.log('登录成功', response.data);
-//     // Assuming the backend returns a user object with a token
-//     localStorage.setItem('user', JSON.stringify(response.data));
-//     router.push("/main");
-//   } catch (error) {
-//     console.error('登录失败', error.response?.data);
-//     alert(error.response?.data || "登录失败，请重试");
-//   }
+// const verify = () => {
+//   router.push("/main");
 // };
+
+
+const verify = async () => {
+  if (!username.value || !password.value) {
+    return alert("请输入有效的账号和密码");
+  }
+  try {
+    const response = await login(username.value, password.value);
+    localStorage.setItem('token', response.data.token);
+    console.log('登录成功', response.data);
+    // Assuming the backend returns a user object with a token
+    localStorage.setItem('user', JSON.stringify(response.data));
+    router.push("/main");
+  } catch (error) {
+    console.error('登录失败', error.response?.data);
+    alert("登录失败，请重试");
+  }
+};
 
 const logout = () => {
   localStorage.removeItem('token');
