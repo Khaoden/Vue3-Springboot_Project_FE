@@ -148,8 +148,8 @@ const menuItems = [
     name: "community",
     emoji: "🤗",
     subItems: [
-      { label: "论坛", name: "forum", emoji: "💬" },
-      { label: "旧物回收", name: "recycling", emoji: "♻️" },
+      { label: "益论坛", name: "forum", emoji: "💬" },
+      { label: "益回收", name: "recycling", emoji: "♻️" },
       { label: "照片墙", name: "photoWall", emoji: "📸" },
     ],
   },
