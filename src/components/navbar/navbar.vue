@@ -4,8 +4,8 @@
       ><!----><img class="logo" src="../../assets/logo-icon.png" alt="Logo"
     /></router-link>
     <div class="logo-container">
-      <span class="logo-text-c">益行山区</span>
-      <span class="logo-text-e">YingXing GOING!</span>
+      <h1 class="logo-text-c">益行山区</h1>
+      <h2 class="logo-text-e">YingXing GOING!</h2>
     </div>
     <nav class="nav-menu">
       <router-link
@@ -293,11 +293,13 @@ onBeforeUnmount(() => {
 .logo-text-c {
   height: 40%;
   font-size: 15px;
+  margin: 0;
 }
 
 .logo-text-e {
   height: 40%;
   font-size: 12px;
+  margin: 0;
 }
 
 .nav-menu {
