@@ -21,9 +21,18 @@ import Footer from '../components/footer/footer.vue';
 
 const route = useRoute();
 
+
+let detail = [ 'detail01', 'detail02', 'detail03', 'detail04', 'detail05', 'detail06', 'detail07', 'detail08', 'detail09' ];
+
 // 计算属性，判断当前路由是否为 photoWall
 const isPhotoWall = computed(() => {
-  return (route.name === 'photoWall' || route.name === 'recycling' || route.name === 'forum' || route.name === 'map'); 
+  return (
+    route.name === 'photoWall' ||
+    route.name === 'recycling' ||
+    route.name === 'forum' ||
+    route.name === 'map' ||
+    detail.some(item => item === route.name) // 使用 some 方法
+  );
 });
 </script>
 

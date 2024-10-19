@@ -4,8 +4,8 @@
       ><!----><img class="logo" src="../../assets/logo-icon.png" alt="Logo"
     /></router-link>
     <div class="logo-container">
-      <span class="logo-text-c">益行山区</span>
-      <span class="logo-text-e">YingXing GOING!</span>
+      <h1 class="logo-text-c">益行山区</h1>
+      <h2 class="logo-text-e">YingXing GOING!</h2>
     </div>
     <nav class="nav-menu">
       <router-link
@@ -19,7 +19,7 @@
         @click="handleMenuItemClick(item)"
       >
         <span v-if="item.name === 'personal-center'" class="personal-center">
-          <img src="@/assets/background/boardeIntro.png" alt="User" />
+          <img src="@/assets/background/ActivityNews07.jpeg" alt="User" />
         </span>
         <span v-else>{{ item.emoji }} {{ item.label }}</span>
       </router-link>
@@ -148,8 +148,8 @@ const menuItems = [
     name: "community",
     emoji: "🤗",
     subItems: [
-      { label: "论坛", name: "forum", emoji: "💬" },
-      { label: "旧物回收", name: "recycling", emoji: "♻️" },
+      { label: "益论坛", name: "forum", emoji: "💬" },
+      { label: "益回收", name: "recycling", emoji: "♻️" },
       { label: "照片墙", name: "photoWall", emoji: "📸" },
     ],
   },
@@ -284,6 +284,7 @@ onBeforeUnmount(() => {
   flex-direction: column; // 垂直排列
   justify-content: center; // 垂直对齐到中间
   margin-left: 10px; // 可选，调整 logo 和文本之间的间距
+  width: 120px;
 }
 
 .logo {
@@ -293,11 +294,13 @@ onBeforeUnmount(() => {
 .logo-text-c {
   height: 40%;
   font-size: 15px;
+  margin: 0;
 }
 
 .logo-text-e {
   height: 40%;
   font-size: 12px;
+  margin: 0;
 }
 
 .nav-menu {

@@ -4,53 +4,42 @@
     <div class="form-container">
       <div class="form-content">
         <h2>欢迎您的到来</h2>
-        <form @submit.prevent="handleSubmit" autocomplete="off">
+        <Form @submit="handleSubmit" :validation-schema="schema" v-slot="{ errors }">
           <div class="input-group">
             <label for="username">用户名</label>
             <div class="input-wrapper">
-              <input
-                id="username"
-                v-model="username"
-                type="text"
-                placeholder="输入用户名"
-                required
-              />
+              <Field name="username" v-slot="{ field, errors }">
+                <input v-bind="field" type="text" placeholder="输入用户名" />
+                <span class="error-message" :class="{ show: errors[0] }">{{ errors[0] }}</span>
+              </Field>
             </div>
           </div>
 
           <div class="input-group">
             <label for="email">电子邮箱</label>
             <div class="input-wrapper">
-              <input
-                id="email"
-                v-model="email"
-                type="email"
-                placeholder="输入您的邮箱"
-                required
-                @input="validateEmail"
-              />
+              <Field name="email" v-slot="{ field, errors }">
+                <input v-bind="field" type="email" placeholder="输入您的邮箱" />
+                <span class="error-message" :class="{ show: errors[0] }">{{ errors[0] }}</span>
+              </Field>
             </div>
           </div>
 
           <div class="input-group">
             <label for="password">密码</label>
             <div class="input-wrapper">
-              <input
-                id="password"
-                v-model="password"
-                type="password"
-                placeholder="输入您的密码"
-                required
-                @input="validatePassword"
-              />
+              <Field v-slot="{ field, errors }" name="password" :rules="passwordRules">
+                <input v-bind="field" type="password" placeholder="输入您的密码" />
+                <span class="error-message" :class="{ show: errors[0] }">{{ errors[0] }}</span>
+              </Field>
             </div>
           </div>
 
-          <button type="submit">注册</button>
-        </form>
+          <button type="submit" :disabled="Object.keys(errors).length > 0">注册</button>
+        </Form>
 
         <div class="form-footer">
-          <p>已有账号，去登录！<router-link to="/login">登录</router-link></p>
+          <p>已有号，去登录！<router-link to="/login">登录</router-link></p>
         </div>
       </div>
     </div>
@@ -59,49 +48,40 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { Form, Field, ErrorMessage } from 'vee-validate';
+import * as yup from 'yup';
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Sky } from "three/examples/jsm/objects/Sky";
 import { Water } from "three/examples/jsm/objects/Water";
-import { ImprovedNoise } from "three/examples/jsm/math/ImprovedNoise";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRouter } from "vue-router";
-import { register } from '@/api/auth.js'; 
+import { register } from '@/api/auth.js';
 
 const threeCanvas = ref(null);
-const username = ref('');
-const email = ref('');
-const password = ref('');
-const emailValid = ref(null);
-const passwordValid = ref(null);
 const router = useRouter();
 
-const validateEmail = () => {
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  emailValid.value = emailPattern.test(email.value);
-};
+const schema = yup.object({
+  username: yup.string().required('用户名是必填的').min(3, '用户名至少需要3个字符'),
+  email: yup.string().required('邮箱是必填的').email('请输入有效的邮箱地址'),
+  password: yup.string()
+    .required('密码是必填的')
+    .min(6, '密码至少需要6个字符')
+    .matches(/^(?=.*[A-Za-z])(?=.*\d)/, '密码必须包含至少一个字母和一个数字')
+});
 
-const validatePassword = () => {
-  // 例如：密码至少 6 位，且包含字母和数字
-  const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-  passwordValid.value = passwordPattern.test(password.value);
-};
 
-const handleSubmit = async () => {
-  if (emailValid.value && passwordValid.value) {
-    try {
-      const response = await register(username.value, email.value, password.value);
-      console.log('注册成功', response.data);
-      alert('注册成功！请检查您的邮箱以验证账户。');
-      router.push('/login');
-    } catch (error) {
-      console.error('注册失败', error.response?.data);
-      alert(error.response?.data || "注册失败，请重试");
-    }
-  } else {
-    alert('请确保所有字段均有效！');
+const handleSubmit = async (values, { resetForm }) => {
+  try {
+    const response = await register(values.username, values.email, values.password);
+    alert('注册成功！请检查您的邮箱以验证账户。');
+    router.push('/login');
+    resetForm();
+  } catch (error) {
+    alert(error.response?.data || "注册失败，请重试");
   }
 };
+
+
 
 // 这里是您的 Three.js 初始化代码
 onMounted(() => {
@@ -273,9 +253,31 @@ onMounted(() => {
   init();
   animate();
 });
-</script>
 
+const passwordRules = (value) => {
+  if (!value) return '密码是必填的';
+  if (value.length < 6) return '密码至少需要6个字符';
+  if (!/^(?=.*[A-Za-z])(?=.*\d)/.test(value)) return '密码必须包含至少一个字母和一个数字';
+  return true;
+};
+</script>
 <style scoped>
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 12px;
+  color: #ff4d4f;
+  padding: 2px 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.error-message.show {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
 .container {
   position: relative;
   width: 100vw;
@@ -328,16 +330,55 @@ form {
 }
 
 .input-group {
-  margin-bottom: 20px;
-  width: 95%;
+  margin-bottom: 25px; /* 增加间距，确保错误消息有足够的空间 */
+  position: relative;
 }
 
 .input-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
   width: 100%;
+  min-height: 50px; /* 减少最小高度 */
 }
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 5px; /* 添加一些底部边距 */
+}
+
+.error-message {
+  position: absolute;
+  bottom: -200px; /* 调整位置，使其更贴近输入框 */
+  left: 0;
+  font-size: 12px;
+  color: #ff4d4f;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2px 5px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.error-message.show {
+  opacity: 1;
+  transform: translateY(0); /* 移除 Y 轴的位移 */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #42b983;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ddd;
+}
+
 
 .icon {
   margin-left: 10px;
@@ -429,4 +470,39 @@ button:hover {
 .form-footer a:hover {
   color: white;
 }
+
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 12px;
+  color: #ff4d4f;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2px 5px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.error-message.show {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 25px;
+}
 </style>
+
+
+
+
+
+
+
+
+
+
+
+

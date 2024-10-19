@@ -27,7 +27,6 @@
 import ForumList from "@/components/forum/forumList.vue";
 import Pagination from "@/components/pagination/pagination.vue";
 import ForumAside from "@/components/forum/forumAside.vue";
-import ForumAside from "@/components/forum/forumAside.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -42,7 +41,7 @@ import ForumAside from "@/components/forum/forumAside.vue";
   padding: 0;
   margin: 0;
   padding: 0;
-  background-image: url("../../../assets/background/ForumBackground.jpg");
+  background-image: url("../../../assets/background/bg15.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
