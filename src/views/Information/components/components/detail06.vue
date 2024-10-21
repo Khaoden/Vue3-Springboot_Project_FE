@@ -39,7 +39,7 @@
 
       <p class="source-link">
         <a
-          href="http://www.moe.gov.cn/jyb_xwfb/s5147/202206/t20220620_638832.html"
+          href="https://www.gov.cn/xinwen/2019-04/19/content_5384424.htm#1"
           target="_blank"
           >查看原文</a
         >

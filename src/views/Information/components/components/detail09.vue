@@ -41,7 +41,7 @@
 
       <p class="source-link">
         <a
-          href="http://www.moe.gov.cn/jyb_xwfb/s5147/202206/t20220620_638832.html"
+          href="https://mp.weixin.qq.com/s?__biz=MzIwNTQyNTYyNA==&mid=2247494427&idx=1&sn=f6ace1b906767c9212b6017778601125&chksm=9733b5aca0443cbababf7e308b6f34df776aea271aaba705cacce29f1173ddbad3791ef3754f&scene=27"
           target="_blank"
           >查看原文</a
         >
