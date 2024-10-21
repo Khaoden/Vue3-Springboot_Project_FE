@@ -283,7 +283,8 @@ const changePage = (page) => {
   z-index: 10;
   text-align: left;
   padding: 15px 35px;
-  color: #222;
+  color: #fffbfbe1;
+  background-color: #14ae78;
   transition: background-color 0.3s ease;
   transition: color 0.3s ease;
 }
@@ -292,11 +293,12 @@ const changePage = (page) => {
   display: block;
   font-size: 14px;
   margin-top: 5px;
-  color: #888;
+  color: #fffbfbe1;
 }
 
 .project-item:hover .description {
-  background-color: #fbc934;
+  color: #14ae78;
+  background-color: #e3c571;
   color: #fff;
 }
 
@@ -310,7 +312,7 @@ const changePage = (page) => {
 
 .page a {
   text-decoration: none;
-  color: #333;
+                                                        color: #333;
   padding: 10px 15px;
   border-radius: 5px;
   margin: 0 5px;
