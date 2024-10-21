@@ -110,6 +110,22 @@ const leave = (el) => {
 
 const menuItems = [
   {
+    label: "首页",
+    name: "home",
+    emoji: "🏠",
+  },
+  {
+    label: "社区",
+    name: "community",
+    emoji: "🤗",
+    subItems: [
+      { label: "益论坛", name: "forum", emoji: "💬" },
+      { label: "益回收", name: "recycling", emoji: "♻️" },
+      { label: "照片墙", name: "photoWall", emoji: "📸" },
+      { label: "益AI", name: "ai", emoji: "🤖" },
+    ],
+  },
+  {
     label: "公益",
     name: "charitable-projects",
     emoji: "🌟",
@@ -144,17 +160,6 @@ const menuItems = [
     ],
   },
   {
-    label: "社区",
-    name: "community",
-    emoji: "🤗",
-    subItems: [
-      { label: "益论坛", name: "forum", emoji: "💬" },
-      { label: "益回收", name: "recycling", emoji: "♻️" },
-      { label: "照片墙", name: "photoWall", emoji: "📸" },
-      { label: "益AI", name: "ai", emoji: "🤖" },
-    ],
-  },
-  {
     label: "个人中心",
     name: "personal-center",
     emoji: "👤",
@@ -168,7 +173,7 @@ const menuItems = [
 const activeItem = computed(() => route.name);
 
 const showDropdown = (name) => {
-  if (name === "personal-center") {
+  if (name === "personal-center" || name === "home") {
     activeDropdown.value = null;
     return;
   }
@@ -370,6 +375,19 @@ onBeforeUnmount(() => {
     left: 0;
   }
 
+  &:first-child {
+    object-fit: contain;
+    transition: transform 0.3s ease;
+
+    // 取消下划线效果
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      transform: scale(1.05); // 轻微放大效果
+    }
+  }
   &:last-child {
     margin-right: 0;
     object-fit: contain;
@@ -377,7 +395,7 @@ onBeforeUnmount(() => {
 
     // 取消下划线效果
     &::after {
-      content: none; // 不显示下划线
+      content: none; 
     }
 
     &:hover {

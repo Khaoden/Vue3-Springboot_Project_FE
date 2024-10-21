@@ -14,25 +14,39 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import Navbar from '../components/navbar/navbar.vue';
-import Footer from '../components/footer/footer.vue';
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import Navbar from "../components/navbar/navbar.vue";
+import Footer from "../components/footer/footer.vue";
 
 const route = useRoute();
 
-
-let detail = [ 'detail01', 'detail02', 'detail03', 'detail04', 'detail05', 'detail06', 'detail07', 'detail08', 'detail09' ];
+let detail = [
+  "detail01",
+  "detail02",
+  "detail03",
+  "detail04",
+  "detail05",
+  "detail06",
+  "detail07",
+  "detail08",
+  "detail09",
+  "r-detail01",
+  "r-detail02",
+  "r-detail03",
+  "r-detail04",
+  "r-detail05",
+];
 
 // 计算属性，判断当前路由是否为 photoWall
 const isPhotoWall = computed(() => {
   return (
-    route.name === 'photoWall' ||
-    route.name === 'recycling' ||
-    route.name === 'forum' ||
-    route.name === 'map' ||
-    route.name === 'ai' ||
-    detail.some(item => item === route.name) // 使用 some 方法
+    route.name === "photoWall" ||
+    route.name === "recycling" ||
+    route.name === "forum" ||
+    route.name === "map" ||
+    route.name === "ai" ||
+    detail.some((item) => item === route.name) // 使用 some 方法
   );
 });
 </script>

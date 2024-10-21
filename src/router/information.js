@@ -56,5 +56,32 @@ export default [
     name: "research-reports",
     component: () =>
       import("@/views/Information/components/ResearchReports.vue"),
+    children: [
+      {
+        path: "r-detail01",
+        name: "r-detail01",
+        component: () => import("@/views/Information/components/components/r-detail01.vue"),
+      },
+      {
+        path: "r-detail02",
+        name: "r-detail02",
+        component: () => import("@/views/Information/components/components/r-detail02.vue"),
+      },
+      {
+        path: "r-detail03",
+        name: "r-detail03",
+        component: () => import("@/views/Information/components/components/r-detail03.vue"),
+      },
+      {
+        path: "r-detail04",
+        name: "r-detail04",
+        component: () => import("@/views/Information/components/components/r-detail04.vue"),
+      },
+      {
+        path: "r-detail05",
+        name: "r-detail05",
+        component: () => import("@/views/Information/components/components/r-detail05.vue"),
+      },
+    ],
   },
 ];
