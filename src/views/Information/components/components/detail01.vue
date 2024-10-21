@@ -131,6 +131,7 @@ const goBack = () => {
 .content-box {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
+  margin: 20px;
   border-radius: 10px;
   max-width: 800px;
   width: 90%;
