@@ -2,7 +2,7 @@
   <div class="background-container">
     <div class="content-box">
       <h1 class="title">从山区到城市：蓝山县易地搬迁助力幸福生活</h1>
-      <p class="meta-info">2024-10-11 15:40 发布于：北京市</p>
+      <p class="meta-info">2024年10月11日</p>
       <div class="article-content">
         <p>
           近几年，中国的易地扶贫搬迁政策给无数山区居民带来了新生活的希望。蓝山县浆洞瑶族乡的集中安置点，正是这一政策成功实施的生动缩影。10月10日，我们走进这个新社区，整齐的楼房、宽阔的道路以及设施完善的休闲广场，无不彰显出美好的新生活。在这里，居民们面带笑容，享受着难得的安宁与幸福。
@@ -82,6 +82,7 @@ const goBack = () => {
 .content-box {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
+  margin: 20px;
   border-radius: 10px;
   max-width: 800px;
   width: 90%;

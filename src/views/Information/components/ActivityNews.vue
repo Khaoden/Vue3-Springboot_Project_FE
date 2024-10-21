@@ -81,7 +81,7 @@ const projects = ref([
   },
   {
     id: 2,
-    title: "蓝山县易地搬迁助力幸...",
+    title: "从山区到城市：蓝山县易地搬迁助力幸福生活",
     date: "2024-10-11",
     image: image2,
     link: "/main/information/activity-news/detail02",
@@ -102,7 +102,7 @@ const projects = ref([
   },
   {
     id: 5,
-    title: "义务教育有保障，山区的孩...",
+    title: "义务教育有保障，山区的孩子有幸福快乐的童年",
     date: "2022-06-18",
     image: image5,
     link: "/main/information/activity-news/detail05",
@@ -116,7 +116,7 @@ const projects = ref([
   },
   {
     id: 7,
-    title: "新华社长篇通讯：中国脱贫...",
+    title: "新华社长篇通讯：中国脱贫攻坚全纪实",
     date: "2021-02-24",
     image: image7,
     link: "/main/information/activity-news/detail07",
@@ -130,8 +130,8 @@ const projects = ref([
   },
   {
     id: 9,
-    title: "情系山区教育 助力乡村振...",
-    date: "2021-03-30",
+    title: "情系乡村教育 助力乡村振兴",
+    date: "2023-12-16",
     image: image9,
     link: "/main/information/activity-news/detail09",
   },
@@ -204,7 +204,7 @@ const changePage = (page) => {
 }
 
 .title-content {
-  color: #000000;
+  color: #fff;
   width: 80%;
   padding-top: 80px;
   padding-bottom: 70px;
@@ -228,7 +228,7 @@ const changePage = (page) => {
   line-height: 1.6;
   margin-top: 10px;
   letter-spacing: 1px;
-  color: #000000;
+  color: #fff;
 }
 
 .projects {
