@@ -32,7 +32,7 @@
             </div>
           </div>
 
-          <button type="submit" @click="verify">登录</button>
+          <button type="submit">登录</button>
         </form>
 
         <div class="form-footer">
@@ -51,33 +51,33 @@ import { Sky } from "three/examples/jsm/objects/Sky";
 import { Water } from "three/examples/jsm/objects/Water";
 import { ImprovedNoise } from "three/examples/jsm/math/ImprovedNoise";
 import { useRouter } from "vue-router";
+import { login } from '@/api/auth'; // 添加这行
 
 const threeCanvas = ref(null); // Declare the canvas ref
 const username = ref("");
 const password = ref("");
 const router = useRouter();
 
-// const verify = () => {
-//   router.push("/main");
-// };
-
-
-const verify = async () => {
-  if (!username.value || !password.value) {
-    return alert("请输入有效的账号和密码");
-  }
-  try {
-    const response = await login(username.value, password.value);
-    localStorage.setItem('token', response.data.token);
-    console.log('登录成功', response.data);
-    // Assuming the backend returns a user object with a token
-    localStorage.setItem('user', JSON.stringify(response.data));
-    router.push("/main");
-  } catch (error) {
-    console.error('登录失败', error.response?.data);
-    alert("登录失败，请重试");
-  }
+const handleSubmit = () => {
+  router.push("/main");
 };
+
+
+// const handleSubmit = async () => {
+//   if (!username.value || !password.value) {
+//     return alert("请输入有效的账号和密码");
+//   }
+//   try {
+//     const response = await login(username.value, password.value);
+//     console.log('登录成功', response.data);
+//     localStorage.setItem('token', response.data.token);
+//     localStorage.setItem('user', JSON.stringify(response.data.user));
+//     router.push("/main");
+//   } catch (error) {
+//     console.error('登录失败', error);
+//     alert(error.response?.data?.message || "登录失败，请重试");
+//   }
+// };
 
 const logout = () => {
   localStorage.removeItem('token');

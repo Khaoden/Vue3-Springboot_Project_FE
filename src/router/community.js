@@ -28,5 +28,10 @@ export default [
         path: "map",
         name: "map",
         component: () => import("@/views/community/components/map.vue")
+    },
+    {
+        path: "ai",
+        name: "ai",
+        component: () => import("@/views/community/components/Ai.vue")
     }
 ];
