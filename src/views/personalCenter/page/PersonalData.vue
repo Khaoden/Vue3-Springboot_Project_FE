@@ -125,7 +125,7 @@ const rules = reactive({
     {
       type: "array",
       required: true,
-      message: "���至少选择一个兴趣标签",
+      message: "至少选择一个兴趣标签",
       trigger: "change",
     },
   ],

@@ -26,8 +26,9 @@ const routes = [
     children: [
       {
         path: "",
+        name: "home",
         component: () =>
-          import("@/views/charitableProjects/components/PlatformCharity.vue"),
+          import("@/views/home/index.vue"),
       },
       {
         path: "charitable-projects",

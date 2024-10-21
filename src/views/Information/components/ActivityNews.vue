@@ -69,7 +69,7 @@ import image9 from "@/assets/information/ActivityNews/9.png";
 
 let isDetailView = ref(false);
 provide('isDetailView', isDetailView);
-console.log(isDetailView.value);
+// console.log(isDetailView.value);
 
 const projects = ref([
   {
@@ -144,62 +144,6 @@ const projects = ref([
   },
   {
     id: 11,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 12,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 13,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 14,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 15,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 16,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 17,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 18,
-    title: "第八届95公益周启动",
-    date: "2022-12-12",
-    image: image,
-    link: "",
-  },
-  {
-    id: 19,
     title: "第八届95公益周启动",
     date: "2022-12-12",
     image: image,
