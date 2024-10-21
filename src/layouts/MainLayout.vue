@@ -31,6 +31,7 @@ const isPhotoWall = computed(() => {
     route.name === 'recycling' ||
     route.name === 'forum' ||
     route.name === 'map' ||
+    route.name === 'ai' ||
     detail.some(item => item === route.name) // 使用 some 方法
   );
 });

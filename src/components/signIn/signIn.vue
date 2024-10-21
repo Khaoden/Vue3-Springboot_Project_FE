@@ -39,7 +39,7 @@
         </Form>
 
         <div class="form-footer">
-          <p>已有号，去登录！<router-link to="/login">登录</router-link></p>
+          <p>已有账号，去登录！<router-link to="/login">登录</router-link></p>
         </div>
       </div>
     </div>
@@ -73,11 +73,21 @@ const schema = yup.object({
 const handleSubmit = async (values, { resetForm }) => {
   try {
     const response = await register(values.username, values.email, values.password);
-    alert('注册成功！请检查您的邮箱以验证账户。');
-    router.push('/login');
-    resetForm();
+    console.log('Registration response:', response);
+    alert('注册成功！请检查您的邮箱以验证账户。验证后您就可以登录了。');
+    // resetForm();
   } catch (error) {
-    alert(error.response?.data || "注册失败，请重试");
+    console.error('Registration error:', error);
+    if (error.response) {
+      console.error('Error response:', error.response.data);
+      alert(`注册失败：${error.response.data || '未知错误'}`);
+    } else if (error.request) {
+      console.error('No response received:', error.request);
+      alert('注册失败：服务器无响应');
+    } else {
+      console.error('Error setting up request:', error.message);
+      alert(`注册失败：${error.message}`);
+    }
   }
 };
 
@@ -85,7 +95,7 @@ const handleSubmit = async (values, { resetForm }) => {
 
 // 这里是您的 Three.js 初始化代码
 onMounted(() => {
-  // 初始化 Three.js 场景
+  // 初始化 Three.js 场��
   // ...（您的 Three.js 代码）
 });
 
@@ -494,6 +504,10 @@ button:hover {
   margin-bottom: 25px;
 }
 </style>
+
+
+
+
 
 
 
