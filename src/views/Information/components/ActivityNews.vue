@@ -68,7 +68,7 @@ import image8 from "@/assets/information/ActivityNews/8.png";
 import image9 from "@/assets/information/ActivityNews/9.png";
 
 let isDetailView = ref(false);
-provide('isDetailView', isDetailView);
+provide("isDetailView", isDetailView);
 // console.log(isDetailView.value);
 
 const projects = ref([
@@ -192,7 +192,8 @@ const changePage = (page) => {
 }
 
 @keyframes backgroundMove {
-  0%, 100% {
+  0%,
+  100% {
     background-size: 100% 100%;
     background-position: center;
   }
@@ -238,6 +239,8 @@ const changePage = (page) => {
   margin: 0 auto;
   margin-top: 10px;
   background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  margin-bottom: 50px;
 }
 
 .project-list {
@@ -312,7 +315,7 @@ const changePage = (page) => {
 
 .page a {
   text-decoration: none;
-                                                        color: #333;
+  color: #333;
   padding: 10px 15px;
   border-radius: 5px;
   margin: 0 5px;
@@ -324,7 +327,7 @@ const changePage = (page) => {
 }
 
 .page a.active {
-  background-color: #fbc934;
+  background-color: #14ae78;
   color: #fff;
 }
 
