@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div v-if="!isDetailView" class="background">
     <div class="title-content">
       <div class="title-content">
         <div class="title">研究报告</div>
@@ -15,6 +15,7 @@
           :key="item.id"
           :to="item.link"
           class="project-item"
+          @click="isDetailView = true"
         >
           <!-- 确保每个 project-item 只显示一个图片 -->
           <img :src="item.image" alt="" />
@@ -52,29 +53,20 @@
       </div>
     </div>
   </div>
+  <router-view @router-view-leave="isDetailView = false"></router-view>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, provide } from "vue";
 import image1 from "@/assets/background/ActivityNews01.jpeg";
-import image2 from "@/assets/background/ActivityNews06.jpeg";
-import image3 from "@/assets/background/ActivityNews03.jpeg";
 import image4 from "@/assets/background/ActivityNews04.jpeg";
 import image5 from "@/assets/background/ActivityNews05.jpeg";
 import image6 from "@/assets/background/ActivityNews06.jpeg";
 import image7 from "@/assets/background/ActivityNews07.jpeg";
-import image8 from "@/assets/background/ActivityNews08.jpeg";
-import image9 from "@/assets/background/ActivityNews09.jpeg";
-import image10 from "@/assets/background/ActivityNews10.jpeg";
-import image11 from "@/assets/background/ActivityNews11.jpeg";
-import image12 from "@/assets/background/ActivityNews12.jpeg";
-import image13 from "@/assets/background/ActivityNews13.jpeg";
-import image14 from "@/assets/background/ActivityNews05.jpeg";
-import image15 from "@/assets/background/ActivityNews08.jpeg";
-import image16 from "@/assets/background/ActivityNews09.jpeg";
-import image17 from "@/assets/background/ActivityNews03.jpeg";
-import image18 from "@/assets/background/ActivityNews07.jpeg";
-import image19 from "@/assets/background/ActivityNews01.jpeg";
+
+let isDetailView = ref(false);
+provide('isDetailView', isDetailView);
+// console.log(isDetailView.value);
 
 const projects = ref([
   {
@@ -82,133 +74,35 @@ const projects = ref([
     title: "理解社会问题与需求",
     date: "2022-12-12",
     image: image1,
-    link: "",
+    link: "/main/information/research-reports/r-detail01",
   },
   {
     id: 2,
-    title: "评估公益活动的成效",
-    date: "2022-12-12",
-    image: image2,
-    link: "",
-  },
-  {
-    id: 3,
-    title: "提供政策建议与改进方向",
-    date: "2022-12-12",
-    image: image3,
-    link: "",
-  },
-  {
-    id: 4,
     title: "促进公众参与与意识提升",
     date: "2022-12-12",
     image: image4,
-    link: "",
+    link: "/main/information/research-reports/r-detail02",
   },
   {
-    id: 5,
+    id: 3,
     title: "推动学术研究与理论创新",
     date: "2022-12-12",
     image: image5,
-    link: "",
+    link: "/main/information/research-reports/r-detail03",
   },
   {
-    id: 6,
+    id: 4,
     title: "提供政策建议与改进方向",
     date: "2022-12-12",
     image: image6,
-    link: "",
+    link: "/main/information/research-reports/r-detail04",
   },
   {
-    id: 7,
+    id: 5,
     title: "评估公益活动的成效与影响",
     date: "2022-12-12",
     image: image7,
-    link: "",
-  },
-  {
-    id: 8,
-    title: "促进公众意识提升与参与",
-    date: "2022-12-12",
-    image: image8,
-    link: "",
-  },
-  {
-    id: 9,
-    title: "揭示社会问题与挑战",
-    date: "2022-12-12",
-    image: image9,
-    link: "",
-  },
-  {
-    id: 10,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image10,
-    link: "",
-  },
-  {
-    id: 11,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image11,
-    link: "",
-  },
-  {
-    id: 12,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image12,
-    link: "",
-  },
-  {
-    id: 13,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image13,
-    link: "",
-  },
-  {
-    id: 14,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image14,
-    link: "",
-  },
-  {
-    id: 15,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image15,
-    link: "",
-  },
-  {
-    id: 16,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image16,
-    link: "",
-  },
-  {
-    id: 17,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image17,
-    link: "",
-  },
-  {
-    id: 18,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image18,
-    link: "",
-  },
-  {
-    id: 19,
-    title: "第一届益行山区公益周启动",
-    date: "2022-12-12",
-    image: image19,
-    link: "",
+    link: "/main/information/research-reports/r-detail05",
   },
 ]);
 
@@ -256,7 +150,7 @@ const changePage = (page) => {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .title-content {
@@ -287,6 +181,7 @@ const changePage = (page) => {
 }
 
 .projects {
+  max-height: 1200px;
   padding-top: 20px;
   position: relative;
   z-index: 10;
