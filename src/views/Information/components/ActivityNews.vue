@@ -68,7 +68,7 @@ import image8 from "@/assets/information/ActivityNews/8.png";
 import image9 from "@/assets/information/ActivityNews/9.png";
 
 let isDetailView = ref(false);
-provide('isDetailView', isDetailView);
+provide("isDetailView", isDetailView);
 // console.log(isDetailView.value);
 
 const projects = ref([
@@ -192,7 +192,8 @@ const changePage = (page) => {
 }
 
 @keyframes backgroundMove {
-  0%, 100% {
+  0%,
+  100% {
     background-size: 100% 100%;
     background-position: center;
   }
@@ -238,6 +239,8 @@ const changePage = (page) => {
   margin: 0 auto;
   margin-top: 10px;
   background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  margin-bottom: 50px;
 }
 
 .project-list {
@@ -283,7 +286,8 @@ const changePage = (page) => {
   z-index: 10;
   text-align: left;
   padding: 15px 35px;
-  color: #222;
+  color: #fffbfbe1;
+  background-color: #14ae78;
   transition: background-color 0.3s ease;
   transition: color 0.3s ease;
 }
@@ -292,11 +296,12 @@ const changePage = (page) => {
   display: block;
   font-size: 14px;
   margin-top: 5px;
-  color: #888;
+  color: #fffbfbe1;
 }
 
 .project-item:hover .description {
-  background-color: #fbc934;
+  color: #14ae78;
+  background-color: #e3c571;
   color: #fff;
 }
 
@@ -322,7 +327,7 @@ const changePage = (page) => {
 }
 
 .page a.active {
-  background-color: #fbc934;
+  background-color: #14ae78;
   color: #fff;
 }
 
